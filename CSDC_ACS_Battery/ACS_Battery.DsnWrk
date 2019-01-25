@@ -1,0 +1,28 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=ACS\Imported ACS.PrjPcb\ACS.PrjPcb
+[Project2]
+ProjectPath=..\CSDC_OBC\OBC\OBC_rev_B\OBC_v8\OBC_v8.PrjPcb
+[Project3]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\batteryProtection\BatteryProtBd\BatteryProtCirc.PrjPCB
+[Project4]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\batterybd\BatteryBd\BatteryBd.PrjPCB
+[Project5]
+ProjectPath=..\CSDC_Power\power_board (2016-05-18)\power_board (2016-05-18)\Imported power_board.PrjPcb\power_board.PrjPcb
+[Project6]
+ProjectPath=C:\EMA\ExportFolder\0\221140\Output\AltiumDesigner\AltiumDesigner\AltiumDesigner\UL_Import.PrjScr
+[Project7]
+ProjectPath=C:\EMA\ExportFolder\0\221140\Output\AltiumDesigner\AltiumDesigner\AltiumDesigner\AltiumDesigner.LibPkg
+[Project8]
+ProjectPath=..\CSDC_Antenna\Balun complete\Balun complete\antenna-test.PrjPcb
+[Project9]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Mar_5th\SolarArray1\SolarArray1.PrjPCB
+[Project10]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Mar_5th\SolarArray2\SolarArray2.PrjPCB
+[Project11]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Mar_5th\SolarArray3\SolarArray3.PrjPCB
+[Project12]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Mar_5th\SolarArray4\SolarArray4.PrjPCB
+[Project13]
+ProjectPath=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Mar_5th\SolarArrayTop\SoalrArrayTop.PrjPCB

@@ -1,0 +1,116 @@
+# Created by Ultra Librarian Gold 8.2.186 Copyright © 1999-2018
+# Frank Frank, Accelerated Designs
+
+StartFootprints
+
+Footprint (Name "BGA_1590X1590")
+Pad (Name "A1") (Location -22.28345966, 22.28345966) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "A3") (Location 0.00000095, 22.28345966) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "A5") (Location 22.28346157, 22.28345966) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "B2") (Location -11.14172935, 11.14172935) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "B4") (Location 11.14173126, 11.14172935) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "C1") (Location -22.28345966, -0.00000095) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "C5") (Location 22.28346157, -0.00000095) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "D2") (Location -11.14172935, -11.14173126) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "D4") (Location 11.14173126, -11.14173126) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "E1") (Location -22.28345966, -22.28346157) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "E3") (Location 0.00000095, -22.28346157) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Pad (Name "E5") (Location 22.28346157, -22.28346157) (Surface True) (Rotation 0) (ExpandMask 0) (ExpandPaste 0)
+PadShape (Size 6, 6) (Shape Rounded) (Layer Top)
+EndPad
+Line (Width 6) (Start 36.5, 7.55645638) (End 36.5, 14.72700233) (Layer TopOverlay) 
+Line (Width 6) (Start 7.55645828, -36.5) (End 14.72700424, -36.5) (Layer TopOverlay) 
+Line (Width 6) (Start -7.55645279, 36.5) (End -14.72700592, 36.5) (Layer TopOverlay) 
+Line (Width 6) (Start 29.8399189, -36.5) (End 36.5, -36.5) (Layer TopOverlay) 
+Line (Width 6) (Start 36.5, -14.72700424) (End 36.5, -7.55645828) (Layer TopOverlay) 
+Line (Width 6) (Start -36.5, -29.83991531) (End -36.5, -36.5) (Layer TopOverlay) 
+Line (Width 6) (Start -36.5, -36.5) (End -29.83991699, -36.5) (Layer TopOverlay) 
+Line (Width 6) (Start 36.5, -36.5) (End 36.5, -29.8399189) (Layer TopOverlay) 
+Line (Width 6) (Start 36.5, 36.5) (End 29.83991531, 36.5) (Layer TopOverlay) 
+Line (Width 6) (Start -36.5, 36.5) (End -36.5, 29.8399134) (Layer TopOverlay) 
+Line (Width 6) (Start -29.8399134, 36.5) (End -36.5, 36.5) (Layer TopOverlay) 
+Line (Width 6) (Start -36.5, 14.72700592) (End -36.5, 7.55645279) (Layer TopOverlay) 
+Line (Width 6) (Start 36.5, 29.83991699) (End 36.5, 36.5) (Layer TopOverlay) 
+Line (Width 6) (Start 14.72700783, 36.5) (End 7.55645469, 36.5) (Layer TopOverlay) 
+Line (Width 6) (Start -36.5, -7.55645469) (End -36.5, -14.72700783) (Layer TopOverlay) 
+Line (Width 6) (Start -14.72700233, -36.5) (End -7.55645638, -36.5) (Layer TopOverlay) 
+Text (Location -81.49999905, -2.71654034) (Height 50) (Width 3) (Rotation 0) (Layer TopOverlay) (Value "A")
+Text (Location -81.49999905, -47.28346157) (Height 50) (Width 3) (Rotation 0) (Layer TopOverlay) (Value "E")
+Text (Location 2.71654034, 56.50000095) (Height 50) (Width 3) (Rotation 90) (Layer TopOverlay) (Value "1")
+Text (Location 47.28346157, 56.50000095) (Height 50) (Width 3) (Rotation 90) (Layer TopOverlay) (Value "5")
+Line (Width 1) (Start -25.92913437, 31.5) (End -31.5, 25.92913437) (Layer Mechanical13) 
+Line (Width 1) (Start -31.5, -31.5) (End 31.5, -31.5) (Layer Mechanical13) 
+Line (Width 1) (Start 31.5, -31.5) (End 31.5, 31.5) (Layer Mechanical13) 
+Line (Width 1) (Start 31.5, 31.5) (End -31.5, 31.5) (Layer Mechanical13) 
+Line (Width 1) (Start -31.5, 31.5) (End -31.5, -31.5) (Layer Mechanical13) 
+Text (Location -81.49999905, -2.71654034) (Height 50) (Width 3) (Rotation 0) (Layer Mechanical13) (Value "A")
+Text (Location -81.49999905, -47.28346157) (Height 50) (Width 3) (Rotation 0) (Layer Mechanical13) (Value "E")
+Text (Location 2.71654034, 56.50000095) (Height 50) (Width 3) (Rotation 90) (Layer Mechanical13) (Value "1")
+Text (Location 47.28346157, 56.50000095) (Height 50) (Width 3) (Rotation 90) (Layer Mechanical13) (Value "5")
+Text (Location -56.49999905, -2.71654034) (Mirrored True) (Height 50) (Width 3) (Rotation 0) (Layer BottomOverlay) (Value "A")
+Text (Location -56.49999905, -47.28346157) (Mirrored True) (Height 50) (Width 3) (Rotation 0) (Layer BottomOverlay) (Value "E")
+Text (Location -47.28345966, 56.50000095) (Mirrored True) (Height 50) (Width 3) (Rotation -90) (Layer BottomOverlay) (Value "1")
+Text (Location -2.71653843, 56.50000095) (Mirrored True) (Height 50) (Width 3) (Rotation -90) (Layer BottomOverlay) (Value "5")
+Line (Width 6) (Start -41.5, -41.5) (End -41.5, 41.5) (Layer Mechanical15) 
+Line (Width 6) (Start -41.5, 41.5) (End 41.5, 41.5) (Layer Mechanical15) 
+Line (Width 6) (Start 41.5, 41.5) (End 41.5, -41.5) (Layer Mechanical15) 
+Line (Width 6) (Start 41.5, -41.5) (End -41.5, -41.5) (Layer Mechanical15) 
+Polygon (PointCount 4) (Layer Mechanical15) 
+Point (-41.5, -41.5)
+Point (-41.5, 41.5)
+Point (41.5, 41.5)
+Point (41.5, -41.5)
+EndPolygon
+Step (Name BGA_1590X1590.stp)
+EndFootprint
+EndFootprints
+
+StartComponents
+
+Component (Name "BMM150") (PartCount 1) (DesPrefix "U?")
+Pin (Location 300, 0) (Rotation 180) (PinType Passive) (Length 300) (Width 0) (Designator Visible "A1") (Name Visible "PS") (PinSwap 0) (PartSwap 0) (PinSeq 1) (Part 1)
+Pin (Location 300, -100) (Rotation 180) (PinType Passive) (Length 300) (Width 0) (Designator Visible "A3") (Name Visible "SCK") (PinSwap 0) (PartSwap 0) (PinSeq 2) (Part 1)
+Pin (Location 300, -200) (Rotation 180) (PinType Passive) (Length 300) (Width 0) (Designator Visible "A5") (Name Visible "CSB") (PinSwap 0) (PartSwap 0) (PinSeq 3) (Part 1)
+Pin (Location 300, -300) (Rotation 180) (PinType Passive) (Length 300) (Width 0) (Designator Visible "B2") (Name Visible "VDDIO") (PinSwap 0) (PartSwap 0) (PinSeq 4) (Part 1)
+Pin (Location 300, -400) (Rotation 180) (PinType Passive) (Length 300) (Width 0) (Designator Visible "B4") (Name Visible "SDI") (PinSwap 0) (PartSwap 0) (PinSeq 5) (Part 1)
+Pin (Location 300, -500) (Rotation 180) (PinType Passive) (Length 300) (Width 0) (Designator Visible "C1") (Name Visible "SDO") (PinSwap 0) (PartSwap 0) (PinSeq 6) (Part 1)
+Pin (Location 1300, -500) (Rotation 0) (PinType Passive) (Length 300) (Width 0) (Designator Visible "C5") (Name Visible "GND") (PinSwap 0) (PartSwap 0) (PinSeq 7) (Part 1)
+Pin (Location 1300, -400) (Rotation 0) (PinType Passive) (Length 300) (Width 0) (Designator Visible "D2") (Name Visible "INT") (PinSwap 0) (PartSwap 0) (PinSeq 8) (Part 1)
+Pin (Location 1300, -300) (Rotation 0) (PinType Passive) (Length 300) (Width 0) (Designator Visible "D4") (Name Visible "DRY") (PinSwap 0) (PartSwap 0) (PinSeq 9) (Part 1)
+Pin (Location 1300, -200) (Rotation 0) (PinType Passive) (Length 300) (Width 0) (Designator Visible "E1") (Name Visible "GND") (PinSwap 0) (PartSwap 0) (PinSeq 10) (Part 1)
+Pin (Location 1300, -100) (Rotation 0) (PinType Passive) (Length 300) (Width 0) (Designator Visible "E3") (Name Visible "GND") (PinSwap 0) (PartSwap 0) (PinSeq 11) (Part 1)
+Pin (Location 1300, 0) (Rotation 0) (PinType Passive) (Length 300) (Width 0) (Designator Visible "E5") (Name Visible "VDD") (PinSwap 0) (PartSwap 0) (PinSeq 12) (Part 1)
+Rectangle (Width 5) (Start 300, 200) (End 1300, -700) (Part 1)
+Parameter (Name "Manufacturer_Part_Number") (Location 0, 0) (Height 50) (Rotation 0) (Justification Center) (Value "BMM150") (Part 1)
+Parameter (Name "Vendor") (Location 0, 0) (Height 50) (Rotation 0) (Justification Center) (Value "Bosch") (Part 1)
+Parameter (Name "Built_By") (Location 0, 0) (Height 50) (Rotation 0) (Justification Center) (Value "EMA_UL_Team") (Part 1)
+Parameter (Name "RefDes") (Location 800, 400) (Height 82) (Rotation 0) (Justification Center) (Value "RefDes") (Part 1)
+Parameter (Name "Type") (Location 800, 300) (Height 82) (Rotation 0) (Justification Center) (Value "DEV") (Part 1)
+Parameter (Name "Value") (Location 800, 300) (Height 82) (Rotation 0) (Justification Center) (Value "Value") (Part 1)
+Parameter (Name "C") (Location 0, 0) (Height 1) (Rotation 0) (Justification Center) (Value "Copyright (C) 2016 Accelerated Designs. All rights reserved") (Part 1)
+Comment (Value "Part Number: BMM150") (Part 1)
+Footprint (Name "BGA_1590X1590")
+EndComponent
+EndComponents

@@ -1,0 +1,32 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: ACS_2.GBR   2018/5/29  12:00:00
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                Top Layer                               
+.G1                 Signal Layer 1                          
+.GP1                Internal Plane 3                        
+.GBL                Bottom Layer                            
+.GML                Multi-Layer                             
+.GTP                Top Paste                               
+.GTO                Top Overlay                             
+.GTS                Top Solder                              
+.1                  Dielectric 1                            
+.GBS                Bottom Solder                           
+.GBO                Bottom Overlay                          
+.GBP                Bottom Paste                            
+.GKO                Keep-Out Layer                          
+.GM1                Mechanical 1                            
+.GM6                Mechanical 6                            
+.GM13               Mechanical 13                           
+.GM15               Mechanical 15                           
+.GM16               Mechanical 16                           
+.GM27               Mechanical 27                           
+.2                  Dielectric 3                            
+.4                  Dielectric 2                            
+.GD1                Drill Drawing                           
+.GG1                Drill Guide                             
+------------------------------------------------------------------------------------------

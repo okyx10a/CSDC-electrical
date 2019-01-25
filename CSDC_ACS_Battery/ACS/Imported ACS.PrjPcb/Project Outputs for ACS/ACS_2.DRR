@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: ACS_2.PcbDoc   2018/5/29  12:00:45
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : ACS_2.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.5mm (19.685mil)        Round          2                5.08 mm (0.20 Inch)
+T2        0.7112mm (28mil)         Round          42               423.89 mm (16.69 Inch)
+T3        0.762mm (30mil)          Round          16               150.65 mm (5.93 Inch)
+T4        0.8mm (31.496mil)        Round          6                73.48 mm (2.89 Inch)
+T5        0.9mm (35.433mil)        Round          104              307.42 mm (12.10 Inch)
+T6        3.175mm (125mil)         Round          1                0.00 mm (0.00 Inch)
+T7        3.2mm (125.984mil)       Round          3                194.71 mm (7.67 Inch)
+---------------------------------------------------------------------------
+Totals                                            174              1155.23 mm (45.48 Inch)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

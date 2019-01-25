@@ -1,0 +1,40 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: PCB1_done2.GBR   2018/5/29  11:06:10
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                Top Layer                               
+.G1                 Top Signal Layer                        
+.G2                 Vbat-chrg                               
+.GP1                Internal Plane 1                        
+.G3                 GND-nBat                                
+.GP2                Internal Plane 2                        
+.G4                 Bottom Signal Layer                     
+.GBL                Bottom Layer                            
+.GML                Multi-Layer                             
+.GTP                Top Paste                               
+.GTO                Top Overlay                             
+.GTS                Top Solder                              
+.1                  Dielectric 1                            
+.GBS                Bottom Solder                           
+.GBO                Bottom Overlay                          
+.GBP                Bottom Paste                            
+.GKO                Keep-Out Layer                          
+.GM1                Mechanical 1                            
+.GM6                Mechanical 6                            
+.GM13               Mechanical 13                           
+.GM14               Mechanical 14                           
+.GM15               Mechanical 15                           
+.GM16               Mechanical 16                           
+.GM27               Mechanical 27                           
+.5                  Dielectric 6                            
+.2                  Dielectric 2                            
+.3                  Dielectric 7                            
+.4                  Dielectric 3                            
+.7                  Dielectric 8                            
+.6                  Dielectric 5                            
+.GD1                Drill Drawing                           
+------------------------------------------------------------------------------------------

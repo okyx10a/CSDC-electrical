@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: E:\Owen\Documents\CSDC_OBC\OBC\OBC_rev_B\OBC_v8\OBC_v8.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=obc_v8.txt|LayerPairs=gtl,gbl
+LayersSetName=Top_Mid1_Blind_Vias|DrillFile=|LayerPairs=gtl,g1

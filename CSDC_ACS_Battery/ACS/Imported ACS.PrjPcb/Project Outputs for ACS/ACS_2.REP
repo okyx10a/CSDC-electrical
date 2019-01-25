@@ -1,0 +1,443 @@
+*************************************************************
+FileName = ACS_2.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : ACS_2.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Signal Layer 1
+      File : ACS_2.G1
+
+    Adding Layer      : Signal Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D35
+    D36
+    D37
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Internal Plane 3
+      File : ACS_2.GP1
+
+    Adding Layer      : Internal Plane 3
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : ACS_2.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D32
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Multi-Layer
+      File : ACS_2.GML
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : ACS_2.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : ACS_2.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D32
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : ACS_2.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D30
+    D34
+    D53
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+*************************************************************
+
+*************************************************************
+Generating : Dielectric 1
+      File : ACS_2.1
+
+    Adding Layer      : Dielectric 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : ACS_2.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D53
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : ACS_2.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D64
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : ACS_2.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : ACS_2.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : ACS_2.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D32
+    D61
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 6
+      File : ACS_2.GM6
+
+    Adding Layer      : Mechanical 6
+
+
+Used DCodes :
+    D95
+    D96
+    D97
+    D98
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : ACS_2.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D64
+    D99
+    D100
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : ACS_2.GM15
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D61
+    D99
+    D101
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 16
+      File : ACS_2.GM16
+
+    Adding Layer      : Mechanical 16
+
+
+Used DCodes :
+    D55
+    D61
+    D64
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+    D117
+    D118
+    D119
+    D120
+    D121
+    D122
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 27
+      File : ACS_2.GM27
+
+    Adding Layer      : Mechanical 27
+
+
+Used DCodes :
+    D102
+*************************************************************
+
+*************************************************************
+Generating : Dielectric 3
+      File : ACS_2.2
+
+    Adding Layer      : Dielectric 3
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Dielectric 2
+      File : ACS_2.4
+
+    Adding Layer      : Dielectric 2
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : ACS_2.GD1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D104
+    D123
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : ACS_2.GG1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D104
+*************************************************************
+

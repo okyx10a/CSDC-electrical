@@ -1,0 +1,27 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: OBC_v8.PcbDoc   2018/5/30  15:27:27
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : OBC_v8.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.254mm (10mil)          Round          405              1064.54 mm (41.91 Inch)
+T2        0.3048mm (12mil)         Round          93               641.59 mm (25.26 Inch)
+T3        0.9mm (35.433mil)        Round          151              614.66 mm (24.20 Inch)
+T4        3.175mm (125mil)         Round          4                268.37 mm (10.57 Inch)
+---------------------------------------------------------------------------
+Totals                                            653              2589.16 mm (101.94 Inch)
+Layer Pair : Top Layer to MidLayer1
+ASCII RoundHoles File : OBC_v8.TX1
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.254mm (10mil)          Round          22               90.05 mm (3.55 Inch)
+---------------------------------------------------------------------------
+Totals                                            22               90.05 mm (3.55 Inch)
+---------------------------------------------------------------------------
+Totals                                            675              2679.21 mm (105.48 Inch)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
