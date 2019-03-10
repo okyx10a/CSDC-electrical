@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Mar_5th\SolarArrayTop\SolarArrayTop.PcbDoc
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

@@ -1,0 +1,634 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://E:\Owen\Documents\Altium\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2018/2/23</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">17:37:43</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc" class="file"><acronym title="C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc">C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">73</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="ID4EE42ZSXFP5ROFRMHBRQFGJA5EKCE15E34CR3BN3EG4J4CBU5VKM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEHZON32W5NOGOUVXPQKW31EKXJU2VZRASD02XWGVITHJPTFOUFIL">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZUNFR1RV0HLH35OD1T4WT2S4GFU1TPIDJA1KGPVLKFNIQLKDCNO">Silk primitive without silk layer</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM4HLAT5D2C2ZKK3SABLS5150PFADBCM452O2R4NTR4WQVS4XXSUN">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAQFCVF4LL0JZNOCS2TU0G0HGOOV0NZMTB4R3V2BOHE2NQLDXDVHK">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">41</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUBZIFUTJLM3NID5M2FJNC3LD0OEV01DHI5CVERKBEJZC02KZ3C2M">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQOSW012AVN10COPCRA41WMHIKNXHDKCMYEMYUMBMMJHRS0YR0LHD">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBDVHOCX4HW2FNGYR0PEQ00WGUGVY1CRC5RBAAWH2PHI0RAG21ZO">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0UPZAL2WODXYDOBVM4JRTVYMHEBPAWZVTBIHU0EXVAA1WXU0ZKSM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTEP0WCPHDWL1OFEYBWMPF4ADMH11CFIJH1OV43CZOMMNQTLP3HZF">Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRH0F4FC5ZO5RH2EF130JGPX3UPEPJE0WAL0ALVJUWUKI02D3LBRO">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOSAGVSBM4WNPKRB0M4KHWTHEXO2OEOZWHL1Z3GHTB41Q4SCZYNH">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZBK5OTPJ221JGOOYAGQ2RDUNVI2F4YZZGKKNIXG5FKGOJKQ11JDD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAW4KW1QBCNCHIJUCRYVXBHPXIBH3QS4WBTV12OINFXWHH3KCYFYG">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">73</td>
+</tr>
+</table><br><hr><a name="IDZUNFR1RV0HLH35OD1T4WT2S4GFU1TPIDJA1KGPVLKFNIQLKDCNO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk primitive without silk layer</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7933.065mil|Location2.X=8695.662mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7933.065mil|Location2.X=8695.662mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Trisol X Solar Wing" (15.843mm,320.383mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8523.616mil|Location2.X=9286.213mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8523.616mil|Location2.X=9286.213mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Trisol X Solar Wing" (30.843mm,320.383mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9114.167mil|Location2.X=9876.764mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9114.167mil|Location2.X=9876.764mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Trisol X Solar Wing" (45.842mm,320.383mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9704.719mil|Location2.X=10467.316mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9704.719mil|Location2.X=10467.316mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Trisol X Solar Wing" (60.842mm,320.383mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10295.27mil|Location2.X=11057.867mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10295.27mil|Location2.X=11057.867mil|Location1.Y=13661.36mil|Location2.Y=14395.627mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Trisol X Solar Wing" (75.843mm,320.383mm)  Top Overlay</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAQFCVF4LL0JZNOCS2TU0G0HGOOV0NZMTB4R3V2BOHE2NQLDXDVHK"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9737mil|Location2.X=9856.968mil|Location1.Y=5749mil|Location2.Y=5828.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9737mil|Location2.X=9856.968mil|Location1.Y=5749mil|Location2.Y=5828.981mil|Absolute=True">Text "39" (66.303mm,110.846mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9758.539mil|Location2.X=10041.539mil|Location1.Y=5781.079mil|Location2.Y=5867.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9758.539mil|Location2.X=10041.539mil|Location1.Y=5781.079mil|Location2.Y=5867.819mil|Absolute=True">Pad 38-1(70.19mm,112.508mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9737mil|Location2.X=9846.971mil|Location1.Y=9844mil|Location2.Y=9923.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9737mil|Location2.X=9846.971mil|Location1.Y=9844mil|Location2.Y=9923.981mil|Absolute=True">Text "19" (66.303mm,214.859mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9719.168mil|Location2.X=10002.168mil|Location1.Y=9875.567mil|Location2.Y=9962.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9719.168mil|Location2.X=10002.168mil|Location1.Y=9875.567mil|Location2.Y=9962.307mil|Absolute=True">Pad 18-1(69.19mm,216.508mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7866.81mil|Location2.X=7986.778mil|Location1.Y=9869.252mil|Location2.Y=9949.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7866.81mil|Location2.X=7986.778mil|Location1.Y=9869.252mil|Location2.Y=9949.233mil|Absolute=True">Text "22" (18.8mm,215.5mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7927.83mil|Location2.X=8210.83mil|Location1.Y=9875.567mil|Location2.Y=9962.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7927.83mil|Location2.X=8210.83mil|Location1.Y=9875.567mil|Location2.Y=9962.307mil|Absolute=True">Pad 16-1(23.69mm,216.508mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8212.015mil|Location2.X=8218.015mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8212.015mil|Location2.X=8218.015mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True">Track (27.39mm,140.695mm)(27.39mm,141.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6961.614mil|Location2.Y=7001.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6961.614mil|Location2.Y=7001.614mil|Absolute=True">Pad C1-1(28mm,141.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8259.637mil|Location2.X=8265.637mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8259.637mil|Location2.X=8265.637mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True">Track (28.6mm,140.695mm)(28.6mm,141.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6961.614mil|Location2.Y=7001.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6961.614mil|Location2.Y=7001.614mil|Absolute=True">Pad C1-1(28mm,141.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8212.015mil|Location2.X=8218.015mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8212.015mil|Location2.X=8218.015mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True">Track (27.39mm,140.695mm)(27.39mm,141.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6890.181mil|Location2.Y=6930.181mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6890.181mil|Location2.Y=6930.181mil|Absolute=True">Pad C1-2(28mm,140.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8259.637mil|Location2.X=8265.637mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8259.637mil|Location2.X=8265.637mil|Location1.Y=6931.181mil|Location2.Y=6960.992mil|Absolute=True">Track (28.6mm,140.695mm)(28.6mm,141.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6890.181mil|Location2.Y=6930.181mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8211.015mil|Location2.X=8267.015mil|Location1.Y=6890.181mil|Location2.Y=6930.181mil|Absolute=True">Pad C1-2(28mm,140.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8526.976mil|Location2.X=8532.976mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8526.976mil|Location2.X=8532.976mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (35.39mm,142.695mm)(35.39mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True">Pad R4-1(36mm,143.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8574.598mil|Location2.X=8580.598mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8574.598mil|Location2.X=8580.598mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (36.6mm,142.695mm)(36.6mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True">Pad R4-1(36mm,143.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8526.976mil|Location2.X=8532.976mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8526.976mil|Location2.X=8532.976mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (35.39mm,142.695mm)(35.39mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True">Pad R4-2(36mm,142.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8574.598mil|Location2.X=8580.598mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8574.598mil|Location2.X=8580.598mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (36.6mm,142.695mm)(36.6mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8525.976mil|Location2.X=8581.976mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True">Pad R4-2(36mm,142.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.236mil|Location2.X=8454.236mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.236mil|Location2.X=8454.236mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (33.39mm,141.695mm)(33.39mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True">Pad R3-1(34mm,142.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8495.858mil|Location2.X=8501.858mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8495.858mil|Location2.X=8501.858mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (34.6mm,141.695mm)(34.6mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True">Pad R3-1(34mm,142.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.236mil|Location2.X=8454.236mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8448.236mil|Location2.X=8454.236mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (33.39mm,141.695mm)(33.39mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True">Pad R3-2(34mm,141.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8495.858mil|Location2.X=8501.858mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8495.858mil|Location2.X=8501.858mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (34.6mm,141.695mm)(34.6mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8447.236mil|Location2.X=8503.236mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True">Pad R3-2(34mm,141.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8369.495mil|Location2.X=8375.495mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8369.495mil|Location2.X=8375.495mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (31.39mm,142.695mm)(31.39mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True">Pad R2-1(32mm,143.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8417.117mil|Location2.X=8423.117mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8417.117mil|Location2.X=8423.117mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (32.6mm,142.695mm)(32.6mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=7040.354mil|Location2.Y=7080.354mil|Absolute=True">Pad R2-1(32mm,143.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8369.495mil|Location2.X=8375.495mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8369.495mil|Location2.X=8375.495mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (31.39mm,142.695mm)(31.39mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True">Pad R2-2(32mm,142.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8417.117mil|Location2.X=8423.117mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8417.117mil|Location2.X=8423.117mil|Location1.Y=7009.921mil|Location2.Y=7039.732mil|Absolute=True">Track (32.6mm,142.695mm)(32.6mm,143.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8368.495mil|Location2.X=8424.495mil|Location1.Y=6968.921mil|Location2.Y=7008.921mil|Absolute=True">Pad R2-2(32mm,142.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8290.755mil|Location2.X=8296.755mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8290.755mil|Location2.X=8296.755mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (29.39mm,141.695mm)(29.39mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True">Pad R1-1(30mm,142.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8338.377mil|Location2.X=8344.377mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8338.377mil|Location2.X=8344.377mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (30.6mm,141.695mm)(30.6mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=7000.984mil|Location2.Y=7040.984mil|Absolute=True">Pad R1-1(30mm,142.9mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8290.755mil|Location2.X=8296.755mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8290.755mil|Location2.X=8296.755mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (29.39mm,141.695mm)(29.39mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True">Pad R1-2(30mm,141.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8338.377mil|Location2.X=8344.377mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8338.377mil|Location2.X=8344.377mil|Location1.Y=6970.551mil|Location2.Y=7000.362mil|Absolute=True">Track (30.6mm,141.695mm)(30.6mm,142.3mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8289.755mil|Location2.X=8345.755mil|Location1.Y=6929.551mil|Location2.Y=6969.551mil|Absolute=True">Pad R1-2(30mm,141.086mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8530.068mil|Location1.Y=6548.385mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8530.068mil|Location1.Y=6548.385mil|Location2.Y=6584.7mil|Absolute=True">Track (35.266mm,131.023mm)(35.266mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-10(36mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8379.329mil|Location2.X=8530.068mil|Location1.Y=6548.385mil|Location2.Y=6558.385mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8379.329mil|Location2.X=8530.068mil|Location1.Y=6548.385mil|Location2.Y=6558.385mil|Absolute=True">Track (31.691mm,131.023mm)(35.266mm,131.023mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-10(36mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True">Track (35.266mm,131.691mm)(44.79mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-10(36mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8530.068mil|Location1.Y=6205.3mil|Location2.Y=6226.182mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8530.068mil|Location1.Y=6205.3mil|Location2.Y=6226.182mil|Absolute=True">Track (35.266mm,122.309mm)(35.266mm,122.585mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-9(36mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8449.103mil|Location2.X=8530.068mil|Location1.Y=6216.182mil|Location2.Y=6226.182mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8449.103mil|Location2.X=8530.068mil|Location1.Y=6216.182mil|Location2.Y=6226.182mil|Absolute=True">Track (33.463mm,122.585mm)(35.266mm,122.585mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-9(36mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True">Track (35.266mm,122.309mm)(44.79mm,122.309mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8531.928mil|Location2.X=8576.023mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-9(36mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True">Track (35.266mm,131.691mm)(44.79mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8610.668mil|Location2.X=8654.763mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8610.668mil|Location2.X=8654.763mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-8(38mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True">Track (35.266mm,122.309mm)(44.79mm,122.309mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8610.668mil|Location2.X=8654.763mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8610.668mil|Location2.X=8654.763mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-7(38mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True">Track (35.266mm,131.691mm)(44.79mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8689.409mil|Location2.X=8733.503mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8689.409mil|Location2.X=8733.503mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-6(40mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True">Track (35.266mm,122.309mm)(44.79mm,122.309mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8689.409mil|Location2.X=8733.503mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8689.409mil|Location2.X=8733.503mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-5(40mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True">Track (35.266mm,131.691mm)(44.79mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8768.149mil|Location2.X=8812.243mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8768.149mil|Location2.X=8812.243mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-4(42mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True">Track (35.266mm,122.309mm)(44.79mm,122.309mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8768.149mil|Location2.X=8812.243mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8768.149mil|Location2.X=8812.243mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-3(42mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=8905.029mil|Location1.Y=6548.385mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=8905.029mil|Location1.Y=6548.385mil|Location2.Y=6584.7mil|Absolute=True">Track (44.79mm,131.023mm)(44.79mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-2(44mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=9045.768mil|Location1.Y=6548.385mil|Location2.Y=6558.385mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=9045.768mil|Location1.Y=6548.385mil|Location2.Y=6558.385mil|Absolute=True">Track (44.79mm,131.023mm)(48.365mm,131.023mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-2(44mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6574.7mil|Location2.Y=6584.7mil|Absolute=True">Track (35.266mm,131.691mm)(44.79mm,131.691mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6418.031mil|Location2.Y=6571.575mil|Absolute=True">Pad Connector-2(44mm,129.535mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6226.182mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6226.182mil|Absolute=True">Track (44.79mm,122.309mm)(44.79mm,122.585mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-1(44mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=8975.994mil|Location1.Y=6216.182mil|Location2.Y=6226.182mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8895.029mil|Location2.X=8975.994mil|Location1.Y=6216.182mil|Location2.Y=6226.182mil|Absolute=True">Track (44.79mm,122.585mm)(46.592mm,122.585mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-1(44mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8520.068mil|Location2.X=8905.029mil|Location1.Y=6205.3mil|Location2.Y=6215.3mil|Absolute=True">Track (35.266mm,122.309mm)(44.79mm,122.309mm)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8846.889mil|Location2.X=8890.983mil|Location1.Y=6218.425mil|Location2.Y=6371.968mil|Absolute=True">Pad Connector-1(44mm,124.465mm)  Bottom Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDUBZIFUTJLM3NID5M2FJNC3LD0OEV01DHI5CVERKBEJZC02KZ3C2M"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True">Pad U1-15(42.968mm,147.675mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7172.386mil|Location2.Y=7194.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7172.386mil|Location2.Y=7194.386mil|Absolute=True">Pad U1-16(42.968mm,147.025mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True">Pad U1-14(42.968mm,148.325mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True">Pad U1-15(42.968mm,147.675mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7249.157mil|Location2.Y=7271.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7249.157mil|Location2.Y=7271.157mil|Absolute=True">Pad U1-13(42.968mm,148.975mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8809.326mil|Location2.X=8847.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True">Pad U1-14(42.968mm,148.325mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-11(41.325mm,149.969mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-12(41.975mm,149.969mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-10(40.675mm,149.969mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-11(41.325mm,149.969mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8701.44mil|Location2.X=8723.44mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8701.44mil|Location2.X=8723.44mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-9(40.025mm,149.969mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-10(40.675mm,149.969mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True">Pad U1-7(39.031mm,148.325mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7249.157mil|Location2.Y=7271.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7249.157mil|Location2.Y=7271.157mil|Absolute=True">Pad U1-8(39.031mm,148.975mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True">Pad U1-6(39.031mm,147.675mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7223.567mil|Location2.Y=7245.567mil|Absolute=True">Pad U1-7(39.031mm,148.325mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7172.386mil|Location2.Y=7194.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7172.386mil|Location2.Y=7194.386mil|Absolute=True">Pad U1-5(39.031mm,147.025mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8654.326mil|Location2.X=8692.326mil|Location1.Y=7197.976mil|Location2.Y=7219.976mil|Absolute=True">Pad U1-6(39.031mm,147.675mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-3(40.675mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8701.44mil|Location2.X=8723.44mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8701.44mil|Location2.X=8723.44mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-4(40.025mm,146.032mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-2(41.325mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-3(40.675mm,146.032mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-1(41.975mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-2(41.325mm,146.032mm)  Bottom Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDBDVHOCX4HW2FNGYR0PEQ00WGUGVY1CRC5RBAAWH2PHI0RAG21ZO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8238.39mil|Location2.X=8869.562mil|Location1.Y=10855.005mil|Location2.Y=11486.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8238.39mil|Location2.X=8869.562mil|Location1.Y=10855.005mil|Location2.Y=11486.176mil|Absolute=True">Hole Size Constraint (16mm &gt; 2.54mm) : Pad Free-1(36mm,248.3mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=1729.02mil|Location2.Y=1848.38mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=1729.02mil|Location2.Y=1848.38mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(79.5mm,10mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=6669.966mil|Location2.Y=6789.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=6669.966mil|Location2.Y=6789.326mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(79.5mm,135.5mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=10106.974mil|Location2.Y=10226.334mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=10106.974mil|Location2.Y=10226.334mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(79.5mm,222.8mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=13435.713mil|Location2.Y=13555.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10206.894mil|Location2.X=10326.254mil|Location1.Y=13435.713mil|Location2.Y=13555.074mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(79.5mm,307.35mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=1729.02mil|Location2.Y=1848.38mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=1729.02mil|Location2.Y=1848.38mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(2.5mm,10mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=6669.966mil|Location2.Y=6789.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=6669.966mil|Location2.Y=6789.326mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(2.5mm,135.5mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=10106.974mil|Location2.Y=10226.334mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=10106.974mil|Location2.Y=10226.334mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(2.5mm,222.8mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=13435.713mil|Location2.Y=13555.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7175.398mil|Location2.X=7294.758mil|Location1.Y=13435.713mil|Location2.Y=13555.074mil|Absolute=True">Hole Size Constraint (3mm &gt; 2.54mm) : Pad Free-1(2.5mm,307.35mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDOSAGVSBM4WNPKRB0M4KHWTHEXO2OEOZWHL1Z3GHTB41Q4SCZYNH"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Clearance Constraint (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-2(41.325mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True">Pad U1-17(41mm,148mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.031mil|Location2.X=8749.031mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-3(40.675mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True">Pad U1-17(41mm,148mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.621mil|Location2.X=8774.621mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-11(41.325mm,149.969mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True">Pad U1-17(41mm,148mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-1(41.975mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True">Pad U1-17(41mm,148mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8701.44mil|Location2.X=8723.44mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8701.44mil|Location2.X=8723.44mil|Location1.Y=7125.272mil|Location2.Y=7163.272mil|Absolute=True">Pad U1-4(40.025mm,146.032mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True">Pad U1-17(41mm,148mm)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8778.212mil|Location2.X=8800.212mil|Location1.Y=7280.272mil|Location2.Y=7318.272mil|Absolute=True">Pad U1-12(41.975mm,149.969mm)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ecad\staging\Owen\kuanghua.qiao_-1374647387\altium\latest\SolarArray_Jan_16th\SolarArray3\SolarArray3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8691.826mil|Location2.X=8809.826mil|Location1.Y=7162.772mil|Location2.Y=7280.772mil|Absolute=True">Pad U1-17(41mm,148mm)  Bottom Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

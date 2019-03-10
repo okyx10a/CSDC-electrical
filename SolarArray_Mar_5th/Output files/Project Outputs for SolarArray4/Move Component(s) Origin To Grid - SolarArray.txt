@@ -1,0 +1,14 @@
+Move Component(s) Origin to Grid
+Filename     : E:\Owen\Documents\CSDC_Power\SolarArray_July_31\SolarArray.PcbDoc
+Date         : 2017/8/2
+Time         : 19:14:09
+Time Elapsed : 00:00:00
+
+
+    SMT Small Component 1-Trisol X Solar Wing (156.362mm,60.198mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component 2-Trisol X Solar Wing (142.862mm,60.198mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component 3-Trisol X Solar Wing (129.362mm,60.198mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component 4-Trisol X Solar Wing (115.862mm,60.198mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component 5-Trisol X Solar Wing (102.362mm,60.198mm) on Top Layer - Component origin is already ON grid.
+    SMT Small Component 6-Trisol X Solar Wing (324.104mm,135.001mm) on Top Layer - Component origin is already ON grid.
+count : 6

@@ -1,0 +1,28 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [SoalrArrayTop.PrjPCB]
+   Generated File[SolarArrayTop.GTL]
+   Generated File[SolarArrayTop.GBL]
+   Generated File[SolarArrayTop.GPB]
+   Generated File[SolarArrayTop.GPT]
+   Generated File[SolarArrayTop.GTO]
+   Generated File[SolarArrayTop.GTP]
+   Generated File[SolarArrayTop.GTS]
+   Generated File[SolarArrayTop.GBS]
+   Generated File[SolarArrayTop.GBP]
+   Generated File[SolarArrayTop.GBO]
+   Generated File[SolarArrayTop.GM1]
+   Generated File[SolarArrayTop.GM13]
+   Generated File[SolarArrayTop.GM15]
+   Generated File[SolarArrayTop.GKO]
+   Generated File[SolarArrayTop.GD1]
+   Generated File[SolarArrayTop.GG1]
+   Generated File[SolarArrayTop.RUL]
+   Generated File[SolarArrayTop.EXTREP]
+   Generated File[SolarArrayTop.REP]
+
+
+Files Generated   : 19
+Documents Printed : 0
+
+Finished Output Generation At 14:23:22 On 2018/3/8
