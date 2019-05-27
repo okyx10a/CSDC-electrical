@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=Net2_0 Pin=Connector-1
+Removed Pin From Net: NetName=Net2_0 Pin=Connector-2
+Removed Pin From Net: NetName=Net1_1 Pin=Connector-3
+Removed Pin From Net: NetName=Net1_1 Pin=Connector-4
+Removed Pin From Net: NetName=NetC1_2 Pin=Connector-5
+Removed Pin From Net: NetName=NetC1_2 Pin=Connector-6
+Removed Pin From Net: NetName=NetConnector_7 Pin=Connector-7
+Removed Pin From Net: NetName=NetConnector_7 Pin=Connector-8
+Removed Pin From Net: NetName=NetConnector_9 Pin=Connector-9
+Removed Pin From Net: NetName=NetConnector_9 Pin=Connector-10
+Removed Member From Class: ClassName=SolarArray1 Member=Connector
+Added Component: Designator=*(TFC-105-X2-XX-D)
+Added Pin To Net: NetName=Net2_0 Pin=*-1
+Added Pin To Net: NetName=Net2_0 Pin=*-2
+Added Pin To Net: NetName=Net1_1 Pin=*-3
+Added Pin To Net: NetName=Net1_1 Pin=*-4
+Added Pin To Net: NetName=NetC1_2 Pin=*-5
+Added Pin To Net: NetName=NetC1_2 Pin=*-6
+Added Pin To Net: NetName=NetConnector_7 Pin=*-7
+Added Pin To Net: NetName=NetConnector_7 Pin=*-8
+Added Pin To Net: NetName=NetConnector_9 Pin=*-9
+Added Pin To Net: NetName=NetConnector_9 Pin=*-10
+Change Net Name : Old Net Name=Net1_1 New Net Name=Net*_3
+Change Net Name : Old Net Name=Net2_0 New Net Name=Net*_1
+Change Net Name : Old Net Name=NetC1_2 New Net Name=Net*_5
+Change Net Name : Old Net Name=NetConnector_7 New Net Name=Net*_7
+Change Net Name : Old Net Name=NetConnector_9 New Net Name=Net*_9
+Added Member To Class: ClassName=SolarArray1 Member=Component * TFC-105-02-F-D
+Added Member To Class: ClassName=SolarArray1 Member=Component 7 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 8 Trisol X Solar Wing
+Added Room: Name=SolarArray1
