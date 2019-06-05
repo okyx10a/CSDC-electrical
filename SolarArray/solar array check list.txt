@@ -2,6 +2,12 @@ Things to be done with solar arrays:
 1) Connect all the pads. (done)
 2) Place metal pours on top and bottom layer. You only have to connect the positive pads with traces, the negative pads can be connected with metal pours. Remember to ground the mounting holes.(Qiao will do it)
 3) Select a new connector for solar array  (done TFC-105-02-F-D mate SFC-105)
+	Array 1 [done]
+	Array 2 [done]
+	Array 3 [done]
+	Array 4 [done]
+      Array Top [done]
 4) Route the temperature sensor and the connectors on the bottom layer of solar array.(unfinished)
 Solar array notes: 
 Max possible current of a single solar panel: 0.48A
+	-look up minimum trace width for this current
