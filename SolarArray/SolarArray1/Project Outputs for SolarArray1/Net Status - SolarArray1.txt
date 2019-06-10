@@ -1,0 +1,41 @@
+Net Status Report
+Filename     : C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarArray1\SolarArray1.PcbDoc
+Date         : 6/7/2019
+Time         : 6:10:21 PM
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    Net13_0, Signal Layers Only, 1014.262mils
+    Net14_0, Signal Layers Only, 1014.262mils
+    Net17_0, Signal Layers Only, 1262.384mils
+    Net19_0, Signal Layers Only, 1262.384mils
+    Net1_0, Signal Layers Only, 1139.686mils
+    Net1_1, Signal Layers Only, 34265.117mils
+    Net21_0, Signal Layers Only, 1446.021mils
+    Net23_0, Signal Layers Only, 853.404mils
+    Net24_0, Signal Layers Only, 853.404mils
+    Net25_0, Signal Layers Only, 853.404mils
+    Net26_0, Signal Layers Only, 853.404mils
+    Net27_0, Signal Layers Only, 853.404mils
+    Net2_0, Signal Layers Only, 9087.297mils
+    Net33_0, Signal Layers Only, 1014.262mils
+    Net34_0, Signal Layers Only, 1014.262mils
+    Net35_0, Signal Layers Only, 1014.262mils
+    Net36_0, Signal Layers Only, 1014.262mils
+    Net37_0, Signal Layers Only, 1014.262mils
+    Net3_0, Signal Layers Only, 853.404mils
+    Net43_0, Signal Layers Only, 1116.064mils
+    Net44_0, Signal Layers Only, 1116.064mils
+    Net45_0, Signal Layers Only, 1116.064mils
+    Net46_0, Signal Layers Only, 1116.064mils
+    Net47_0, Signal Layers Only, 1116.064mils
+    Net4_0, Signal Layers Only, 853.404mils
+    Net5_0, Signal Layers Only, 853.404mils
+    Net6_0, Signal Layers Only, 853.404mils
+    Net7_0, Signal Layers Only, 853.404mils
+    NetC1_2, Signal Layers Only, 0mils
+    NetConnector_7, Signal Layers Only, 0mils
+    NetConnector_9, Signal Layers Only, 0mils
+    NetR1_1, Signal Layers Only, 0mils
+    NetR3_1, Signal Layers Only, 0mils
+count : 33
