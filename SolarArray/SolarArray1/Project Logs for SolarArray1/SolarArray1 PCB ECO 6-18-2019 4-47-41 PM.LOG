@@ -1,0 +1,7 @@
+Added Component: Designator=53(PCBComponent_1)
+Added Component: Designator=54(PCBComponent_1)
+Added Pin To Net: NetName=Net2_0 Pin=53-0
+Added Pin To Net: NetName=Net1_1 Pin=54-1
+Added Pin To Net: NetName=Net53_1 Pin=53-1
+Added Pin To Net: NetName=Net53_1 Pin=54-0
+Added Net: Name=Net53_1

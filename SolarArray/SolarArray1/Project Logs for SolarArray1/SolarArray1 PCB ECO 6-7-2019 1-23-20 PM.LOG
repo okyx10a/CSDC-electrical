@@ -1,0 +1,7 @@
+Change Physical Footprint: Designator=C1 Old Footprint=0805 New Footprint=0805
+Change Physical Footprint: Designator=Connector Old Footprint=TFC-105-X2-XX-D New Footprint=TFC-105-X2-XX-D
+Change Physical Footprint: Designator=R1 Old Footprint=0805 New Footprint=0805
+Change Physical Footprint: Designator=R2 Old Footprint=0805 New Footprint=0805
+Change Physical Footprint: Designator=R3 Old Footprint=0805 New Footprint=0805
+Change Physical Footprint: Designator=R4 Old Footprint=0805 New Footprint=0805
+Change Physical Footprint: Designator=U1 Old Footprint=CP_16_17 New Footprint=CP_16_17

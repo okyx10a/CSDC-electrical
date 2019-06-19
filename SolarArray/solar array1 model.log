@@ -1,0 +1,2557 @@
+﻿STEP to UG
+! INFO-     NX STEP AP203 - V11.0
+! INFO-      
+! INFO-     Start of Translation: 7-JUN-2019  2:46:38 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\solar array1 model.stp
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Unknown
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        solar array1 model.stp
+! SUMMARY-  Date             2019-06-07T14:46:00-04:00
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      ST-DEVELOPER v16
+! SUMMARY-  Orig_System      SIEMENS PLM Software NX 11.0
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:   1917
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  axis2_placement_3d .........................................:   3223
+! SUMMARY-  b_spline_curve_with_knots ..................................:     26
+! SUMMARY-  b_spline_curve_with_knots_and_rational_b_spline_curve ......:     72
+! SUMMARY-  cartesian_point ............................................:  11071
+! SUMMARY-  circle .....................................................:   1049
+! SUMMARY-  closed_shell ...............................................:     36
+! SUMMARY-  conical_surface ............................................:     24
+! SUMMARY-  context_dependent_shape_representation .....................:    222
+! SUMMARY-  conversion_based_unit_and_plane_angle_unit .................:      1
+! SUMMARY-  cylindrical_surface ........................................:    534
+! SUMMARY-  dimensional_exponents ......................................:      1
+! SUMMARY-  direction ..................................................:  10322
+! SUMMARY-  edge_curve .................................................:   5008
+! SUMMARY-  edge_loop ..................................................:   2853
+! SUMMARY-  ellipse ....................................................:     32
+! SUMMARY-  face_bound .................................................:   1163
+! SUMMARY-  face_outer_bound ...........................................:   1691
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:     98
+! SUMMARY-  item_defined_transformation ................................:    222
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  line .......................................................:   3876
+! SUMMARY-  manifold_solid_brep ........................................:     36
+! SUMMARY-  next_assembly_usage_occurrence .............................:    222
+! SUMMARY-  open_shell .................................................:      6
+! SUMMARY-  oriented_edge ..............................................:   9684
+! SUMMARY-  plane ......................................................:   1351
+! SUMMARY-  plane_angle_measure_with_unit ..............................:      1
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:     98
+! SUMMARY-  product_context ............................................:     98
+! SUMMARY-  product_definition .........................................:     98
+! SUMMARY-  product_definition_context .................................:     98
+! SUMMARY-  product_definition_formation_with_specified_source .........:     98
+! SUMMARY-  product_definition_shape ...................................:    320
+! SUMMARY-  product_related_product_category ...........................:     98
+! SUMMARY-  representation_relationship_with_transformation_and_shape ..:    222
+! SUMMARY-  shape_representation .......................................:    100
+! SUMMARY-  shell_based_surface_model ..................................:      6
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  spherical_surface ..........................................:      2
+! SUMMARY-  toroidal_surface ...........................................:      6
+! SUMMARY-  trimmed_curve ..............................................:     24
+! SUMMARY-  uncertainty_measure_with_unit ..............................:     98
+! SUMMARY-  vector .....................................................:   3876
+! SUMMARY-  vertex_loop ................................................:      1
+! SUMMARY-  vertex_point ...............................................:   3425
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          63413
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 7-JUN-2019 2:46:39 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:39 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2869
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SideRail Left
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SideRail Left:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Arc/Circle ..................:     2
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:39 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2838
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink1
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink1:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:41 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2866
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink3
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink3:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Point .......................:     3
+! SUMMARY-  Line ........................:    12
+! SUMMARY-  Arc/Circle ..................:     8
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             24
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:43 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2867
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink4
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink4:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Point .......................:     3
+! SUMMARY-  Line ........................:    12
+! SUMMARY-  Arc/Circle ..................:    13
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             29
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:45 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2870
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarPanel1
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarPanel1:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:47 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2839
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Torquer_Rod
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Torquer_Rod:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:49 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2840
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HorizontalMagnetorquerHolderV2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HorizontalMagnetorquerHolderV2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:50 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2844
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HeatSink
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HeatSink:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:52 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2841
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Point .......................:     1
+! SUMMARY-  Reference Set ...............:     2
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              4
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:54 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2868
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\VerticalMagnetorquerHolderV2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\VerticalMagnetorquerHolderV2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:56 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2871
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\terminalpoint
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\terminalpoint:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:46:58 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2872
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarCellRegion
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarCellRegion:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:00 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2873
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Overhead
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Overhead:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:02 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2842
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsUHFRadio
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsUHFRadio:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:04 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2843
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Reference Set ...............:     2
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:06 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2863
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD_Battery_bd
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD_Battery_bd:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:08 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2845
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\BoardPCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\BoardPCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:10 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2864
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\LIPO_Battery_QB50
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\LIPO_Battery_QB50:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:12 PM
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:15 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2851
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2852
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2853
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2854
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2855
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2856
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2857
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 2261
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 2262
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 2263
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 2264
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 2265
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 2266
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:    13
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             13
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:17 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2846
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded27981
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded27981:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:19 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2847
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded28422
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded28422:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:21 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2848
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded28817
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded28817:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:23 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2849
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded29240
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded29240:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:25 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2850
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded29719
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded29719:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:27 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2858
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded75592
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded75592:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:29 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2859
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded75987
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded75987:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:31 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2860
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded76382
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded76382:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:33 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2861
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded76833
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded76833:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:35 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2862
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded77256
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded77256:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:37 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: TERMINALPOINT
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\terminalpoint
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SOLARCELLREGION
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarCellRegion
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: OVERHEAD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Overhead
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:40 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SOLARPANEL1
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarPanel1
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: ONECELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Onecell
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarPanel1WCell
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarPanel1WCell:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:44 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: TORQUER_ROD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Torquer_Rod
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: VERTICALMAGNETORQUERHOLDERV2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\VerticalMagnetorquerHolderV2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: VERTICALMAGNETORQUERHOLDERV2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\VerticalMagnetorquerHolderV2
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\V_Mag_asm
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\V_Mag_asm:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:46 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: MAINLINK3
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink3
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: MAINLINK4
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink4
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: V_MAG_ASM
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\V_Mag_asm
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Bottom Network
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Bottom Network:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:47 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: TORQUER_ROD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Torquer_Rod
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: HORIZONTALMAGNETORQUERHOLDERV2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HorizontalMagnetorquerHolderV2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: HORIZONTALMAGNETORQUERHOLDERV2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HorizontalMagnetorquerHolderV2
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\H_Mag_asm
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\H_Mag_asm:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:49 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U480BD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsACSBoard_MODEL
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:51 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 2865
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: LIPO_BATTERY_QB50
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\LIPO_Battery_QB50
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: LIPO_BATTERY_QB50
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\LIPO_Battery_QB50
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Clamp_MODEL
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:52 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U480BD_BATTERY_BD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD_Battery_bd
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\BATTERYboard_MODEL
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     2
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              2
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:52 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U480BD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsOBCBoard_MODEL
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:52 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED28817
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded28817
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:52 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151408
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q76PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q76PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:54 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED27981
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded27981
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:56 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R710PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R710PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:47:58 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED77256
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded77256
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151952
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151952:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:01 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151952
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151952
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\X1PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\X1PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:03 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED28422
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded28422
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152088
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152088:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:05 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777152088
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152088
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U82PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U82PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:07 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED76833
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded76833
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152224
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152224:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:09 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777152224
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152224
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U70PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U70PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:11 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED76382
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded76382
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151000
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151000:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:14 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151000
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151000
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U33PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U33PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:16 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151000
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151000
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U18PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U18PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:18 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151000
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151000
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U13PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U13PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:20 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED75987
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded75987
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777136312
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777136312:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:22 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777136312
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777136312
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U2PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U2PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:24 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED75592
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded75592
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151816
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151816:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:26 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151816
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151816
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U1PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U1PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:28 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R813PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R813PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:31 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R810PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R810PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:33 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R115PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R115PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:35 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R19PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R19PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:37 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R9PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R9PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:39 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R3PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R3PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:41 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R1PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R1PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:43 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151408
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q88PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q88PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:45 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151408
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q87PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q87PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:47 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151408
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q86PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q86PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:49 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED29240
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded29240
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:51 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q85PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q85PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:53 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q84PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q84PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:55 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q83PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q83PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:56 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q82PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q82PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:48:58 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: T2M-105-01-X-D-RA
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P6PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P6PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:00 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: T2M-105-01-X-D-RA
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P5PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P5PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:02 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: T2M-105-01-X-D-RA
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P4PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P4PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:04 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: T2M-105-01-X-D-RA
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P3PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P3PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:06 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: T2M-105-01-X-D-RA
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P2PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P2PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:08 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: T2M-105-01-X-D-RA
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\T2M-105-01-X-D-RA
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P1PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P1PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:09 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: EXTRUDED29719
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Extruded29719
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151544
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151544:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:11 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151544
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151544
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D83PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D83PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:13 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151544
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151544
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D82PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D82PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:15 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151544
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151544
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D72PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D72PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:17 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151544
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151544
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D73PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D73PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:18 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q72PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q72PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:20 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q73PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q73PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:23 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q74PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q74PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:25 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151680
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151680
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q75PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q75PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:27 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151408
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q77PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q77PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:28 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151408
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151408
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q78PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q78PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:30 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777152088
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777152088
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U72PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U72PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:32 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R713PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R713PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:34 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151136
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151136
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: 777151272
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\777151272
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R716PCB1_done2
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R716PCB1_done2:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:36 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: BOARDPCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\BoardPCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R716PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R716PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R713PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R713PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U72PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U72PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q78PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q78PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q77PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q77PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q75PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q75PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q74PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q74PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q73PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q73PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q72PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q72PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: D73PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D73PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: D72PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D72PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: D82PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D82PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: D83PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\D83PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: P1PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P1PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: P2PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P2PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: P3PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P3PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: P4PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P4PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: P5PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P5PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: P6PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\P6PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q82PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q82PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q83PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q83PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q84PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q84PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q85PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q85PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q86PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q86PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q87PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q87PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q88PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q88PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R1PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R1PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R3PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R3PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R9PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R9PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R19PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R19PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R115PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R115PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R810PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R810PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R813PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R813PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U1PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U1PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U2PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U2PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U13PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U13PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U18PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U18PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U33PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U33PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U70PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U70PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U82PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U82PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: X1PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\X1PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: R710PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\R710PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Q76PCB1_DONE2
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Q76PCB1_done2
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Power-Distrubution-board-cad_step
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Power-Distrubution-board-cad_step:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:40 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: POWER-DISTRUBUTION-BOARD-CAD_STEP
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Power-Distrubution-board-cad_step
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsPOWERBoard_MODEL
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:42 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: NANOAVIONICSUHFRADIO
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsUHFRadio
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: U480BD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\U480BD
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsTxRxBoard
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsTxRxBoard:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:42 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: NANOAVIONICSTXRXBOARD
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\NanoAvionicsTxRxBoard
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: HEATSINK
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\HeatSink
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SAMTEC-ESQ-126-39-G-D
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SAMTEC-ESQ-126-39-G-D
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Boards Assembly
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Boards Assembly:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     4
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              4
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:45 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: MAINLINK1
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\MainLink1
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: H_MAG_ASM
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\H_Mag_asm
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: H_MAG_ASM
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\H_Mag_asm
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: BOARDS_ASSEMBLY
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Boards Assembly
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Top Network
+! ERROR-    Unable to archive C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Top Network:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 7-JUN-2019  2:49:47 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: TOP_NETWORK
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Top Network
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: BOTTOM_NETWORK
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\Bottom Network
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SIDERAIL_LEFT
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SideRail Left
+! WARNING-    Convert all component parts before converting the master part
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: SOLARPANEL1WCELL
+! WARNING-    Component part name: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\SolarPanel1WCell
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\admin\Documents\GitHub\CSDC-electrical\SolarArray\solar array1 model_stp.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! INFO-      
+! INFO-     Total number of solids input for this translation       :        36
+! INFO-      
+! INFO-     Number of solids created without body validation faults :        36
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 7-JUN-2019  2:49:49 PM
+! INFO-      
