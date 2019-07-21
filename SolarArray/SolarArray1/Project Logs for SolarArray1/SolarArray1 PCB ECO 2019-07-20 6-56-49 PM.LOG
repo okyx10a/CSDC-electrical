@@ -1,0 +1,81 @@
+Added Component: Designator=59(PCBComponent_1)
+Added Component: Designator=60(PCBComponent_1)
+Added Pin To Net: NetName=Net2_0 Pin=55-0
+Added Pin To Net: NetName=Net1_1 Pin=56-1
+Added Pin To Net: NetName=Net2_0 Pin=57-0
+Added Pin To Net: NetName=Net1_1 Pin=58-1
+Added Pin To Net: NetName=Net55_1 Pin=55-1
+Added Pin To Net: NetName=Net55_1 Pin=56-0
+Added Net: Name=Net55_1
+Added Pin To Net: NetName=Net57_1 Pin=57-1
+Added Pin To Net: NetName=Net57_1 Pin=58-0
+Added Net: Name=Net57_1
+Added Pin To Net: NetName=Net59_1 Pin=59-1
+Added Pin To Net: NetName=Net59_1 Pin=60-0
+Added Net: Name=Net59_1
+Added Member To Class: ClassName=SolarArray1 Member=Component 1 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 2 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 3 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 4 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 5 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 6 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 7 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 8 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 9 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 10 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 11 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 12 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 13 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 14 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 15 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 16 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 17 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 18 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 19 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 20 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 21 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 22 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 23 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 24 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 25 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 26 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 27 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 28 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 29 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 30 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 31 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 32 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 33 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 34 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 35 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 36 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 37 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 38 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 39 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 40 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 41 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 42 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 43 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 44 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 45 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 46 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 47 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 48 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 49 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 50 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 51 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 52 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 53 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 54 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 55 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 56 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 57 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 58 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component C1 100pF
+Added Member To Class: ClassName=SolarArray1 Member=Component Connector TFC-105-02-F-D
+Added Member To Class: ClassName=SolarArray1 Member=Component R1 1K
+Added Member To Class: ClassName=SolarArray1 Member=Component R2 1K
+Added Member To Class: ClassName=SolarArray1 Member=Component R3 1K
+Added Member To Class: ClassName=SolarArray1 Member=Component R4 1K
+Added Member To Class: ClassName=SolarArray1 Member=Component U1 ADT7420UCPZ-R2
+Added Room: Name=SolarArray1

@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=Bob NewDesignator=1
+Change Net Name : Old Net Name=Net2_1 New Net Name=Net1_1
+Change Net Name : Old Net Name=Net8_1 New Net Name=Net1_0

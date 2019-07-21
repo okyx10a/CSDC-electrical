@@ -1,0 +1,12 @@
+Change Component Designator: OldDesignator=5 NewDesignator=4
+Change Component Designator: OldDesignator=6 NewDesignator=5
+Change Component Designator: OldDesignator=8 NewDesignator=6
+Change Component Designator: OldDesignator=9 NewDesignator=7
+Change Component Designator: OldDesignator=10 NewDesignator=8
+Change Component Designator: OldDesignator=11 NewDesignator=9
+Change Component Designator: OldDesignator=12 NewDesignator=10
+Change Net Name : Old Net Name=Net5_0 New Net Name=Net4_0
+Change Net Name : Old Net Name=Net6_0 New Net Name=Net5_0
+Added Member To Class: ClassName=SolarArray1 Member=Component 1 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 2 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray1 Member=Component 4 Trisol X Solar Wing

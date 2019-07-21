@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=7 NewDesignator=Bob
+Change Net Name : Old Net Name=Net7_0 New Net Name=Net8_1
+Added Room: Name=SolarArray1
