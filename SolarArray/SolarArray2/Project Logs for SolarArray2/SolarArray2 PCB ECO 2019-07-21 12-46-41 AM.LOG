@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=Net1_0 Pin=21-0
+Removed Pin From Net: NetName=Net1_0 Pin=22-0
+Removed Pin From Net: NetName=Net1_0 Pin=23-0
+Added Member To Class: ClassName=SolarArray2 Member=Component 11 Trisol X Solar Wing
+Added Room: Name=SolarArray2

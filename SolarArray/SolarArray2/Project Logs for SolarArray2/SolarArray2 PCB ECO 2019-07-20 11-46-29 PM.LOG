@@ -1,0 +1,133 @@
+Removed Pin From Net: NetName=Net1_0 Pin=34-0
+Removed Pin From Net: NetName=Net1_0 Pin=35-0
+Removed Pin From Net: NetName=Net1_0 Pin=36-0
+Removed Pin From Net: NetName=Net2_1 Pin=49-1
+Removed Pin From Net: NetName=Net1_0 Pin=50-0
+Change Component Footprint: Designator=Connector Old Footprint=T2M-105-01-X-D-SM New Footprint=TFC-105-X2-XX-D
+Change Component Comment : Designator=Connector Old Comment=T2M-105-01-L-D-SM New Comment=TFC-105-02-F-D
+Change Component Designator: OldDesignator=1 NewDesignator=15
+Change Component Designator: OldDesignator=2 NewDesignator=40
+Change Component Designator: OldDesignator=3 NewDesignator=35
+Change Component Designator: OldDesignator=4 NewDesignator=36
+Change Component Designator: OldDesignator=5 NewDesignator=37
+Change Component Designator: OldDesignator=6 NewDesignator=38
+Change Component Designator: OldDesignator=7 NewDesignator=39
+Change Component Designator: OldDesignator=8 NewDesignator=20
+Change Component Designator: OldDesignator=9 NewDesignator=19
+Change Component Designator: OldDesignator=10 NewDesignator=34
+Change Component Designator: OldDesignator=11 NewDesignator=33
+Change Component Designator: OldDesignator=12 NewDesignator=32
+Change Component Designator: OldDesignator=13 NewDesignator=31
+Change Component Designator: OldDesignator=14 NewDesignator=17
+Change Component Designator: OldDesignator=15 NewDesignator=18
+Change Component Designator: OldDesignator=16 NewDesignator=14
+Change Component Designator: OldDesignator=17 NewDesignator=13
+Change Component Designator: OldDesignator=18 NewDesignator=12
+Change Component Designator: OldDesignator=19 NewDesignator=50
+Change Component Designator: OldDesignator=20 NewDesignator=49
+Change Component Designator: OldDesignator=21 NewDesignator=48
+Change Component Designator: OldDesignator=22 NewDesignator=47
+Change Component Designator: OldDesignator=23 NewDesignator=46
+Change Component Designator: OldDesignator=24 NewDesignator=41
+Change Component Designator: OldDesignator=25 NewDesignator=42
+Change Component Designator: OldDesignator=26 NewDesignator=43
+Change Component Designator: OldDesignator=27 NewDesignator=44
+Change Component Designator: OldDesignator=28 NewDesignator=45
+Change Component Designator: OldDesignator=29 NewDesignator=30
+Change Component Designator: OldDesignator=30 NewDesignator=29
+Change Component Designator: OldDesignator=31 NewDesignator=28
+Change Component Designator: OldDesignator=32 NewDesignator=27
+Change Component Designator: OldDesignator=33 NewDesignator=26
+Change Component Designator: OldDesignator=34 NewDesignator=21
+Change Component Designator: OldDesignator=35 NewDesignator=22
+Change Component Designator: OldDesignator=36 NewDesignator=23
+Change Component Designator: OldDesignator=37 NewDesignator=24
+Change Component Designator: OldDesignator=38 NewDesignator=25
+Change Component Designator: OldDesignator=39 NewDesignator=10
+Change Component Designator: OldDesignator=40 NewDesignator=9
+Change Component Designator: OldDesignator=41 NewDesignator=8
+Change Component Designator: OldDesignator=42 NewDesignator=7
+Change Component Designator: OldDesignator=43 NewDesignator=6
+Change Component Designator: OldDesignator=44 NewDesignator=1
+Change Component Designator: OldDesignator=45 NewDesignator=2
+Change Component Designator: OldDesignator=46 NewDesignator=3
+Change Component Designator: OldDesignator=47 NewDesignator=4
+Change Component Designator: OldDesignator=48 NewDesignator=5
+Change Component Designator: OldDesignator=50 NewDesignator=16
+Added Component: Designator=11(PCBComponent_1)
+Added Component: Designator=51(PCBComponent_1)
+Added Component: Designator=52(PCBComponent_1)
+Added Component: Designator=53(PCBComponent_1)
+Added Component: Designator=54(PCBComponent_1)
+Added Component: Designator=55(PCBComponent_1)
+Added Component: Designator=56(PCBComponent_1)
+Added Component: Designator=57(PCBComponent_1)
+Added Component: Designator=58(PCBComponent_1)
+Added Component: Designator=59(PCBComponent_1)
+Added Component: Designator=60(PCBComponent_1)
+Added Pin To Net: NetName=Net1_0 Pin=11-0
+Added Pin To Net: NetName=Net2_1 Pin=16-1
+Added Pin To Net: NetName=Net1_0 Pin=51-0
+Added Pin To Net: NetName=Net1_0 Pin=52-0
+Added Pin To Net: NetName=Net1_0 Pin=53-0
+Added Pin To Net: NetName=Net1_0 Pin=54-0
+Added Pin To Net: NetName=Net1_0 Pin=55-0
+Added Pin To Net: NetName=Net2_1 Pin=56-1
+Added Pin To Net: NetName=Net2_1 Pin=57-1
+Added Pin To Net: NetName=Net2_1 Pin=58-1
+Added Pin To Net: NetName=Net2_1 Pin=59-1
+Added Pin To Net: NetName=Net2_1 Pin=60-1
+Change Net Name : Old Net Name=Net1_1 New Net Name=Net15_1
+Change Net Name : Old Net Name=Net2_0 New Net Name=Net35_1
+Change Net Name : Old Net Name=Net2_1 New Net Name=Net6_1
+Change Net Name : Old Net Name=Net4_0 New Net Name=Net31_1
+Change Net Name : Old Net Name=Net5_0 New Net Name=Net32_1
+Change Net Name : Old Net Name=Net6_0 New Net Name=Net33_1
+Change Net Name : Old Net Name=Net7_0 New Net Name=Net34_1
+Change Net Name : Old Net Name=Net9_0 New Net Name=Net14_1
+Change Net Name : Old Net Name=Net14_0 New Net Name=Net12_1
+Change Net Name : Old Net Name=Net15_0 New Net Name=Net13_1
+Change Net Name : Old Net Name=Net19_0 New Net Name=Net45_1
+Change Net Name : Old Net Name=Net20_0 New Net Name=Net44_1
+Change Net Name : Old Net Name=Net21_0 New Net Name=Net43_1
+Change Net Name : Old Net Name=Net22_0 New Net Name=Net42_1
+Change Net Name : Old Net Name=Net23_0 New Net Name=Net41_1
+Change Net Name : Old Net Name=Net29_0 New Net Name=Net25_1
+Change Net Name : Old Net Name=Net30_0 New Net Name=Net24_1
+Change Net Name : Old Net Name=Net31_0 New Net Name=Net23_1
+Change Net Name : Old Net Name=Net32_0 New Net Name=Net22_1
+Change Net Name : Old Net Name=Net33_0 New Net Name=Net21_1
+Change Net Name : Old Net Name=Net39_0 New Net Name=Net5_1
+Change Net Name : Old Net Name=Net40_0 New Net Name=Net4_1
+Change Net Name : Old Net Name=Net41_0 New Net Name=Net3_1
+Change Net Name : Old Net Name=Net42_0 New Net Name=Net2_1
+Change Net Name : Old Net Name=Net43_0 New Net Name=Net1_1
+Added Pin To Net: NetName=Net11_1 Pin=11-1
+Added Pin To Net: NetName=Net11_1 Pin=16-0
+Added Net: Name=Net11_1
+Added Pin To Net: NetName=Net51_1 Pin=51-1
+Added Pin To Net: NetName=Net51_1 Pin=56-0
+Added Net: Name=Net51_1
+Added Pin To Net: NetName=Net52_1 Pin=52-1
+Added Pin To Net: NetName=Net52_1 Pin=57-0
+Added Net: Name=Net52_1
+Added Pin To Net: NetName=Net53_1 Pin=53-1
+Added Pin To Net: NetName=Net53_1 Pin=58-0
+Added Net: Name=Net53_1
+Added Pin To Net: NetName=Net54_1 Pin=54-1
+Added Pin To Net: NetName=Net54_1 Pin=59-0
+Added Net: Name=Net54_1
+Added Pin To Net: NetName=Net55_1 Pin=55-1
+Added Pin To Net: NetName=Net55_1 Pin=60-0
+Added Net: Name=Net55_1
+Added Member To Class: ClassName=SolarArray2 Member=Component 51 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 52 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 53 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 54 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 55 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 56 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 57 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 58 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 59 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray2 Member=Component 60 Trisol X Solar Wing
+Added Room: Name=SolarArray2
