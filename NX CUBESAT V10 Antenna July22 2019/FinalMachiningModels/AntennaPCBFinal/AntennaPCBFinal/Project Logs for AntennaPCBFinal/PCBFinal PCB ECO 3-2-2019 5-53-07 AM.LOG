@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GND Pin=1-31
+Removed Pin From Net: NetName=GND Pin=2-31
+Removed Pin From Net: NetName=GND Pin=3-31
+Added Member To Class: ClassName=PCBSchematic Member=Component R1 Res3

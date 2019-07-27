@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [AntennaPCBFinal.PrjPcb]
+   Generated File[PCBFinal.TXT]
+   Generated File[PCBFinal-BoardEdgeRout.TXT]
+   Generated File[PCBFinal.LDP]
+   Generated File[PCBFinal.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 6:25:35 AM On 3/12/2019

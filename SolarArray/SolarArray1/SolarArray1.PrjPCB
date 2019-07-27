@@ -87,7 +87,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=SGCRXECP
 
 [Document4]
 DocumentPath=..\Libraries\temperature sensor\AltiumDesigner\AltiumDesigner\Temperature sensor.SchLib
@@ -172,7 +172,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=JDEJPLLT
 
 [Document9]
 DocumentPath=..\Libraries\yusend_power.PCBLIB
@@ -189,7 +189,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LYECKHKE
 
 [Document10]
 DocumentPath=..\Libraries\yusend_power.SCHLIB
@@ -240,7 +240,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=WGYDJYCL
+DocumentUniqueId=UHKITUCE
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for SolarArray1\Design Rule Check - SolarArray1.html

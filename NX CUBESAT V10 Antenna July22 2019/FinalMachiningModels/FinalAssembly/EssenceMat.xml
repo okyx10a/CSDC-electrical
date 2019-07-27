@@ -1,0 +1,1131 @@
+<MatML_Doc>
+    <Material>
+       <BulkDetails>
+           <Name>StainlessSteel316</Name>
+           <Class> <Name>METAL</Name></Class>
+           <Subclass> <Name>Stainless Steel</Name></Subclass>
+           <Source source=""/>
+           <PropertyData property="Material Type">
+               <Data format="string">IsotropicMaterial</Data>
+           </PropertyData>
+           <PropertyData property="Version">
+               <Data format="string">4.0</Data>
+           </PropertyData>
+           <PropertyData property="Category">
+               <Data format="string">PLASTIC</Data>
+           </PropertyData>
+           <PropertyData property="Mass Density (RHO)_6">
+               <Data format="exponential">7.99e-006</Data>
+           </PropertyData>
+           <PropertyData property="PoissonsRatio">
+               <Data format="exponential">2.500000e-001</Data>
+           </PropertyData>
+		   <PropertyData property="Max Stress Shear (SS)_16">
+               <Data format="exponential">77.00e-006</Data>
+           </PropertyData>
+           <PropertyData property="MatlNonlinearityType">
+               <Data format="integer">1</Data>
+           </PropertyData>
+           <PropertyData property="YieldFunctionCriterion">
+               <Data format="integer">1</Data>
+           </PropertyData>
+           <PropertyData property="HardeningRule">
+               <Data format="integer">1</Data>
+           </PropertyData>
+           <PropertyData property="Yield Strength_32">
+               <Data format="exponential">29.000000e+005</Data>
+           </PropertyData>
+		   <PropertyData property="Ultimate Tensile Strength_P12">
+               <Data format="exponential">579.000000e+003</Data>
+           </PropertyData>
+		   <PropertyData property="Yield Strength_32">
+               <Data format="exponential">29.000000e+005</Data>
+           </PropertyData>
+		   <PropertyData property="Temperature (TREF)_22">
+               <Data format="exponential">1.000000e+002</Data>
+           </PropertyData>
+           <PropertyData property="Thermal Conductivity (K)_35">
+               <Data format="exponential">16.200000e+003</Data>
+           </PropertyData>
+           <PropertyData property="Specific Heat (CP)_23">
+               <Data format="exponential">0.500000e+008</Data>
+           </PropertyData>
+           <PropertyData property="Crosshatch Pattern">
+             <Data format="string">Steel</Data>
+           </PropertyData>
+       </BulkDetails>
+    </Material>
+   <Metadata>
+       <!--  First write out the field dependent variables -->
+       <ParameterDetails id="Mass Density (RHO)_P1">
+           <Name> Mass Density (RHO) </Name>
+           <Units name="kg/mm^3" description="kilograms per millimeter cubed">
+               <Unit>
+                   <Name> kg/mm^3 </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Thermal Conductivity (K)_P2">
+           <Name> Thermal Conductivity (K) </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Specific Heat (CP)_P3">
+           <Name> Specific Heat (CP) </Name>
+           <Units name="microJ/kg-K" description="microJoules per kilogram per degree Kelvin">
+               <Unit>
+                   <Name> microJ/kg-K </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Dynamic Viscosity_P4">
+           <Name> Dynamic Viscosity </Name>
+           <Units name="kg/mm-sec" description="kilograms per millimeter per second">
+               <Unit>
+                   <Name> kg/mm-sec </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Thermal Expansion (A)_P5">
+           <Name> Thermal Expansion (A) </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Youngs Modulus (E)_P7">
+           <Name> Youngs Modulus (E) </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Poissons Ratio (NU)_P8">
+           <Name> Poissons Ratio (NU) </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Yield Strength_P11">
+           <Name> Yield Strength </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Ultimate Tensile Strength_P12">
+           <Name> Ultimate Tensile Strength </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Structural Damping Coefficient (GE)_P36">
+           <Name> Structural Damping Coefficient (GE) </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Stress-Strain (H)_P37">
+           <Name> Stress-Strain (H) </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </ParameterDetails>
+       <ParameterDetails id="Forming Limit_P38">
+           <Name> Forming Limit </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </ParameterDetails>
+       <!--  Next write out the field independent variables (usually temperature)-->
+       <PropertyDetails id="Mass Density (RHO)_1">
+           <Name> MassDensity </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K)_2">
+           <Name> ThermalConductivity </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Specific Heat (CP)_3">
+           <Name> SpecificHeat </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Dynamic Viscosity_4">
+           <Name> DynamicVisc </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A)_5">
+           <Name> ThermalExpansion </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Youngs Modulus (E)_7">
+           <Name> YoungsModulus </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Poissons Ratio (NU)_8">
+           <Name> PoissonsRatio </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Yield Strength_11">
+           <Name> Yield </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Ultimate Tensile Strength_12">
+           <Name> UltTensile </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Structural Damping Coefficient (GE)_36">
+           <Name> StructuralDamping </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Forming Limit_38">
+           <Name> FormingLimit </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <!--  Next write out the scalar variables -->
+       <PropertyDetails id="Mass Density (RHO)_6">
+           <Name> MassDensity </Name>
+           <Units name="kg/mm^3" description="kilograms per millimeter cubed">
+               <Unit>
+                   <Name> kg/mm^3 </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Initial Yield Point (LIMIT1)_4">
+           <Name> InitialYieldPoint </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Initial Friction Angle (LIMIT2)_10">
+           <Name> InitialFrictionAngle </Name>
+           <Units name="degrees" description="degrees">
+               <Unit>
+                   <Name> degrees </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Tsai-Wu Interaction Coefficient (F12)_13">
+           <Name> TsaiWuInteraction </Name>
+           <Units name="mm^4/N^2" description="Millimeters power four per Newton squared">
+               <Unit>
+                   <Name> mm^4/N^2 </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Max Stress Tension (ST)_14">
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Max Stress Compression (SC)_15">
+           <Name> MaxStressCompression </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Max Stress Shear (SS)_16">
+           <Name> MaxInPlaneShearStress </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Max Strain Tension (XT)_17">
+           <Name> MaxStrainTension </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Max Strain Compression (XC)_18">
+           <Name> MaxStrainCompression </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Max Strain Shear (XS)_19">
+           <Name> MaxInPlaneShearStrain </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Fatigue Strength Coefficient_20">
+           <Name> FatigueStrengthCoeff </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Strength Coefficient_21">
+           <Name> StrengthCoefficient </Name>
+           <Units name="N/mm^2(MPa)" description="Newtons per millimeter squared">
+               <Unit>
+                   <Name> N/mm^2(MPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Temperature (TREF)_22">
+           <Name> RefTemp </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Specific Heat (CP)_23">
+           <Name> SpecificHeat </Name>
+           <Units name="microJ/kg-K" description="microJoules per kilogram per degree Kelvin">
+               <Unit>
+                   <Name> microJ/kg-K </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Phase Change Temperature_24">
+           <Name> PhaseTemp </Name>
+           <Units name="C" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Phase Change Temperature Range_25">
+           <Name> PhaseTempRange </Name>
+           <Units name="deltaC" description="Celsius">
+               <Unit>
+                   <Name> C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="IR Scattering Coefficient_26">
+           <Name> IrScatterCoeff </Name>
+           <Units name="1/mm" description="coefficient per millimeter">
+               <Unit>
+                   <Name> 1/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="IR Extinction Coefficient_27">
+           <Name> IrExtinctCoeff </Name>
+           <Units name="1/mm" description="coefficient per millimeter">
+               <Unit>
+                   <Name> 1/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Solar Scattering Coefficient_28">
+           <Name> SolarScatterCoeff </Name>
+           <Units name="1/mm" description="coefficient per millimeter">
+               <Unit>
+                   <Name> 1/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Solar Extinction Coefficient_29">
+           <Name> SolarExtinctCoeff </Name>
+           <Units name="1/mm" description="coefficient per millimeter">
+               <Unit>
+                   <Name> 1/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Fatigue Strength Coefficient_30">
+           <Name> FatigueStrengthCoeff </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Youngs Modulus (E)_31">
+           <Name> YoungsModulus </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Yield Strength_32">
+           <Name> Yield </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Ultimate Tensile Strength_33">
+           <Name> UltTensile </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A)_34">
+           <Name> ThermalExpansion </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K)_35">
+           <Name> ThermalConductivity </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Stress-Strain (H)_37">
+           <Name> StressStrainCurve </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Youngs Modulus (E1)_39">
+           <Name> YoungsModulus </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Youngs Modulus (E2)_40">
+           <Name> YoungsModulus2 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Youngs Modulus (E3)_41">
+           <Name> YoungsModulus3 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A1)_42">
+           <Name> ThermalExpansion </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A2)_43">
+           <Name> ThermalExpansion2 </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A3)_44">
+           <Name> ThermalExpansion3 </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A4)_45">
+           <Name> ThermalExpansion4 </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A5)_46">
+           <Name> ThermalExpansion5 </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Expansion (A6)_47">
+           <Name> ThermalExpansion6 </Name>
+           <Units name="1/C" description="Expansion coefficient per degree Celsius">
+               <Unit>
+                   <Name> 1/C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K1)_48">
+           <Name> ThermalConductivity </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K2)_49">
+           <Name> ThermalConductivity2 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K3)_50">
+           <Name> ThermalConductivity3 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K11)_51">
+           <Name> ThermalConductivity </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K12)_52">
+           <Name> ThermalConductivity2 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K13)_53">
+           <Name> ThermalConductivity3 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K21)_54">
+           <Name> ThermalConductivity21 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K22)_55">
+           <Name> ThermalConductivity22 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K23)_56">
+           <Name> ThermalConductivity23 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K31)_57">
+           <Name> ThermalConductivity31 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K32)_58">
+           <Name> ThermalConductivity32 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Thermal Conductivity (K33)_59">
+           <Name> ThermalConductivity33 </Name>
+           <Units name="microW/mm-C" description="microWatts per millimeter per degree Centrigade">
+               <Unit>
+                   <Name> microW/mm-C </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Molar Mass_60">
+           <Name> MolarMass </Name>
+           <Units name="kg" description="kilograms">
+               <Unit>
+                   <Name> kg </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Gas Constant_61">
+           <Name> GasConstant </Name>
+           <Units name="microJ/kg-K" description="microJoules per kilogram per degree Kelvin">
+               <Unit>
+                   <Name> microJ/kg-K </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Dynamic Viscosity_62">
+           <Name> DynamicVisc </Name>
+           <Units name="kg/mm-sec" description="kilograms per millimeter per second">
+               <Unit>
+                   <Name> kg/mm-sec </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ShearModulus">
+           <Name> ShearModulus </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="StressStrainCurve_1">
+           <Name> StressStrainCurve </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="InitialStrain">
+           <Name> InitialStrain </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="LatentHeat">
+           <Name> LatentHeat </Name>
+           <Units name="microJ/kg" description="microJoules per Kilogram">
+               <Unit>
+                   <Name> microJ/kg </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="PhaseSpecificHeat">
+           <Name> PhaseSpecificHeat </Name>
+           <Units name="microJ/kg-K" description="microJoules per kilogram per degree Kelvin">
+               <Unit>
+                   <Name> microJ/kg-K </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ElecResist">
+           <Name> ElecResist </Name>
+           <Units name="ohm-mm" description="ohms millimeter">
+               <Unit>
+                   <Name> ohm-mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="InitialStrain">
+           <Name> InitialStrain </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ShearModulus2">
+           <Name> ShearModulus2 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G22">
+           <Name> G22 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ShearModulus3">
+           <Name> ShearModulus3 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G32">
+           <Name> G32 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G33">
+           <Name> G33 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ShearModulus4">
+           <Name> ShearModulus4 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G42">
+           <Name> G42 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G43">
+           <Name> G43 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G44">
+           <Name> G44 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ShearModulus5">
+           <Name> ShearModulus5 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G52">
+           <Name> G52 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G53">
+           <Name> G53 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G54">
+           <Name> G54 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G55">
+           <Name> G55 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="ShearModulus6">
+           <Name> ShearModulus6 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G62">
+           <Name> G62 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G63">
+           <Name> G63 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G64">
+           <Name> G64 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G65">
+           <Name> G65 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="G66">
+           <Name> G66 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="PoissonsRatio2">
+           <Name> PoissonsRatio2 </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="PoissonsRatio3">
+           <Name> PoissonsRatio3 </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStressTension">
+           <Name> MaxStressTension </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStressTension2">
+           <Name> MaxStressTension2 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStressTension3">
+           <Name> MaxStressTension3 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStressCompression">
+           <Name> MaxStressCompression </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStressCompress2">
+           <Name> MaxStressCompress2 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStressCompress3">
+           <Name> MaxStressCompress3 </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxInPlaneShearStress">
+           <Name> MaxInPlaneShearStress </Name>
+           <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+               <Unit>
+                   <Name> mN/mm^2(kPa) </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStrainTension">
+           <Name> MaxStrainTension </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStrainTension2">
+           <Name> MaxStrainTension2 </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStrainTension3">
+           <Name> MaxStrainTension3 </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStrainCompression">
+           <Name> MaxStrainCompression </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStrainCompression2">
+           <Name> MaxStrainCompression2 </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxStrainCompression3">
+           <Name> MaxStrainCompression3 </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MaxInPlaneShearStrain">
+           <Name> MaxInPlaneShearStrain </Name>
+           <Units name="mm/mm" description="millimeters per millimeter">
+               <Unit>
+                   <Name> mm/mm </Name>
+               </Unit>
+           </Units>
+       </PropertyDetails>
+       <!--  Finally write out the unitless properties -->
+       <PropertyDetails id="Material Type">
+           <Name> Material Type </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Version">
+           <Name> Version </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="Category">
+           <Name> Category </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="PoissonsRatio">
+           <Name> PoissonsRatio </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MatlNonlinearityType">
+           <Name> MatlNonlinearityType </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="YieldFunctionCriterion">
+           <Name> YieldFunctionCriterion </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="HardeningRule">
+           <Name> HardeningRule </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="MatlNonlinearityType">
+           <Name> MatlNonlinearityType </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="YieldFunctionCriterion">
+           <Name> YieldFunctionCriterion </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="HardeningRule">
+           <Name> HardeningRule </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="FatigueStrengthExp">
+           <Name> FatigueStrengthExp </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="FatigueDuctCoeff">
+           <Name> FatigueDuctCoeff </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="FatigueDuctExp">
+           <Name> FatigueDuctExp </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="CyclicYieldStrength">
+          <Name> CyclicYieldStrength </Name>
+          <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+             <Unit>
+                <Name> mN/mm^2(kPa) </Name>
+             </Unit>
+          </Units>
+       </PropertyDetails>
+       <PropertyDetails id="CyclicStrengthCoeff">
+          <Name> CyclicStrengthCoeff </Name>
+          <Units name="mN/mm^2(kPa)" description="milliNewtons per millimeter squared">
+             <Unit>
+                <Name> mN/mm^2(kPa) </Name>
+             </Unit>
+          </Units>
+       </PropertyDetails>
+       <PropertyDetails id="CyclicStrainHardeningExp">
+          <Name> CyclicStrainHardeningExp </Name>
+          <Units>
+             <Unitless/>
+          </Units>
+       </PropertyDetails>
+       <PropertyDetails id="WorkHardening">
+           <Name> WorkHardening </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="FormingLimit">
+           <Name> FormingLimit </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="PlasticStrainRatio">
+           <Name> PlasticStrainRatio </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="HardeningExponent">
+           <Name> HardeningExponent </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="AnisotropyCoefficientR0">
+           <Name> AnisotropyCoefficientR0 </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="AnisotropyCoefficientR45">
+           <Name> AnisotropyCoefficientR45 </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>
+       <PropertyDetails id="AnisotropyCoefficientR90">
+           <Name> AnisotropyCoefficientR90 </Name>
+           <Units>
+               <Unitless/>
+           </Units>
+       </PropertyDetails>       
+   </Metadata>
+</MatML_Doc>

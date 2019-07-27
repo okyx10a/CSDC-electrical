@@ -1,0 +1,1025 @@
+﻿STEP to UG
+! INFO-     NX STEP AP203 - V10.0
+! INFO-      
+! INFO-     Start of Translation: 14-JAN-2017  5:25:37 PM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Power-Distrubution-board-cad.step
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Open CASCADE Model
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        Open CASCADE Shape Model
+! SUMMARY-  Date             2017-01-14T16:19:58
+! SUMMARY-  Author           Author
+! SUMMARY-  Organization     Open CASCADE
+! SUMMARY-  Pre_Version      Open CASCADE STEP processor 6.8
+! SUMMARY-  Orig_System      Open CASCADE 6.8
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_brep_shape_representation .........................:     12
+! SUMMARY-  advanced_face ..............................................:    813
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  application_protocol_definition ............................:      1
+! SUMMARY-  axis2_placement_2d .........................................:     58
+! SUMMARY-  axis2_placement_3d .........................................:   1510
+! SUMMARY-  b_spline_curve_with_knots ..................................:    582
+! SUMMARY-  b_spline_curve_with_knots_and_rational_b_spline_curve ......:    630
+! SUMMARY-  cartesian_point ............................................:  26353
+! SUMMARY-  circle .....................................................:    636
+! SUMMARY-  closed_shell ...............................................:     19
+! SUMMARY-  context_dependent_shape_representation .....................:    118
+! SUMMARY-  cylindrical_surface ........................................:    327
+! SUMMARY-  definitional_representation ................................:   4446
+! SUMMARY-  direction ..................................................:   8065
+! SUMMARY-  edge_curve .................................................:   2389
+! SUMMARY-  edge_loop ..................................................:   1252
+! SUMMARY-  face_bound .................................................:   1252
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:     68
+! SUMMARY-  item_defined_transformation ................................:    118
+! SUMMARY-  length_unit_and_si_unit ....................................:     68
+! SUMMARY-  line .......................................................:   4987
+! SUMMARY-  manifold_solid_brep ........................................:     12
+! SUMMARY-  next_assembly_usage_occurrence .............................:    118
+! SUMMARY-  open_shell .................................................:      6
+! SUMMARY-  oriented_edge ..............................................:   4446
+! SUMMARY-  pcurve .....................................................:   4446
+! SUMMARY-  plane ......................................................:    482
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:     68
+! SUMMARY-  product ....................................................:     68
+! SUMMARY-  product_context ............................................:     68
+! SUMMARY-  product_definition .........................................:     68
+! SUMMARY-  product_definition_context .................................:     68
+! SUMMARY-  product_definition_formation ...............................:     68
+! SUMMARY-  product_definition_shape ...................................:    186
+! SUMMARY-  product_related_product_category ...........................:     68
+! SUMMARY-  representation_relationship_with_transformation_and_shape ..:    118
+! SUMMARY-  seam_curve .................................................:    202
+! SUMMARY-  shape_definition_representation ............................:     68
+! SUMMARY-  shape_representation .......................................:     56
+! SUMMARY-  shell_based_surface_model ..................................:     13
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:     68
+! SUMMARY-  surface_curve ..............................................:   2187
+! SUMMARY-  toroidal_surface ...........................................:      4
+! SUMMARY-  uncertainty_measure_with_unit ..............................:     68
+! SUMMARY-  vector .....................................................:   4987
+! SUMMARY-  vertex_point ...............................................:   1596
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          73244
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 14-JAN-2017 5:25:38 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:38 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 77257
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded77256
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:38 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 76834
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded76833
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:39 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 76383
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded76382
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:39 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 75988
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded75987
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:39 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 75593
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded75592
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:40 PM
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 30183
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 40921
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 43119
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 45189
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 47259
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 49329
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 51527
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 53725
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG sheet body from Input Ent Id 59905
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 66085
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 68283
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 70481
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 72679
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\T2M-105-01-X-D-RA
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:    13
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             13
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:41 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 29720
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded29719
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:41 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 29241
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded29240
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:41 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 28818
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded28817
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:42 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 28423
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded28422
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:42 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 27982
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded27981
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:42 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 27605
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded
+! ERROR-    Unable to archive C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded:
+! ERROR-     
+! ERROR-    File already exists
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:42 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 198
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\BoardPCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:44 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151408
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:44 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q76PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:44 PM
+! WARNING-  Unable to create a component instance in the master part
+! WARNING-    Component name: Extruded
+! WARNING-    Component part name: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Extruded
+! WARNING-    Convert all component parts before converting the master part
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151136
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:46 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151272
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:46 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R710PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:46 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151952
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:47 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\X1PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:47 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777152088
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:47 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U82PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:48 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777152224
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:48 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U70PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:48 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151000
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:48 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U33PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:49 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U18PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:49 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U13PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:49 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777136312
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:50 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U2PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:50 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151816
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:50 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U1PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:50 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R813PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:51 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R810PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:51 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R115PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:51 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R19PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:51 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R9PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:52 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R3PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:52 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R1PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:52 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q88PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:53 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q87PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:53 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q86PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:53 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151680
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:53 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q85PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:54 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q84PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:54 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q83PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:54 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q82PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:54 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\P6PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:55 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\P5PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:55 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\P4PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:55 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\P3PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:55 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\P2PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:56 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\P1PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:56 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\777151544
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:56 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\D83PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:56 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\D82PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:57 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\D72PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:57 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\D73PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:57 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q72PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:57 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q73PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:58 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q74PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:58 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q75PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:58 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q77PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:59 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Q78PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:59 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\U72PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:25:59 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R713PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:26:00 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\R716PCB1_done2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 14-JAN-2017  5:26:00 PM
+! INFO-     Filing Part ..: C:\Users\Mohammed\Desktop\NX Cubesat V10\Power\Power Board Altium\Power-Distrubution-board-cad_step.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:    44
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             44
+! INFO-      
+! INFO-     Total number of solids input for this translation       :        19
+! INFO-      
+! INFO-     Number of solids created without body validation faults :        19
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 14-JAN-2017  5:26:01 PM
+! INFO-      
