@@ -1,0 +1,35 @@
+Removed Pin From Net: NetName=Net6_0 Pin=Connector-1
+Removed Pin From Net: NetName=Net1_1 Pin=Connector-3
+Removed Pin From Net: NetName=NetC1_2 Pin=Connector-5
+Change Component Comment : Designator=Connector Old Comment=T2M-105-01-X-D-SM New Comment=TFC-105-02-F-D
+Change Component Designator: OldDesignator=1 NewDesignator=10
+Change Component Designator: OldDesignator=2 NewDesignator=9
+Change Component Designator: OldDesignator=3 NewDesignator=8
+Change Component Designator: OldDesignator=4 NewDesignator=7
+Change Component Designator: OldDesignator=5 NewDesignator=6
+Change Component Designator: OldDesignator=6 NewDesignator=1
+Change Component Designator: OldDesignator=7 NewDesignator=2
+Change Component Designator: OldDesignator=8 NewDesignator=3
+Change Component Designator: OldDesignator=9 NewDesignator=4
+Change Component Designator: OldDesignator=10 NewDesignator=5
+Change Net Name : Old Net Name=Net1_0 New Net Name=Net5_1
+Change Net Name : Old Net Name=Net1_1 New Net Name=Net6_1
+Change Net Name : Old Net Name=Net2_0 New Net Name=Net4_1
+Change Net Name : Old Net Name=Net3_0 New Net Name=Net3_1
+Change Net Name : Old Net Name=Net4_0 New Net Name=Net2_1
+Change Net Name : Old Net Name=Net5_0 New Net Name=Net1_1
+Change Net Name : Old Net Name=Net6_0 New Net Name=Net1_0
+Added Pin To Net: NetName=NetConnector_8 Pin=Connector-8
+Added Pin To Net: NetName=NetConnector_8 Pin=U1-2
+Added Net: Name=NetConnector_8
+Added Pin To Net: NetName=NetConnector_10 Pin=Connector-10
+Added Pin To Net: NetName=NetConnector_10 Pin=U1-1
+Added Net: Name=NetConnector_10
+Added Member To Class: ClassName=SolarArray4 Member=Component 51 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 53 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 54 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 55 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 56 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 57 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 58 Trisol X Solar Wing
+Added Member To Class: ClassName=SolarArray4 Member=Component 59 Trisol X Solar Wing

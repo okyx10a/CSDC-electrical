@@ -1,0 +1,45 @@
+Change Component Designator: OldDesignator=31 NewDesignator=40
+Change Component Designator: OldDesignator=32 NewDesignator=39
+Change Component Designator: OldDesignator=33 NewDesignator=38
+Change Component Designator: OldDesignator=34 NewDesignator=37
+Change Component Designator: OldDesignator=35 NewDesignator=36
+Change Component Designator: OldDesignator=36 NewDesignator=31
+Change Component Designator: OldDesignator=37 NewDesignator=32
+Change Component Designator: OldDesignator=38 NewDesignator=33
+Change Component Designator: OldDesignator=39 NewDesignator=34
+Change Component Designator: OldDesignator=40 NewDesignator=35
+Change Component Designator: OldDesignator=41 NewDesignator=50
+Change Component Designator: OldDesignator=42 NewDesignator=49
+Change Component Designator: OldDesignator=43 NewDesignator=48
+Change Component Designator: OldDesignator=44 NewDesignator=47
+Change Component Designator: OldDesignator=45 NewDesignator=46
+Change Component Designator: OldDesignator=46 NewDesignator=41
+Change Component Designator: OldDesignator=47 NewDesignator=42
+Change Component Designator: OldDesignator=48 NewDesignator=43
+Change Component Designator: OldDesignator=49 NewDesignator=44
+Change Component Designator: OldDesignator=50 NewDesignator=45
+Change Component Designator: OldDesignator=51 NewDesignator=60
+Change Component Designator: OldDesignator=52 NewDesignator=59
+Change Component Designator: OldDesignator=53 NewDesignator=58
+Change Component Designator: OldDesignator=54 NewDesignator=57
+Change Component Designator: OldDesignator=55 NewDesignator=56
+Change Component Designator: OldDesignator=56 NewDesignator=51
+Change Component Designator: OldDesignator=57 NewDesignator=52
+Change Component Designator: OldDesignator=58 NewDesignator=53
+Change Component Designator: OldDesignator=59 NewDesignator=54
+Change Component Designator: OldDesignator=60 NewDesignator=55
+Change Net Name : Old Net Name=Net31_0 New Net Name=Net35_1
+Change Net Name : Old Net Name=Net32_0 New Net Name=Net34_1
+Change Net Name : Old Net Name=Net33_0 New Net Name=Net33_1
+Change Net Name : Old Net Name=Net34_0 New Net Name=Net32_1
+Change Net Name : Old Net Name=Net35_0 New Net Name=Net31_1
+Change Net Name : Old Net Name=Net41_0 New Net Name=Net45_1
+Change Net Name : Old Net Name=Net42_0 New Net Name=Net44_1
+Change Net Name : Old Net Name=Net43_0 New Net Name=Net43_1
+Change Net Name : Old Net Name=Net44_0 New Net Name=Net42_1
+Change Net Name : Old Net Name=Net45_0 New Net Name=Net41_1
+Change Net Name : Old Net Name=Net51_0 New Net Name=Net55_1
+Change Net Name : Old Net Name=Net52_0 New Net Name=Net54_1
+Change Net Name : Old Net Name=Net53_0 New Net Name=Net53_1
+Change Net Name : Old Net Name=Net54_0 New Net Name=Net52_1
+Change Net Name : Old Net Name=Net55_0 New Net Name=Net51_1

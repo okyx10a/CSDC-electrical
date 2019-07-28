@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=Net6_1 Pin=6-1
+Removed Pin From Net: NetName=Net6_1 Pin=7-1
+Removed Pin From Net: NetName=Net6_1 Pin=8-1
+Removed Pin From Net: NetName=Net6_1 Pin=9-1
+Removed Pin From Net: NetName=Net6_1 Pin=10-1
+Removed Pin From Net: NetName=Net6_1 Pin=U1-17
+Change Net Name : Old Net Name=Net6_1 New Net Name=Net16_1

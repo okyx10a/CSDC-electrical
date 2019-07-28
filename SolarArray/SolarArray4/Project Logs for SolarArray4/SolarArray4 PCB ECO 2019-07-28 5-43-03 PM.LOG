@@ -1,0 +1,30 @@
+Change Component Designator: OldDesignator=11 NewDesignator=20
+Change Component Designator: OldDesignator=12 NewDesignator=19
+Change Component Designator: OldDesignator=13 NewDesignator=18
+Change Component Designator: OldDesignator=14 NewDesignator=17
+Change Component Designator: OldDesignator=15 NewDesignator=16
+Change Component Designator: OldDesignator=16 NewDesignator=11
+Change Component Designator: OldDesignator=17 NewDesignator=12
+Change Component Designator: OldDesignator=18 NewDesignator=13
+Change Component Designator: OldDesignator=19 NewDesignator=14
+Change Component Designator: OldDesignator=20 NewDesignator=15
+Change Component Designator: OldDesignator=21 NewDesignator=30
+Change Component Designator: OldDesignator=22 NewDesignator=29
+Change Component Designator: OldDesignator=23 NewDesignator=28
+Change Component Designator: OldDesignator=24 NewDesignator=27
+Change Component Designator: OldDesignator=25 NewDesignator=26
+Change Component Designator: OldDesignator=26 NewDesignator=21
+Change Component Designator: OldDesignator=27 NewDesignator=22
+Change Component Designator: OldDesignator=28 NewDesignator=23
+Change Component Designator: OldDesignator=29 NewDesignator=24
+Change Component Designator: OldDesignator=30 NewDesignator=25
+Change Net Name : Old Net Name=Net11_0 New Net Name=Net15_1
+Change Net Name : Old Net Name=Net12_0 New Net Name=Net14_1
+Change Net Name : Old Net Name=Net13_0 New Net Name=Net13_1
+Change Net Name : Old Net Name=Net14_0 New Net Name=Net12_1
+Change Net Name : Old Net Name=Net15_0 New Net Name=Net11_1
+Change Net Name : Old Net Name=Net21_0 New Net Name=Net25_1
+Change Net Name : Old Net Name=Net22_0 New Net Name=Net24_1
+Change Net Name : Old Net Name=Net23_0 New Net Name=Net23_1
+Change Net Name : Old Net Name=Net24_0 New Net Name=Net22_1
+Change Net Name : Old Net Name=Net25_0 New Net Name=Net21_1
