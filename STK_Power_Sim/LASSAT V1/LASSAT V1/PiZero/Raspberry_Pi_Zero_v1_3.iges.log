@@ -1,0 +1,188 @@
+﻿IGES to UG
+! INFO-     NX V11.0 / IGES Specification 5.3
+! INFO-      
+! INFO-     Start of Translation: 5-AUG-2019  6:05:11 PM
+! INFO-      
+! STATUS-   Converting Part: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\Raspberry_Pi_Zero_v1_3.iges
+! SUMMARY-   
+! SUMMARY-  Summary of Supported IGES Entities in file
+! SUMMARY-   
+! SUMMARY-  Entity Type                    Count
+! SUMMARY-  -----------                    -----
+! SUMMARY-  B-Spline Curve (126/0-4).....:  9451
+! SUMMARY-  B-Spline Surface (128/0-9)...:  3179
+! SUMMARY-  Trans Matrix (124/0,1,10,12).:     5
+! SUMMARY-  Subfigure Definition (308/0).:     5
+! SUMMARY-  Subfigure Instance (408/0)...:     5
+! SUMMARY-  Color Definition (314/0,1)...:     5
+! SUMMARY-  Name (406/15)................:    10
+! SUMMARY-  Manifold Solid B-Rep (186/0).:    10
+! SUMMARY-  Shell (514/*)................:    10
+! SUMMARY-                                 -----
+! SUMMARY-  Total                          12680
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 5-AUG-2019 6:05:12 PM
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 5-AUG-2019  6:05:12 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 31
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\MicroUSB v1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 5-AUG-2019  6:05:14 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 33
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\MicroUSB v1 (1)
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 5-AUG-2019  6:05:16 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 35
+! STATUS-    
+! STATUS-   fixing vertex off curve and/or edge reversed faults
+! STATUS-    
+! STATUS-   fixing vertex and/or edge off surface faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\MiniHDMI v1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 5-AUG-2019  6:05:21 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 37
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\22FFCconnector(545482271) v2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 5-AUG-2019  6:05:28 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 39
+! STATUS-    
+! STATUS-   fixing vertex off curve and/or edge reversed faults
+! STATUS-    
+! STATUS-   fixing self-intersecting topology faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\MicroSD(1040310811) v1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 5-AUG-2019  6:05:30 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 41
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 43
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 45
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 47
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 49
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: D:\University Files\CSDC\CubeSat Master Files\LASSAT V1\Raspberry_Pi_Zero_v1_3_iges.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Part Attribute ..............:     8
+! SUMMARY-  Component ...................:     5
+! SUMMARY-  Solid .......................:     5
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             18
+! INFO-      
+! INFO-     End of Translation: 5-AUG-2019  6:05:32 PM
+! INFO-      
