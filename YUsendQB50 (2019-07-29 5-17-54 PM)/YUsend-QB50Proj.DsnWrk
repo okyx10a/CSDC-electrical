@@ -1,0 +1,26 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=YUsendQB50.PrjPCB
+[Project2]
+ProjectPath=Imported ACS.PrjPcb\ACS.PrjPcb
+[Project3]
+ProjectPath=OBC_rev_B\OBC_v8\OBC_v8.PrjPcb
+[Project4]
+ProjectPath=Imported power_board.PrjPcb\power_board.PrjPcb
+[Project5]
+ProjectPath=BatteryBd\BatteryBd.PrjPCB
+[Project6]
+ProjectPath=BatteryProtBd\BatteryProtCirc.PrjPCB
+[Project7]
+ProjectPath=QB50SolarPanels\QB50SidePanel.PrjPCB
+[Project8]
+ProjectPath=QB50SolarPanels\QB50NZPanel.PrjPCB
+[Project9]
+ProjectPath=LinuxstampII\Linuxstamp II\LinuxstampII.PrjPCB
+[Project10]
+ProjectPath=Linuxstamp II\Breakout Board 3\Breakout_board_v3.PrjPcb
+[Project11]
+ProjectPath=Abra\ACS-Abra.PrjPCB
+[Project12]
+ProjectPath=Altiumtutorial\tutorial.PrjPCB

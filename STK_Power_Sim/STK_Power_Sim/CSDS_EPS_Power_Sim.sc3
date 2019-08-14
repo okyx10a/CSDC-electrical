@@ -108,7 +108,7 @@ VO_V110
             CentralBody              Earth
             DisplayMode              Normal
             StereoProjectionMode     Automatic
-            ProjectionDistance       2.831432
+            ProjectionDistance       3.175739
             EyeSeparationFactor      0.020000
             WireframeMode            No
             CameraLightAntiSun       No
@@ -726,25 +726,25 @@ EndCentralBody
                 UseLayer                Yes
                 FromName                "Satellite/Selfie-Sat"
                 FromRegPosAttView       "Point"
-                FromPosition            -5045261.428826827555894852  2815483.610729844309389591  3544227.203309614676982164
-                FromOffset              -0.748530712909996510  -1.416491215117275715  2.334580061957240105
-                FromOffsetLLR           0.433567499725521110  1.653177738231592420  2.831432438954218700
+                FromPosition            570551.488436665036715567  -4174067.106376365758478642  5309877.097567859105765820
+                FromOffset              -1.746689554656459809  0.745842255230787177  2.545214382310151180
+                FromOffsetLLR           0.452173216234743880  2.234669374080881177  3.175739492142290121
                 ToName                  "Satellite/Selfie-Sat"
                 ToRegPosAttView         "Point"
-                ToPosition              -5045260.680296114645898342  2815485.027221059426665306  3544224.868729552719742060
-                ToOffset                -0.000000000000000000  0.000000000000000000  0.000000000000000000
+                ToPosition              570553.235126219689846039  -4174067.852218620944768190  5309874.552353477105498314
+                ToOffset                0.000000000000000000  0.000000000000000000  0.000000000000000000
                 ToOffsetLLR             0.000000000000000000  0.000000000000000000  0.000000000000000000
                 ConstantDistanceType    None
                 ConstantDistanceValue   1.000000
-                UpVector                -0.653147222311319942  0.721903020875141133  0.228592944856908009
-                ViewRad                 2.831432439015158842
-                ViewQuat                0.7132943 0.1689626 0.1366495 -0.6663255
+                UpVector                0.360741415511422525  -0.798696374757974947  0.481611598784003614
+                ViewRad                 3.175739491881650611
+                ViewQuat                0.8760591 0.0982024 0.2015104 -0.4269313
                 ViewCoordSystem         From
                 ViewFromToMode          FromTo
-                ViewToCBIMtx            -0.667795064329353982 -0.461011171348406967 -0.584395800762910977 -0.001686358473494215 -0.784174918496009843 0.620537551963517675  -0.744343273129040361 0.415377415242748071 0.522890710047329899
+                ViewToCBIMtx            0.995211745409877557 0.091152209794298333 -0.035282523263529361 -0.049679602681245660 0.782601484589901752 0.620537551962099587  0.084175524207805427 -0.615813438443249761 0.783382595005175708
                 UseUpAxis               Yes
-                UpAxisType              UserDefined
-                UserDefinedUpAxis       -0.038910424164624001 -0.312337321858950634 0.949174049511101181
+                UpAxisType              Z
+                UserDefinedUpAxis       0.000000000000000000 0.000000000000000000 1.000000000000000000
                 OverUpAxis              No
                 LockInViewDir           No
                 NoZoom                  No
@@ -752,7 +752,7 @@ EndCentralBody
                 MinAngleToUpAxis        0.0087266
                 InitUpAxisUp            Yes
                 TempUpAxisUp            Yes
-                CrossAxis               0.9967498 0.0549238 0.0589341
+                CrossAxis               0.7876117 0.6161719 -0.0000000
                 DefaultOffset           70.3584790
                 BaseDefaultOffset       56.2867832
             End View

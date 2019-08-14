@@ -170,14 +170,253 @@ END IntervalList
                 TimeBound    0
             END Section
         END TimeData
+        DisplayOnLoad     No
+        FrameType         0
+        DockCircleID      0
+        DockID            0
+        WindowRectLeft    546
+        WindowRectTop     745
+        WindowRectRight   706
+        WindowRectBottom  773
+    END Report
+
+    BEGIN Report
+        Name    Beta Angle1
+        Type    Graph
+        BaseDir Install
+        Style    Beta Angle
+        AGIViewer    No
+        Instance    Satellite/Selfie-Sat
+        BEGIN TimeData
+            BEGIN Section
+                SectionNumber    1
+                SectionType      2
+                ShowIntervals    No
+BEGIN IntervalList
+
+DateUnitAbrv UTCG
+
+BEGIN Intervals
+
+    "6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
+END Intervals
+
+END IntervalList
+
+                TimeType    Availability
+                SamplingType    Default
+                TimeBound    0
+            END Section
+        END TimeData
         DisplayOnLoad     Yes
         FrameType         0
         DockCircleID      0
         DockID            0
-        WindowRectLeft    548
+        WindowRectLeft    706
+        WindowRectTop     745
+        WindowRectRight   866
+        WindowRectBottom  773
+    END Report
+
+    BEGIN Report
+        Name    Solar Panel Power1
+        Type    Graph
+        BaseDir Install
+        Style    Solar Panel Power
+        AGIViewer    No
+        Instance    Satellite/Selfie-Sat
+        BEGIN TimeData
+            BEGIN Section
+                SectionNumber    1
+                SectionType      2
+                ShowIntervals    No
+                TimeType    Availability
+                SamplingType    Default
+                TimeBound    0
+            END Section
+        END TimeData
+        DisplayOnLoad     Yes
+        FrameType         0
+        DockCircleID      0
+        DockID            0
+        WindowRectLeft    866
+        WindowRectTop     745
+        WindowRectRight   1026
+        WindowRectBottom  773
+    END Report
+
+    BEGIN Report
+        Name    Solar Panel Power2
+        Type    Graph
+        BaseDir Install
+        Style    Solar Panel Power
+        AGIViewer    No
+        Instance    Satellite/Selfie-Sat
+        BEGIN TimeData
+            BEGIN Section
+                SectionNumber    1
+                SectionType      2
+                ShowIntervals    No
+                TimeType    Availability
+                SamplingType    Default
+                TimeBound    0
+            END Section
+        END TimeData
+        DisplayOnLoad     Yes
+        FrameType         0
+        DockCircleID      0
+        DockID            0
+        WindowRectLeft    1190
         WindowRectTop     747
-        WindowRectRight   708
+        WindowRectRight   1350
         WindowRectBottom  775
+    END Report
+
+    BEGIN Report
+        Name    Lighting Times
+        Type    Graph
+        BaseDir Install
+        Style    Lighting Times
+        AGIViewer    No
+        Instance    Satellite/Selfie-Sat
+        BEGIN TimeData
+            BEGIN Section
+                SectionNumber    1
+                SectionType      4
+                ShowIntervals    No
+BEGIN IntervalList
+
+DateUnitAbrv UTCG
+
+BEGIN Intervals
+
+    "20 Jun 2020 00:00:00.000000000" "28 Jun 2020 00:00:00.000000000"
+END Intervals
+
+END IntervalList
+
+                TimeType    Availability
+                SamplingType    Default
+                Step        5.000000
+                TimeBound    0
+            END Section
+        END TimeData
+        DisplayOnLoad     Yes
+        FrameType         0
+        DockCircleID      0
+        DockID            0
+        WindowRectLeft    1026
+        WindowRectTop     746
+        WindowRectRight   1186
+        WindowRectBottom  774
+    END Report
+
+    BEGIN Report
+        Name    Lighting Times1
+        Type    Graph
+        BaseDir Install
+        Style    Lighting Times
+        AGIViewer    No
+        Instance    Satellite/Selfie-Sat
+        BEGIN TimeData
+            BEGIN Section
+                SectionNumber    1
+                SectionType      4
+                ShowIntervals    No
+BEGIN IntervalList
+
+DateUnitAbrv UTCG
+
+BEGIN Intervals
+
+    "11 Aug 2019 00:00:00.000000000" "12 Aug 2019 00:00:00.000000000"
+END Intervals
+
+END IntervalList
+
+                TimeType    Availability
+                SamplingType    Default
+                Step        5.000000
+                TimeBound    0
+            END Section
+        END TimeData
+        DisplayOnLoad     Yes
+        FrameType         0
+        DockCircleID      0
+        DockID            0
+        WindowRectLeft    546
+        WindowRectTop     745
+        WindowRectRight   706
+        WindowRectBottom  773
+    END Report
+
+    BEGIN Report
+        Name    Beta Angle2
+        Type    Report
+        BaseDir Install
+        Style    Beta Angle
+        AGIViewer    Yes
+        Instance    Satellite/Selfie-Sat
+        BEGIN TimeData
+            BEGIN Section
+                SectionNumber    1
+                SectionType      2
+                ShowIntervals    No
+BEGIN IntervalList
+
+DateUnitAbrv UTCG
+
+BEGIN Intervals
+
+    "6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
+END Intervals
+
+END IntervalList
+
+                TimeType    Interval
+                TimeInterval 	IntervalTimePeriod
+                SamplingType    Default
+                TimeBound    0
+            END Section
+        END TimeData
+        BEGIN ElementUnitList
+            BEGIN ElementUnit
+                SectionNumber    1
+                LineNumber    1
+                ElementNumber    1
+                Instance    Satellite/Selfie-Sat
+                Name    Time
+                ServiceName    BetaAngle
+                BEGIN ElemUnitData
+                    UseDefaultUnits    No
+                    BEGIN ElemDimUnitList
+		DateFormat		EpochSeconds
+                    END ElemDimUnitList
+                END ElemUnitData
+            END ElementUnit
+            BEGIN ElementUnit
+                SectionNumber    1
+                LineNumber    1
+                ElementNumber    2
+                Instance    Satellite/Selfie-Sat
+                Name    Beta Angle
+                ServiceName    BetaAngle
+                BEGIN ElemUnitData
+                    UseDefaultUnits    No
+                    BEGIN ElemDimUnitList
+		AngleUnit		Degrees
+                    END ElemDimUnitList
+                END ElemUnitData
+            END ElementUnit
+        END ElementUnitList
+        DisplayOnLoad     Yes
+        FrameType         0
+        DockCircleID      0
+        DockID            0
+        WindowRectLeft    1506
+        WindowRectTop     745
+        WindowRectRight   1666
+        WindowRectBottom  773
     END Report
 END QuickReports
 
@@ -432,9 +671,24 @@ BEGIN Extensions
         BEGIN Class
             Name  Satellite
             BEGIN Favorite
+                Type    Report
+                BaseDir Install
+                Style   Beta Angle
+            END Favorite
+            BEGIN Favorite
                 Type    Graph
                 BaseDir Install
                 Style   Beta Angle
+            END Favorite
+            BEGIN Favorite
+                Type    Report
+                BaseDir Install
+                Style   Lighting Times
+            END Favorite
+            BEGIN Favorite
+                Type    Graph
+                BaseDir Install
+                Style   Lighting Times
             END Favorite
             BEGIN Favorite
                 Type    Graph
@@ -1156,9 +1410,9 @@ BEGIN Animation
 
     StartTime          6 Aug 2019 16:00:00.000000000
     EndTime            6 Aug 2020 16:00:00.000000000
-    CurrentTime        6 Aug 2019 16:35:30.000000000
+    CurrentTime        25 Jun 2020 01:43:37.000000000
     Direction          Forward
-    UpdateDelta        30.000000
+    UpdateDelta        10.000000
     RefreshDelta       0.010000
     XRealTimeMult      1.000000
     RealTimeOffset     0.000000

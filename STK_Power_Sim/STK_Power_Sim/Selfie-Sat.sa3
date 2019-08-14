@@ -528,20 +528,20 @@ VO_V110
     SolarSmartInterval
 	BEGIN	EVENTINTERVAL
 			BEGIN Interval
-				Start	24 Jun 2020 06:00:00.000000000
-				Stop	26 Jun 2020 06:00:00.000000000
+				Start	25 Jun 2020 11:00:00.000000000
+				Stop	25 Jun 2020 15:00:00.000000000
 			END Interval
 			IntervalState	Explicit
 	END	EVENTINTERVAL
 
     UseSolarToolOnjIntvl      No
-    SolarStartTime            2.78712e+07
-    SolarStopTime             2.8044e+07
-    SolarTimeStep             60
+    SolarStartTime            2.79756e+07
+    SolarStopTime             2.799e+07
+    SolarTimeStep             5
     SolarGroupName            All Cells
     UseSolarToolBoundRadius   Yes
     SolarPowerEquation        Basic
-    SolarToolBoundRadius      0.200000
+    SolarToolBoundRadius      0.280000
     UseLabelOffset            Yes
     LabelOffsetInPixels       Yes
     LabelXYZ                  5.000000 -4.000000 10.000000

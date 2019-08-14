@@ -1,0 +1,62 @@
+Importer Log Report
+Project : AbraSchematicVer5.PrjPcb
+
+Section : Analyze Document - C:\Users\Hugh\Documents\Consulting\QB50\Electronics\Abra\AbraSchematicVer5.brd
+    Analyzing data of C:\Users\Hugh\Documents\Consulting\QB50\Electronics\Abra\AbraSchematicVer5.brd
+    Load settings
+    Load layers 106
+    Load Library "urover"
+    Load Packages 9
+    Load Library "SparkFun"
+    Load Packages 1
+    Load Library "AndrewLib"
+    Load Packages 6
+    Load Library "diode"
+    Load Packages 1
+    Load Library "con-molex"
+    Load Packages 1
+    Load Library "rcl"
+    Load Packages 1
+    ERROR: Unhandled typeerrors
+EndSection
+
+Section : Analyze Document - C:\Users\Hugh\Documents\Consulting\QB50\Electronics\Abra\AbraSchematicVer5.sch
+    Analyzing data of C:\Users\Hugh\Documents\Consulting\QB50\Electronics\Abra\AbraSchematicVer5.sch
+    Load settings
+    Load layers 105
+    Load schematic
+    Load Libraries 7
+    Load Library "urover"
+    Load Packages 21
+    Load Symbols 11
+    Load DeviceSets 11
+    Load Library "SparkFun"
+    Load Packages 4
+    Load Symbols 3
+    Load DeviceSets 3
+    Load Library "supply1"
+    Load Packages 0
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "AndrewLib"
+    Load Packages 6
+    Load Symbols 6
+    Load DeviceSets 6
+    Load Library "diode"
+    Load Packages 1
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "con-molex"
+    Load Packages 1
+    Load Symbols 2
+    Load DeviceSets 1
+    Load Library "rcl"
+    Load Packages 78
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Attributes 0
+    Load Classes 3
+    Load Parts 158
+    Load Sheets 1
+    ERROR: Unhandled typeerrors
+EndSection
