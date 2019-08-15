@@ -30,9 +30,10 @@ end
 
 f_E = @(B) (1/180)*real(acosd(sqrt(h^2+2*R*h)./((R+h)*cosd(B)))); %equation for fraction of orbit in eclipse at any Beta angle
 
-new = abs(transpose(M(:,2)));
-var = f_E(new);
-plot(var)%plot of the fraction of orbit in eclipse at each time
+eclipse_frac = f_E(abs(transpose(M(:,2))));
+
+figure 
+plot(eclipse_frac)%plot of the fraction of orbit in eclipse at each time
 ylabel(' Fraction of Orbit Spent in Eclipse');
 xlabel('Epoch Minutes');
 title('Eclipse Fraction Over Mission Duration')
@@ -47,6 +48,11 @@ plot(M(:,2))
 
 yyaxis right
 ylabel('Fraction of Orbit Spent in Eclipse')
-plot(var)
+plot(eclipse_frac)
 hold off
 
+figure
+fplot(f_E, [0 90])
+title('Eclipse Fraction for 400 km Circular Orbit');
+xlabel(' Beta Angle (deg)');
+ylabel('Fraction of Orbit Spent in Eclipse');

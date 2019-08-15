@@ -1,5 +1,5 @@
 <?xml version = "1.0" standalone = "yes"?>
-<TimelineLine_Prefs STK_version = "11.2.0">
+<TimelineLine_Prefs STK_version = "11.6.1">
     <Views Type = "Content">
         <ContentView Name = "Scenario Availability">
             <Row ClassName = "Scenario" ComponentName = "AvailabilityIntervals" DisplayName = "CSDS_EPS_Power_Sim AvailabilityIntervals" IsDefaultName = "True" IsExpanded = "False" IsGroup = "False" IsHidden = "False" Path = "/Application/STK/Scenario/CSDS_EPS_Power_Sim" Type = "IntervalList">

@@ -1,910 +1,900 @@
 stk.v.11.0
-WrittenBy    STK_v11.2.0
+WrittenBy    STK_v11.6.1
 BEGIN Scenario
-    Name            CSDS_EPS_Power_Sim
+    Name		 CSDS_EPS_Power_Sim
 
-BEGIN Epoch
+    BEGIN Epoch
 
-    Epoch        6 Aug 2019 16:00:00.000000000
-    SmartEpoch
-	BEGIN	EVENT
-			Epoch	6 Aug 2019 16:00:00.000000000
-			EventEpoch
-				BEGIN	EVENT
-					Type	EVENT_LINKTO
-					Name	AnalysisStartTime
-				END	EVENT
-			EpochState	Implicit
-	END	EVENT
+        Epoch		 6 Aug 2019 16:00:00.000000000
+        SmartEpoch		
+        BEGIN EVENT
+            Epoch		 6 Aug 2019 16:00:00.000000000
+            EventEpoch		
+            BEGIN EVENT
+                Type		 EVENT_LINKTO
+                Name		 AnalysisStartTime
+            END EVENT
+            EpochState		 Implicit
+        END EVENT
 
 
-END Epoch
+    END Epoch
 
-BEGIN Interval
+    BEGIN Interval
 
-Start                   6 Aug 2019 16:00:00.000000000
-Stop                    6 Aug 2020 16:00:00.000000000
-    SmartInterval
-	BEGIN	EVENTINTERVAL
-			BEGIN Interval
-				Start	6 Aug 2019 16:00:00.000000000
-				Stop	6 Aug 2020 16:00:00.000000000
-			END Interval
-			IntervalState	Explicit
-	END	EVENTINTERVAL
+        Start		 6 Aug 2019 16:00:00.000000000
+        Stop		 6 Aug 2020 16:00:00.000000000
+        SmartInterval		
+        BEGIN EVENTINTERVAL
+            BEGIN Interval
+                Start		 6 Aug 2019 16:00:00.000000000
+                Stop		 6 Aug 2020 16:00:00.000000000
+            END Interval
+            IntervalState		 Explicit
+        END EVENTINTERVAL
 
-EpochUsesAnalStart      No
-AnimStartUsesAnalStart  Yes
-AnimStopUsesAnalStop    Yes
+        EpochUsesAnalStart		 No
+        AnimStartUsesAnalStart		 Yes
+        AnimStopUsesAnalStop		 Yes
 
-END Interval
+    END Interval
 
-BEGIN EOPFile
+    BEGIN EOPFile
 
-    EOPFilename     EOP-v1.1.txt
+        InheritEOPSource		 No
+        EOPFilename		 EOP-v1.1.txt
 
-END EOPFile
+    END EOPFile
 
-BEGIN GlobalPrefs
-
-    SatelliteNoOrbWarning    No
-    MissilePerigeeWarning    No
-    MissileStopTimeWarning   No
-    AircraftWGS84Warning     Always
-END GlobalPrefs
-
-BEGIN CentralBody
-
-    PrimaryBody     Earth
-
-END CentralBody
-
-BEGIN CentralBodyTerrain
+    BEGIN GlobalPrefs
+        SatelliteNoOrbWarning		 No
+        MissilePerigeeWarning		 No
+        MissileStopTimeWarning		 No
+        AircraftWGS84Warning		 Always
+    END GlobalPrefs
 
     BEGIN CentralBody
-        Name            Earth
-        UseTerrainCache Yes
-        TotalCacheSize  402653184
 
-        BEGIN StreamingTerrain
-            UseCurrentStreamingTerrainServer     Yes
-            CurrentStreamingTerrainServerName    http://twsusecovacc01.agi.com/stk-terrain
-            StreamingTerrainTilesetName    world
-            StreamingTerrainServerName           assets.agi.com/stk-terrain/
-            StreamingTerrainAzimuthElevationMaskEnabled       No
-            StreamingTerrainObscurationEnabled       No
-            StreamingTerrainCoverageGridObscurationEnabled       No
-        END StreamingTerrain
+        PrimaryBody		 Earth
+
     END CentralBody
 
-END CentralBodyTerrain
+    BEGIN CentralBodyTerrain
 
-BEGIN StarCollection
+        BEGIN CentralBody
+            Name		 Earth
+            UseTerrainCache		 Yes
+            TotalCacheSize		 402653184
 
-    Name     Hipparcos 2 Mag 6
+            BEGIN StreamingTerrain
+                UseCurrentStreamingTerrainServer		 Yes
+                CurrentStreamingTerrainServerName		 http://twsusecovacc01.agi.com/stk-terrain
+                StreamingTerrainTilesetName		 world
+                StreamingTerrainServerName		 assets.agi.com/stk-terrain/
+                StreamingTerrainAzimuthElevationMaskEnabled		 No
+                StreamingTerrainObscurationEnabled		 No
+                StreamingTerrainCoverageGridObscurationEnabled		 No
+            END StreamingTerrain
+        END CentralBody
 
-END StarCollection
+    END CentralBodyTerrain
 
-BEGIN ScenarioLicenses
-    Module    AMMv11.2
-    Module    ASTGv11.2
-    Module    AnalysisWBv11.2
-    Module    CATv11.2
-    Module    COVv11.2
-    Module    Commv11.2
-    Module    Radarv11.2
-    Module    SEETv11.2
-    Module    STKIntegrationv11.2
-    Module    STKProfessionalv11.2
-    Module    STKv11.2
-    Module    SatProv11.2
-    Module    UPropv11.2
-END ScenarioLicenses
+    BEGIN StarCollection
 
-BEGIN QuickReports
+        Name		 Hipparcos 2 Mag 6
 
-    BEGIN Report
-        Name    Solar Panel Power
-        Type    Graph
-        BaseDir Install
-        Style    Solar Panel Power
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      2
-                ShowIntervals    No
-BEGIN IntervalList
+    END StarCollection
 
-DateUnitAbrv UTCG
+    BEGIN ScenarioLicenses
+        Module		 AMMv11.6
+        Module		 ASTGv11.6
+        Module		 AnalysisWBv11.6
+        Module		 CATv11.6
+        Module		 COVv11.6
+        Module		 Commv11.6
+        Module		 Radarv11.6
+        Module		 SEETv11.6
+        Module		 STKIntegrationv11.6
+        Module		 STKProfessionalv11.6
+        Module		 STKv11.6
+        Module		 SatProv11.6
+        Module		 UPropv11.6
+    END ScenarioLicenses
 
-BEGIN Intervals
+    BEGIN QuickReports
 
-    "6 Aug 2019 16:00:00.000000000" "7 Aug 2019 16:00:00.000000000"
-END Intervals
+        BEGIN Report
+            Name		 Solar Panel Power
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Solar Panel Power
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 2
+                    ShowIntervals		 No
+                    BEGIN IntervalList
 
-END IntervalList
+                        DateUnitAbrv		 UTCG
 
-                TimeType    Availability
-                SamplingType    Default
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     No
-        FrameType         2
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    98
-        WindowRectTop     122
-        WindowRectRight   1344
-        WindowRectBottom  785
-    END Report
+                        BEGIN Intervals
 
-    BEGIN Report
-        Name    Beta Angle
-        Type    Graph
-        BaseDir Install
-        Style    Beta Angle
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      2
-                ShowIntervals    No
-BEGIN IntervalList
+"6 Aug 2019 16:00:00.000000000" "7 Aug 2019 16:00:00.000000000"
+                        END Intervals
 
-DateUnitAbrv UTCG
+                    END IntervalList
 
-BEGIN Intervals
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 No
+            FrameType		 2
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 98
+            WindowRectTop		 122
+            WindowRectRight		 1344
+            WindowRectBottom		 785
+        END Report
 
-    "6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
-END Intervals
+        BEGIN Report
+            Name		 Beta Angle
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Beta Angle
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 2
+                    ShowIntervals		 No
+                    BEGIN IntervalList
 
-END IntervalList
+                        DateUnitAbrv		 UTCG
 
-                TimeType    Availability
-                SamplingType    Default
-                Step        120.000000
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     No
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    546
-        WindowRectTop     745
-        WindowRectRight   706
-        WindowRectBottom  773
-    END Report
+                        BEGIN Intervals
 
-    BEGIN Report
-        Name    Beta Angle1
-        Type    Graph
-        BaseDir Install
-        Style    Beta Angle
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      2
-                ShowIntervals    No
-BEGIN IntervalList
+"6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
+                        END Intervals
 
-DateUnitAbrv UTCG
+                    END IntervalList
 
-BEGIN Intervals
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    Step		 120
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 No
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 546
+            WindowRectTop		 745
+            WindowRectRight		 706
+            WindowRectBottom		 773
+        END Report
 
-    "6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
-END Intervals
+        BEGIN Report
+            Name		 Beta Angle1
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Beta Angle
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 2
+                    ShowIntervals		 No
+                    BEGIN IntervalList
 
-END IntervalList
+                        DateUnitAbrv		 UTCG
 
-                TimeType    Availability
-                SamplingType    Default
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     Yes
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    706
-        WindowRectTop     745
-        WindowRectRight   866
-        WindowRectBottom  773
-    END Report
+                        BEGIN Intervals
 
-    BEGIN Report
-        Name    Solar Panel Power1
-        Type    Graph
-        BaseDir Install
-        Style    Solar Panel Power
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      2
-                ShowIntervals    No
-                TimeType    Availability
-                SamplingType    Default
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     Yes
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    866
-        WindowRectTop     745
-        WindowRectRight   1026
-        WindowRectBottom  773
-    END Report
+"6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
+                        END Intervals
 
-    BEGIN Report
-        Name    Solar Panel Power2
-        Type    Graph
-        BaseDir Install
-        Style    Solar Panel Power
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      2
-                ShowIntervals    No
-                TimeType    Availability
-                SamplingType    Default
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     Yes
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    1190
-        WindowRectTop     747
-        WindowRectRight   1350
-        WindowRectBottom  775
-    END Report
+                    END IntervalList
 
-    BEGIN Report
-        Name    Lighting Times
-        Type    Graph
-        BaseDir Install
-        Style    Lighting Times
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      4
-                ShowIntervals    No
-BEGIN IntervalList
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 No
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 228
+            WindowRectTop		 783
+            WindowRectRight		 388
+            WindowRectBottom		 811
+        END Report
 
-DateUnitAbrv UTCG
+        BEGIN Report
+            Name		 Solar Panel Power1
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Solar Panel Power
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 2
+                    ShowIntervals		 No
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 Yes
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 866
+            WindowRectTop		 745
+            WindowRectRight		 1026
+            WindowRectBottom		 773
+        END Report
 
-BEGIN Intervals
+        BEGIN Report
+            Name		 Solar Panel Power2
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Solar Panel Power
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 2
+                    ShowIntervals		 No
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 Yes
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 1190
+            WindowRectTop		 747
+            WindowRectRight		 1350
+            WindowRectBottom		 775
+        END Report
 
-    "20 Jun 2020 00:00:00.000000000" "28 Jun 2020 00:00:00.000000000"
-END Intervals
+        BEGIN Report
+            Name		 Lighting Times
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Lighting Times
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 4
+                    ShowIntervals		 No
+                    BEGIN IntervalList
 
-END IntervalList
+                        DateUnitAbrv		 UTCG
 
-                TimeType    Availability
-                SamplingType    Default
-                Step        5.000000
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     Yes
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    1026
-        WindowRectTop     746
-        WindowRectRight   1186
-        WindowRectBottom  774
-    END Report
+                        BEGIN Intervals
 
-    BEGIN Report
-        Name    Lighting Times1
-        Type    Graph
-        BaseDir Install
-        Style    Lighting Times
-        AGIViewer    No
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      4
-                ShowIntervals    No
-BEGIN IntervalList
+"20 Jun 2020 00:00:00.000000000" "28 Jun 2020 00:00:00.000000000"
+                        END Intervals
 
-DateUnitAbrv UTCG
+                    END IntervalList
 
-BEGIN Intervals
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    Step		 5
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 No
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 228
+            WindowRectTop		 783
+            WindowRectRight		 388
+            WindowRectBottom		 811
+        END Report
 
-    "11 Aug 2019 00:00:00.000000000" "12 Aug 2019 00:00:00.000000000"
-END Intervals
+        BEGIN Report
+            Name		 Lighting Times1
+            Type		 Graph
+            BaseDir		 Install
+            Style		 Lighting Times
+            AGIViewer		 No
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 4
+                    ShowIntervals		 No
+                    BEGIN IntervalList
 
-END IntervalList
+                        DateUnitAbrv		 UTCG
 
-                TimeType    Availability
-                SamplingType    Default
-                Step        5.000000
-                TimeBound    0
-            END Section
-        END TimeData
-        DisplayOnLoad     Yes
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    546
-        WindowRectTop     745
-        WindowRectRight   706
-        WindowRectBottom  773
-    END Report
+                        BEGIN Intervals
 
-    BEGIN Report
-        Name    Beta Angle2
-        Type    Report
-        BaseDir Install
-        Style    Beta Angle
-        AGIViewer    Yes
-        Instance    Satellite/Selfie-Sat
-        BEGIN TimeData
-            BEGIN Section
-                SectionNumber    1
-                SectionType      2
-                ShowIntervals    No
-BEGIN IntervalList
+"11 Aug 2019 00:00:00.000000000" "12 Aug 2019 00:00:00.000000000"
+                        END Intervals
 
-DateUnitAbrv UTCG
+                    END IntervalList
 
-BEGIN Intervals
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    Step		 5
+                    TimeBound		 0
+                END Section
+            END TimeData
+            DisplayOnLoad		 No
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 228
+            WindowRectTop		 783
+            WindowRectRight		 388
+            WindowRectBottom		 811
+        END Report
 
-    "6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
-END Intervals
+        BEGIN Report
+            Name		 Beta Angle2
+            Type		 Report
+            BaseDir		 Install
+            Style		 Beta Angle
+            AGIViewer		 Yes
+            Instance		 Satellite/Selfie-Sat
+            BEGIN TimeData
+                BEGIN Section
+                    SectionNumber		 1
+                    SectionType		 2
+                    ShowIntervals		 No
+                    BEGIN IntervalList
 
-END IntervalList
+                        DateUnitAbrv		 UTCG
 
-                TimeType    Interval
-                TimeInterval 	IntervalTimePeriod
-                SamplingType    Default
-                TimeBound    0
-            END Section
-        END TimeData
-        BEGIN ElementUnitList
-            BEGIN ElementUnit
-                SectionNumber    1
-                LineNumber    1
-                ElementNumber    1
-                Instance    Satellite/Selfie-Sat
-                Name    Time
-                ServiceName    BetaAngle
-                BEGIN ElemUnitData
-                    UseDefaultUnits    No
-                    BEGIN ElemDimUnitList
-		DateFormat		EpochSeconds
-                    END ElemDimUnitList
-                END ElemUnitData
-            END ElementUnit
-            BEGIN ElementUnit
-                SectionNumber    1
-                LineNumber    1
-                ElementNumber    2
-                Instance    Satellite/Selfie-Sat
-                Name    Beta Angle
-                ServiceName    BetaAngle
-                BEGIN ElemUnitData
-                    UseDefaultUnits    No
-                    BEGIN ElemDimUnitList
-		AngleUnit		Degrees
-                    END ElemDimUnitList
-                END ElemUnitData
-            END ElementUnit
-        END ElementUnitList
-        DisplayOnLoad     Yes
-        FrameType         0
-        DockCircleID      0
-        DockID            0
-        WindowRectLeft    1506
-        WindowRectTop     745
-        WindowRectRight   1666
-        WindowRectBottom  773
-    END Report
-END QuickReports
+                        BEGIN Intervals
 
-BEGIN WebData
-        EnableWebTerrainData    No
-        SaveWebTerrainDataPasswords    No
-        BEGIN ConfigServerDataList
-            BEGIN ConfigServerData
-                Name "globeserver.agi.com"
-                Port 80
-                DataURL "bin/getGlobeSvrConfig.pl"
-            END ConfigServerData
-        END ConfigServerDataList
-END WebData
+"6 Aug 2019 16:00:00.000000000" "6 Aug 2020 16:00:00.000000000"
+                        END Intervals
 
-BEGIN Extensions
-    
-    BEGIN ClsApp
-		RangeConstraint         5000.000
-		ApoPeriPad              30000.000
-		OrbitPathPad            100000.000
-		TimeDistPad             30000.000
-		OutOfDate               2592000.000
-		MaxApoPeriStep          900.000
-		ApoPeriAngle            0.785
-		UseApogeePerigeeFilter  Yes
-		UsePathFilter           No
-		UseTimeFilter           No
-		UseOutOfDate            Yes
-		CreateSats              No
-		MaxSatsToCreate         500
-		UseModelScale           No
-		ModelScale              0.000
-		UseCrossRefDb           Yes
-		CollisionDB                     stkAllTLE.tce
-		CollisionCrossRefDB             stkAllTLE.sd
-		ShowLine                Yes
-		AnimHighlight           Yes
-		StaticHighlight         Yes
-		UseLaunchWindow                         No
-		LaunchWindowUseEntireTraj               Yes
-		LaunchWindowTrajMETStart                0.000
-		LaunchWindowTrajMETStop                 900.000
-		LaunchWindowStart                       0.000
-		LaunchWindowStop                        -31536000.000
-		LaunchMETOffset                         0.000
-		LaunchWindowUseSecEphem                 No 
-		LaunchWindowUseScenFolderForSecEphem    Yes
-		LaunchWindowUsePrimEphem                No 
-		LaunchWindowUseScenFolderForPrimEphem   Yes
-    LaunchWindowIntervalPtr
-	BEGIN	EVENTINTERVAL
-			BEGIN Interval
-				Start	6 Aug 2019 16:00:00.000000000
-				Stop	7 Aug 2019 16:00:00.000000000
-			END Interval
-			IntervalState	Explicit
-	END	EVENTINTERVAL
+                    END IntervalList
 
-		LaunchWindowUsePrimMTO                  No 
-		GroupLaunches                           No 
-		LWTimeConvergence                       1.000e-03
-		LWRelValueConvergence                   1.000e-08
-		LWTSRTimeConvergence                    1.000e-04
-		LWTSRRelValueConvergence                1.000e-10
-		LaunchWindowStep                        300.000
-		MaxTSRStep                              180.000
-		MaxTSRRelMotion                         20.000
-		UseLaunchArea                           No 
-		LaunchAreaOrientation                   North
-		LaunchAreaAzimuth                       0.000
-		LaunchAreaXLimits                       -10000.000   10000.000
-		LaunchAreaYLimits                       -10000.000   10000.000
-		LaunchAreaNumXIntrPnts                  1
-		LaunchAreaNumYIntrPnts                  1
-		LaunchAreaAltReference                  Ellipsoid
-		TargetSameStop                          No 
-		SkipSurfaceMetric                       No 
-		LWAreaTSRRelValueConvergence            1.000e-10
-		AreaLaunchWindowStep                    300.000
-		AreaMaxTSRStep                          30.000
-		AreaMaxTSRRelMotion                     1.000
-		ShowLaunchArea                          No 
-		ShowBlackoutTracks                      No 
-		ShowClearedTracks                       No 
-		UseObjectForClearedColor                No 
-		BlackoutColor                           #ff0000
-		ClearedColor                             #ffffff
-		ShowTracksSegments                      Yes
-		ShowMinRangeTracks                      Yes
-		MinRangeTrackTimeStep                   0.500000
-		UsePrimStepForTracks                    Yes
-		GfxTracksTimeStep                       30.000
-		GfxAreaNumXIntrPnts                     1
-		GfxAreaNumYIntrPnts                     1
-		CreateLaunchMTO                         No 
-		CovarianceSigmaScale                    3.000
-		CovarianceMode                          None 
-    END ClsApp
-    
-    BEGIN Units
-		DistanceUnit		Kilometers
-		TimeUnit		Seconds
-		DateFormat		GregorianUTC
-		AngleUnit		Degrees
-		MassUnit		Kilograms
-		PowerUnit		dBW
-		FrequencyUnit		Gigahertz
-		SmallDistanceUnit		Meters
-		LatitudeUnit		Degrees
-		LongitudeUnit		Degrees
-		DurationUnit		Hr:Min:Sec
-		Temperature		Kelvin
-		SmallTimeUnit		Seconds
-		RatioUnit		Decibel
-		RcsUnit		Decibel
-		DopplerVelocityUnit		MetersperSecond
-		SARTimeResProdUnit		Meter-Second
-		ForceUnit		Newtons
-		PressureUnit		Pascals
-		SpecificImpulseUnit		Seconds
-		PRFUnit		Kilohertz
-		BandwidthUnit		Megahertz
-		SmallVelocityUnit		CentimetersperSecond
-		Percent		Percentage
-		AviatorDistanceUnit		NauticalMiles
-		AviatorTimeUnit		Hours
-		AviatorAltitudeUnit		Feet
-		AviatorFuelQuantityUnit		Pounds
-		AviatorRunwayLengthUnit		Kilofeet
-		AviatorBearingAngleUnit		Degrees
-		AviatorAngleOfAttackUnit		Degrees
-		AviatorAttitudeAngleUnit		Degrees
-		AviatorGUnit		StandardSeaLevelG
-		SolidAngle		Steradians
-		AviatorTSFCUnit		TSFCLbmHrLbf
-		AviatorPSFCUnit		PSFCLbmHrHp
-		AviatorForceUnit		Pounds
-		AviatorPowerUnit		Horsepower
-		SpectralBandwidthUnit		Hertz
-		AviatorAltTimeUnit		Minutes
-		AviatorSmallTimeUnit		Seconds
-		AviatorEnergyUnit		kilowatt-hours
-		BitsUnit		MegaBits
-		RadiationDose		Rads
-		MagneticFieldUnit		nanoTesla
-		RadiationShieldThickness		Mils
-		ParticleEnergy		MeV
-    END Units
-    
-    BEGIN ReportUnits
-		DistanceUnit		Kilometers
-		TimeUnit		Seconds
-		DateFormat		GregorianUTC
-		AngleUnit		Degrees
-		MassUnit		Kilograms
-		PowerUnit		dBW
-		FrequencyUnit		Gigahertz
-		SmallDistanceUnit		Meters
-		LatitudeUnit		Degrees
-		LongitudeUnit		Degrees
-		DurationUnit		Hr:Min:Sec
-		Temperature		Kelvin
-		SmallTimeUnit		Seconds
-		RatioUnit		Decibel
-		RcsUnit		Decibel
-		DopplerVelocityUnit		MetersperSecond
-		SARTimeResProdUnit		Meter-Second
-		ForceUnit		Newtons
-		PressureUnit		Pascals
-		SpecificImpulseUnit		Seconds
-		PRFUnit		Kilohertz
-		BandwidthUnit		Megahertz
-		SmallVelocityUnit		CentimetersperSecond
-		Percent		Percentage
-		AviatorDistanceUnit		NauticalMiles
-		AviatorTimeUnit		Hours
-		AviatorAltitudeUnit		Feet
-		AviatorFuelQuantityUnit		Pounds
-		AviatorRunwayLengthUnit		Kilofeet
-		AviatorBearingAngleUnit		Degrees
-		AviatorAngleOfAttackUnit		Degrees
-		AviatorAttitudeAngleUnit		Degrees
-		AviatorGUnit		StandardSeaLevelG
-		SolidAngle		Steradians
-		AviatorTSFCUnit		TSFCLbmHrLbf
-		AviatorPSFCUnit		PSFCLbmHrHp
-		AviatorForceUnit		Pounds
-		AviatorPowerUnit		Horsepower
-		SpectralBandwidthUnit		Hertz
-		AviatorAltTimeUnit		Minutes
-		AviatorSmallTimeUnit		Seconds
-		AviatorEnergyUnit		kilowatt-hours
-		BitsUnit		MegaBits
-		RadiationDose		Rads
-		MagneticFieldUnit		nanoTesla
-		RadiationShieldThickness		Mils
-		ParticleEnergy		MeV
-    END ReportUnits
-    
-    BEGIN ConnectReportUnits
-		DistanceUnit		Kilometers
-		TimeUnit		Seconds
-		DateFormat		GregorianUTC
-		AngleUnit		Degrees
-		MassUnit		Kilograms
-		PowerUnit		dBW
-		FrequencyUnit		Gigahertz
-		SmallDistanceUnit		Meters
-		LatitudeUnit		Degrees
-		LongitudeUnit		Degrees
-		DurationUnit		Hr:Min:Sec
-		Temperature		Kelvin
-		SmallTimeUnit		Seconds
-		RatioUnit		Decibel
-		RcsUnit		Decibel
-		DopplerVelocityUnit		MetersperSecond
-		SARTimeResProdUnit		Meter-Second
-		ForceUnit		Newtons
-		PressureUnit		Pascals
-		SpecificImpulseUnit		Seconds
-		PRFUnit		Kilohertz
-		BandwidthUnit		Megahertz
-		SmallVelocityUnit		CentimetersperSecond
-		Percent		Percentage
-		AviatorDistanceUnit		NauticalMiles
-		AviatorTimeUnit		Hours
-		AviatorAltitudeUnit		Feet
-		AviatorFuelQuantityUnit		Pounds
-		AviatorRunwayLengthUnit		Kilofeet
-		AviatorBearingAngleUnit		Degrees
-		AviatorAngleOfAttackUnit		Degrees
-		AviatorAttitudeAngleUnit		Degrees
-		AviatorGUnit		StandardSeaLevelG
-		SolidAngle		Steradians
-		AviatorTSFCUnit		TSFCLbmHrLbf
-		AviatorPSFCUnit		PSFCLbmHrHp
-		AviatorForceUnit		Pounds
-		AviatorPowerUnit		Horsepower
-		SpectralBandwidthUnit		Hertz
-		AviatorAltTimeUnit		Minutes
-		AviatorSmallTimeUnit		Seconds
-		AviatorEnergyUnit		kilowatt-hours
-		BitsUnit		MegaBits
-		RadiationDose		Rads
-		MagneticFieldUnit		nanoTesla
-		RadiationShieldThickness		Mils
-		ParticleEnergy		MeV
-    END ConnectReportUnits
-    
-    BEGIN ReportFavorites
-        BEGIN Class
-            Name  Satellite
-            BEGIN Favorite
-                Type    Report
-                BaseDir Install
-                Style   Beta Angle
-            END Favorite
-            BEGIN Favorite
-                Type    Graph
-                BaseDir Install
-                Style   Beta Angle
-            END Favorite
-            BEGIN Favorite
-                Type    Report
-                BaseDir Install
-                Style   Lighting Times
-            END Favorite
-            BEGIN Favorite
-                Type    Graph
-                BaseDir Install
-                Style   Lighting Times
-            END Favorite
-            BEGIN Favorite
-                Type    Graph
-                BaseDir Install
-                Style   Solar Panel Power
-            END Favorite
-        END Class
-    END ReportFavorites
-    
-    BEGIN ADFFileData
-    END ADFFileData
-    
-    BEGIN GenDb
+                    TimeType		 Availability
+                    SamplingType		 Default
+                    TimeBound		 0
+                END Section
+            END TimeData
+            BEGIN ElementUnitList
+                BEGIN ElementUnit
+                    SectionNumber		 1
+                    LineNumber		 1
+                    ElementNumber		 1
+                    Instance		 Satellite/Selfie-Sat
+                    Name		 Time
+                    ServiceName		 BetaAngle
+                    BEGIN ElemUnitData
+                        UseDefaultUnits		 No
+                        BEGIN ElemDimUnitList
+                            DateFormat		 EpochSeconds
+                        END ElemDimUnitList
+                    END ElemUnitData
+                END ElementUnit
+                BEGIN ElementUnit
+                    SectionNumber		 1
+                    LineNumber		 1
+                    ElementNumber		 2
+                    Instance		 Satellite/Selfie-Sat
+                    Name		 Beta Angle
+                    ServiceName		 BetaAngle
+                    BEGIN ElemUnitData
+                        UseDefaultUnits		 No
+                        BEGIN ElemDimUnitList
+                            AngleUnit		 Degrees
+                        END ElemDimUnitList
+                    END ElemUnitData
+                END ElementUnit
+            END ElementUnitList
+            DisplayOnLoad		 No
+            FrameType		 0
+            DockCircleID		 0
+            DockID		 0
+            WindowRectLeft		 228
+            WindowRectTop		 783
+            WindowRectRight		 388
+            WindowRectBottom		 811
+        END Report
+    END QuickReports
 
-		BEGIN Database
-		    DbType       Satellite
-		    DefDb        stkAllTLE.sd
-		    UseMyDb      Off
-		    MaxMatches   2000
-		    Use4SOC      On
+    BEGIN Extensions
 
-		BEGIN FieldDefaults
+        BEGIN ClsApp
+            RangeConstraint		 5000
+            ApoPeriPad		 30000
+            OrbitPathPad		 100000
+            TimeDistPad		 30000
+            OutOfDate		 2.592e+06
+            MaxApoPeriStep		 900
+            ApoPeriAngle		 0.785
+            UseApogeePerigeeFilter		 Yes
+            UsePathFilter		 No
+            UseTimeFilter		 No
+            UseOutOfDate		 Yes
+            CreateSats		 No
+            MaxSatsToCreate		 500
+            UseModelScale		 No
+            ModelScale		 0
+            UseCrossRefDb		 Yes
+            CollisionDB		 stkAllTLE.tce
+            CollisionCrossRefDB		 stkAllTLE.sd
+            ShowLine		 Yes
+            AnimHighlight		 Yes
+            StaticHighlight		 Yes
+            UseLaunchWindow		 No
+            LaunchWindowUseEntireTraj		 Yes
+            LaunchWindowTrajMETStart		 0
+            LaunchWindowTrajMETStop		 900
+            LaunchWindowStart		 0
+            LaunchWindowStop		 -3.1536e+07
+            LaunchMETOffset		 0
+            LaunchWindowUseSecEphem		 No 
+            LaunchWindowUseScenFolderForSecEphem		 Yes
+            LaunchWindowUsePrimEphem		 No 
+            LaunchWindowUseScenFolderForPrimEphem		 Yes
+            LaunchWindowIntervalPtr		
+            BEGIN EVENTINTERVAL
+                BEGIN Interval
+                    Start		 6 Aug 2019 16:00:00.000000000
+                    Stop		 7 Aug 2019 16:00:00.000000000
+                END Interval
+                IntervalState		 Explicit
+            END EVENTINTERVAL
 
-			BEGIN Field
-				Name "SSC Number"
-				Default "*"
-			END Field
+            LaunchWindowUsePrimMTO		 No 
+            GroupLaunches		 No 
+            LWTimeConvergence		 0.001
+            LWRelValueConvergence		 1e-08
+            LWTSRTimeConvergence		 0.0001
+            LWTSRRelValueConvergence		 1e-10
+            LaunchWindowStep		 300
+            MaxTSRStep		  1.8000000000000000e+02
+            MaxTSRRelMotion		  2.0000000000000000e+01
+            UseLaunchArea		 No 
+            LaunchAreaOrientation		 North
+            LaunchAreaAzimuth		 0
+            LaunchAreaXLimits		 -10000 10000
+            LaunchAreaYLimits		 -10000 10000
+            LaunchAreaNumXIntrPnts		 1
+            LaunchAreaNumYIntrPnts		 1
+            LaunchAreaAltReference		 Ellipsoid
+            TargetSameStop		 No 
+            SkipSurfaceMetric		 No 
+            LWAreaTSRRelValueConvergence		 1e-10
+            AreaLaunchWindowStep		 300
+            AreaMaxTSRStep		  3.0000000000000000e+01
+            AreaMaxTSRRelMotion		 1
+            ShowLaunchArea		 No 
+            ShowBlackoutTracks		 No 
+            ShowClearedTracks		 No 
+            UseObjectForClearedColor		 No 
+            BlackoutColor		 #ff0000
+            ClearedColor		 #ffffff
+            ShowTracksSegments		 Yes
+            ShowMinRangeTracks		 Yes
+            MinRangeTrackTimeStep		 0.5
+            UsePrimStepForTracks		 Yes
+            GfxTracksTimeStep		 30
+            GfxAreaNumXIntrPnts		 1
+            GfxAreaNumYIntrPnts		 1
+            CreateLaunchMTO		 No 
+            CovarianceSigmaScale		 3
+            CovarianceMode		 None 
+        END ClsApp
 
-			BEGIN Field
-				Name "Common Name"
-				Default "*"
-			END Field
+        BEGIN Units
+            DistanceUnit		 Kilometers
+            TimeUnit		 Seconds
+            DateFormat		 GregorianUTC
+            AngleUnit		 Degrees
+            MassUnit		 Kilograms
+            PowerUnit		 dBW
+            FrequencyUnit		 Gigahertz
+            SmallDistanceUnit		 Meters
+            LatitudeUnit		 Degrees
+            LongitudeUnit		 Degrees
+            DurationUnit		 Hr:Min:Sec
+            Temperature		 Kelvin
+            SmallTimeUnit		 Seconds
+            RatioUnit		 Decibel
+            RcsUnit		 Decibel
+            DopplerVelocityUnit		 MetersperSecond
+            SARTimeResProdUnit		 Meter-Second
+            ForceUnit		 Newtons
+            PressureUnit		 Pascals
+            SpecificImpulseUnit		 Seconds
+            PRFUnit		 Kilohertz
+            BandwidthUnit		 Megahertz
+            SmallVelocityUnit		 CentimetersperSecond
+            Percent		 Percentage
+            AviatorDistanceUnit		 NauticalMiles
+            AviatorTimeUnit		 Hours
+            AviatorAltitudeUnit		 Feet
+            AviatorFuelQuantityUnit		 Pounds
+            AviatorRunwayLengthUnit		 Kilofeet
+            AviatorBearingAngleUnit		 Degrees
+            AviatorAngleOfAttackUnit		 Degrees
+            AviatorAttitudeAngleUnit		 Degrees
+            AviatorGUnit		 StandardSeaLevelG
+            SolidAngle		 Steradians
+            AviatorTSFCUnit		 TSFCLbmHrLbf
+            AviatorPSFCUnit		 PSFCLbmHrHp
+            AviatorForceUnit		 Pounds
+            AviatorPowerUnit		 Horsepower
+            SpectralBandwidthUnit		 Hertz
+            AviatorAltTimeUnit		 Minutes
+            AviatorSmallTimeUnit		 Seconds
+            AviatorEnergyUnit		 kilowatt-hours
+            BitsUnit		 MegaBits
+            RadiationDose		 Rads
+            MagneticFieldUnit		 nanoTesla
+            RadiationShieldThickness		 Mils
+            ParticleEnergy		 MeV
+        END Units
 
-		END FieldDefaults
+        BEGIN ReportUnits
+            DistanceUnit		 Kilometers
+            TimeUnit		 Seconds
+            DateFormat		 GregorianUTC
+            AngleUnit		 Degrees
+            MassUnit		 Kilograms
+            PowerUnit		 dBW
+            FrequencyUnit		 Gigahertz
+            SmallDistanceUnit		 Meters
+            LatitudeUnit		 Degrees
+            LongitudeUnit		 Degrees
+            DurationUnit		 Hr:Min:Sec
+            Temperature		 Kelvin
+            SmallTimeUnit		 Seconds
+            RatioUnit		 Decibel
+            RcsUnit		 Decibel
+            DopplerVelocityUnit		 MetersperSecond
+            SARTimeResProdUnit		 Meter-Second
+            ForceUnit		 Newtons
+            PressureUnit		 Pascals
+            SpecificImpulseUnit		 Seconds
+            PRFUnit		 Kilohertz
+            BandwidthUnit		 Megahertz
+            SmallVelocityUnit		 CentimetersperSecond
+            Percent		 Percentage
+            AviatorDistanceUnit		 NauticalMiles
+            AviatorTimeUnit		 Hours
+            AviatorAltitudeUnit		 Feet
+            AviatorFuelQuantityUnit		 Pounds
+            AviatorRunwayLengthUnit		 Kilofeet
+            AviatorBearingAngleUnit		 Degrees
+            AviatorAngleOfAttackUnit		 Degrees
+            AviatorAttitudeAngleUnit		 Degrees
+            AviatorGUnit		 StandardSeaLevelG
+            SolidAngle		 Steradians
+            AviatorTSFCUnit		 TSFCLbmHrLbf
+            AviatorPSFCUnit		 PSFCLbmHrHp
+            AviatorForceUnit		 Pounds
+            AviatorPowerUnit		 Horsepower
+            SpectralBandwidthUnit		 Hertz
+            AviatorAltTimeUnit		 Minutes
+            AviatorSmallTimeUnit		 Seconds
+            AviatorEnergyUnit		 kilowatt-hours
+            BitsUnit		 MegaBits
+            RadiationDose		 Rads
+            MagneticFieldUnit		 nanoTesla
+            RadiationShieldThickness		 Mils
+            ParticleEnergy		 MeV
+        END ReportUnits
 
-		END Database
+        BEGIN ConnectReportUnits
+            DistanceUnit		 Kilometers
+            TimeUnit		 Seconds
+            DateFormat		 GregorianUTC
+            AngleUnit		 Degrees
+            MassUnit		 Kilograms
+            PowerUnit		 dBW
+            FrequencyUnit		 Gigahertz
+            SmallDistanceUnit		 Meters
+            LatitudeUnit		 Degrees
+            LongitudeUnit		 Degrees
+            DurationUnit		 Hr:Min:Sec
+            Temperature		 Kelvin
+            SmallTimeUnit		 Seconds
+            RatioUnit		 Decibel
+            RcsUnit		 Decibel
+            DopplerVelocityUnit		 MetersperSecond
+            SARTimeResProdUnit		 Meter-Second
+            ForceUnit		 Newtons
+            PressureUnit		 Pascals
+            SpecificImpulseUnit		 Seconds
+            PRFUnit		 Kilohertz
+            BandwidthUnit		 Megahertz
+            SmallVelocityUnit		 CentimetersperSecond
+            Percent		 Percentage
+            AviatorDistanceUnit		 NauticalMiles
+            AviatorTimeUnit		 Hours
+            AviatorAltitudeUnit		 Feet
+            AviatorFuelQuantityUnit		 Pounds
+            AviatorRunwayLengthUnit		 Kilofeet
+            AviatorBearingAngleUnit		 Degrees
+            AviatorAngleOfAttackUnit		 Degrees
+            AviatorAttitudeAngleUnit		 Degrees
+            AviatorGUnit		 StandardSeaLevelG
+            SolidAngle		 Steradians
+            AviatorTSFCUnit		 TSFCLbmHrLbf
+            AviatorPSFCUnit		 PSFCLbmHrHp
+            AviatorForceUnit		 Pounds
+            AviatorPowerUnit		 Horsepower
+            SpectralBandwidthUnit		 Hertz
+            AviatorAltTimeUnit		 Minutes
+            AviatorSmallTimeUnit		 Seconds
+            AviatorEnergyUnit		 kilowatt-hours
+            BitsUnit		 MegaBits
+            RadiationDose		 Rads
+            MagneticFieldUnit		 nanoTesla
+            RadiationShieldThickness		 Mils
+            ParticleEnergy		 MeV
+        END ConnectReportUnits
 
-		BEGIN Database
-		    DbType       City
-		    DefDb        stkCityDb.cd
-		    UseMyDb      Off
-		    MaxMatches   2000
-		    Use4SOC      On
+        BEGIN ReportFavorites
+            BEGIN Class
+                Name		 Satellite
+                BEGIN Favorite
+                    Type		 Report
+                    BaseDir		 Install
+                    Style		 Lighting Times
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Lighting Times
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Solar Panel Power
+                END Favorite
+                BEGIN Favorite
+                    Type		 Graph
+                    BaseDir		 Install
+                    Style		 Beta Angle
+                END Favorite
+                BEGIN Favorite
+                    Type		 Report
+                    BaseDir		 Install
+                    Style		 Beta Angle
+                END Favorite
+            END Class
+        END ReportFavorites
 
-		BEGIN FieldDefaults
+        BEGIN ADFFileData
+        END ADFFileData
 
-			BEGIN Field
-				Name "City Name"
-				Default "*"
-			END Field
+        BEGIN GenDb
 
-		END FieldDefaults
+            BEGIN Database
+                DbType		 Satellite
+                DefDb		 stkAllTLE.sd
+                UseMyDb		 Off
+                MaxMatches		 2000
+                Use4SOC		 On
 
-		END Database
+                BEGIN FieldDefaults
 
-		BEGIN Database
-		    DbType       Facility
-		    DefDb        stkFacility.fd
-		    UseMyDb      Off
-		    MaxMatches   2000
-		    Use4SOC      On
+                    BEGIN Field
+                        Name		 "SSC Number"
+                        Default		 "*"
+                    END Field
 
-		BEGIN FieldDefaults
+                    BEGIN Field
+                        Name		 "Common Name"
+                        Default		 "*"
+                    END Field
 
-		END FieldDefaults
+                END FieldDefaults
 
-		END Database
-    END GenDb
-    
-    BEGIN SOCDb
-        BEGIN Defaults
-        END Defaults
-    END SOCDb
-    
-    BEGIN Msgp4Ext
-    END Msgp4Ext
-    
-    BEGIN FileLocations
-    END FileLocations
-    
-    BEGIN Author
-	Optimize	No
-	UseBasicGlobe	No
-	SaveEphemeris	Yes
-	SaveScenFolder	No
-	BEGIN ExternalFileTypes
-	    BEGIN Type
-		FileType  Calculation Scalar
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Celestial Image
-		Include    No
-	    END Type
-	    BEGIN Type
-		FileType  Cloud
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  EOP
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  External Vector Data
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Globe
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Globe Data
-		Include    No
-	    END Type
-	    BEGIN Type
-		FileType  Map
-		Include    No
-	    END Type
-	    BEGIN Type
-		FileType  Map Image
-		Include    No
-	    END Type
-	    BEGIN Type
-		FileType  Marker/Label
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Model
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Object Break-up File
-		Include    No
-	    END Type
-	    BEGIN Type
-		FileType  Planetary Ephemeris
-		Include    No
-	    END Type
-	    BEGIN Type
-		FileType  Report Style Script
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Report/Graph Style
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Scalar Calculation File
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Terrain
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Volume Grid Intervals File
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  Volumetric File
-		Include    Yes
-	    END Type
-	    BEGIN Type
-		FileType  WTM
-		Include    Yes
-	    END Type
-	END ExternalFileTypes
-	ReadOnly	No
-	ViewerPassword	No
-	STKPassword	No
-	ExcludeInstallFiles	No
-	BEGIN ExternalFileList
-	END ExternalFileList
-    END Author
-    
-    BEGIN ExportDataFile
-    FileType         Ephemeris
-    IntervalType     Ephemeris
-    TimePeriodStart  0.000000e+00
-    TimePeriodStop   0.000000e+00
-    StepType         Ephemeris
-    StepSize         60.000000
-    EphemType        STK
-    UseVehicleCentralBody   Yes
-    CentralBody      Earth
-    SatelliteID      -200000
-    CoordSys         ICRF
-    NonSatCoordSys   Fixed
-    InterpolateBoundaries  Yes
-    EphemFormat      Current
-    InterpType       9
-    InterpOrder      5
-    AttCoordSys      Fixed
-    Quaternions      0
-    ExportCovar      Position
-    AttitudeFormat   Current
-    TimePrecision      6
-    CCSDSDateFormat    YMD
-    CCSDSEphFormat     SciNotation
-    CCSDSTimeSystem    UTC
-    CCSDSRefFrame      ICRF
-    UseSatCenterAndFrame   No
-    IncludeCovariance      No
-    IncludeAcceleration    No
-    CCSDSFileFormat      KVN
-    END ExportDataFile
-    
-    BEGIN Desc
-    END Desc
-    
-    BEGIN RfEnv
+            END Database
+
+            BEGIN Database
+                DbType		 City
+                DefDb		 stkCityDb.cd
+                UseMyDb		 Off
+                MaxMatches		 2000
+                Use4SOC		 On
+
+                BEGIN FieldDefaults
+
+                    BEGIN Field
+                        Name		 "City Name"
+                        Default		 "*"
+                    END Field
+
+                END FieldDefaults
+
+            END Database
+
+            BEGIN Database
+                DbType		 Facility
+                DefDb		 stkFacility.fd
+                UseMyDb		 Off
+                MaxMatches		 2000
+                Use4SOC		 On
+
+                BEGIN FieldDefaults
+
+                END FieldDefaults
+
+            END Database
+        END GenDb
+
+        BEGIN SOCDb
+            BEGIN Defaults
+            END Defaults
+        END SOCDb
+
+        BEGIN Msgp4Ext
+        END Msgp4Ext
+
+        BEGIN FileLocations
+        END FileLocations
+
+        BEGIN Author
+            Optimize		 No
+            UseBasicGlobe		 No
+            SaveEphemeris		 Yes
+            SaveScenFolder		 No
+            BEGIN ExternalFileTypes
+                BEGIN Type
+                    FileType		 Calculation Scalar
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Celestial Image
+                    Include		 No
+                END Type
+                BEGIN Type
+                    FileType		 Cloud
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 EOP
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 External Vector Data
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Globe
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Globe Data
+                    Include		 No
+                END Type
+                BEGIN Type
+                    FileType		 Map
+                    Include		 No
+                END Type
+                BEGIN Type
+                    FileType		 Map Image
+                    Include		 No
+                END Type
+                BEGIN Type
+                    FileType		 Marker/Label
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Model
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Object Break-up File
+                    Include		 No
+                END Type
+                BEGIN Type
+                    FileType		 Planetary Ephemeris
+                    Include		 No
+                END Type
+                BEGIN Type
+                    FileType		 Report Style Script
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Report/Graph Style
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Scalar Calculation File
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Terrain
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Volume Grid Intervals File
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 Volumetric File
+                    Include		 Yes
+                END Type
+                BEGIN Type
+                    FileType		 WTM
+                    Include		 Yes
+                END Type
+            END ExternalFileTypes
+            ReadOnly		 No
+            ViewerPassword		 No
+            STKPassword		 No
+            ExcludeInstallFiles		 No
+            BEGIN ExternalFileList
+            END ExternalFileList
+        END Author
+
+        BEGIN ExportDataFile
+            FileType		 Ephemeris
+            IntervalType		 Ephemeris
+            TimePeriodStart		 0
+            TimePeriodStop		 0
+            StepType		 Ephemeris
+            StepSize		 60
+            EphemType		 STK
+            UseVehicleCentralBody		 Yes
+            CentralBody		 Earth
+            SatelliteID		 -200000
+            CoordSys		 ICRF
+            NonSatCoordSys		 Fixed
+            InterpolateBoundaries		 Yes
+            EphemFormat		 Current
+            InterpType		 9
+            InterpOrder		 5
+            AttCoordSys		 Fixed
+            Quaternions		 0
+            ExportCovar		 Position
+            AttitudeFormat		 Current
+            TimePrecision		 6
+            CCSDSDateFormat		 YMD
+            CCSDSEphFormat		 SciNotation
+            CCSDSTimeSystem		 UTC
+            CCSDSRefFrame		 ICRF
+            UseSatCenterAndFrame		 No
+            IncludeCovariance		 No
+            IncludeAcceleration		 No
+            CCSDSFileFormat		 KVN
+        END ExportDataFile
+
+        BEGIN Desc
+        END Desc
+
+        BEGIN RfEnv
 <?xml version = "1.0" standalone = "yes"?>
 <VAR name = "STK_RF_Environment">
     <SCOPE Class = "RFEnvironment">
         <VAR name = "Version">
             <STRING>&quot;1.0.0 a&quot;</STRING>
+        </VAR>
+        <VAR name = "STKVersion">
+            <INT>1161</INT>
         </VAR>
         <VAR name = "ComponentName">
             <STRING>&quot;STK_RF_Environment&quot;</STRING>
@@ -932,6 +922,9 @@ BEGIN Extensions
                 <SCOPE Class = "PropagationChannel">
                     <VAR name = "Version">
                         <STRING>&quot;1.0.0 a&quot;</STRING>
+                    </VAR>
+                    <VAR name = "STKVersion">
+                        <INT>1161</INT>
                     </VAR>
                     <VAR name = "ComponentName">
                         <STRING>&quot;RF_Propagation_Channel&quot;</STRING>
@@ -965,6 +958,9 @@ BEGIN Extensions
                             <SCOPE Class = "CloudFogLossModel">
                                 <VAR name = "Version">
                                     <STRING>&quot;1.0.0 a&quot;</STRING>
+                                </VAR>
+                                <VAR name = "STKVersion">
+                                    <INT>1161</INT>
                                 </VAR>
                                 <VAR name = "ComponentName">
                                     <STRING>&quot;ITU-R_P840-6&quot;</STRING>
@@ -1035,6 +1031,9 @@ BEGIN Extensions
                                 <VAR name = "Version">
                                     <STRING>&quot;1.0.0 a&quot;</STRING>
                                 </VAR>
+                                <VAR name = "STKVersion">
+                                    <INT>1161</INT>
+                                </VAR>
                                 <VAR name = "ComponentName">
                                     <STRING>&quot;ITU-R_P618-12&quot;</STRING>
                                 </VAR>
@@ -1080,6 +1079,51 @@ BEGIN Extensions
                             </SCOPE>
                         </VAR>
                     </VAR>
+                    <VAR name = "UseIonoFadingModel">
+                        <BOOL>false</BOOL>
+                    </VAR>
+                    <VAR name = "IonoFadingModel">
+                        <VAR name = "ITU-R_P531-13">
+                            <SCOPE Class = "IonoFadingLossModel">
+                                <VAR name = "Version">
+                                    <STRING>&quot;1.0.0 a&quot;</STRING>
+                                </VAR>
+                                <VAR name = "STKVersion">
+                                    <INT>1161</INT>
+                                </VAR>
+                                <VAR name = "ComponentName">
+                                    <STRING>&quot;ITU-R_P531-13&quot;</STRING>
+                                </VAR>
+                                <VAR name = "Description">
+                                    <STRING>&quot;ITU-R P531-13&quot;</STRING>
+                                </VAR>
+                                <VAR name = "Type">
+                                    <STRING>&quot;ITU-R P531-13&quot;</STRING>
+                                </VAR>
+                                <VAR name = "UserComment">
+                                    <STRING>&quot;ITU-R P531-13&quot;</STRING>
+                                </VAR>
+                                <VAR name = "ReadOnly">
+                                    <BOOL>false</BOOL>
+                                </VAR>
+                                <VAR name = "Clonable">
+                                    <BOOL>true</BOOL>
+                                </VAR>
+                                <VAR name = "Category">
+                                    <STRING>&quot;&quot;</STRING>
+                                </VAR>
+                                <VAR name = "UseAlternateAPFile">
+                                    <BOOL>false</BOOL>
+                                </VAR>
+                                <VAR name = "AlternateAPDataFile">
+                                    <STRING>
+                                        <PROP name = "FullName">
+                                            <STRING>&quot;&quot;</STRING>
+                                        </PROP>&quot;&quot;</STRING>
+                                </VAR>
+                            </SCOPE>
+                        </VAR>
+                    </VAR>
                     <VAR name = "UseRainModel">
                         <BOOL>false</BOOL>
                     </VAR>
@@ -1088,6 +1132,9 @@ BEGIN Extensions
                             <SCOPE Class = "RainLossModel">
                                 <VAR name = "Version">
                                     <STRING>&quot;1.0.0 a&quot;</STRING>
+                                </VAR>
+                                <VAR name = "STKVersion">
+                                    <INT>1161</INT>
                                 </VAR>
                                 <VAR name = "ComponentName">
                                     <STRING>&quot;ITU-R_P618-12&quot;</STRING>
@@ -1129,6 +1176,9 @@ BEGIN Extensions
                             <SCOPE Class = "AtmosphericAbsorptionModel">
                                 <VAR name = "Version">
                                     <STRING>&quot;1.0.1 a&quot;</STRING>
+                                </VAR>
+                                <VAR name = "STKVersion">
+                                    <INT>1161</INT>
                                 </VAR>
                                 <VAR name = "ComponentName">
                                     <STRING>&quot;Simple_Satcom&quot;</STRING>
@@ -1172,6 +1222,9 @@ BEGIN Extensions
                             <SCOPE Class = "UrbanTerrestrialPropagationLossModel">
                                 <VAR name = "Version">
                                     <STRING>&quot;1.0.0 a&quot;</STRING>
+                                </VAR>
+                                <VAR name = "STKVersion">
+                                    <INT>1161</INT>
                                 </VAR>
                                 <VAR name = "ComponentName">
                                     <STRING>&quot;Two_Ray&quot;</STRING>
@@ -1234,17 +1287,20 @@ BEGIN Extensions
             </LINKTOOBJ>
         </VAR>
     </SCOPE>
-</VAR>    END RfEnv
-    
-    BEGIN CommRad
-    END CommRad
-    
-    BEGIN RadarCrossSection
+</VAR>        END RfEnv
+
+        BEGIN CommRad
+        END CommRad
+
+        BEGIN RadarCrossSection
 <?xml version = "1.0" standalone = "yes"?>
 <VAR name = "STK_Radar_RCS_Extension">
     <SCOPE Class = "RadarRCSExtension">
         <VAR name = "Version">
             <STRING>&quot;1.0.0 a&quot;</STRING>
+        </VAR>
+        <VAR name = "STKVersion">
+            <INT>1161</INT>
         </VAR>
         <VAR name = "ComponentName">
             <STRING>&quot;STK_Radar_RCS_Extension&quot;</STRING>
@@ -1272,6 +1328,9 @@ BEGIN Extensions
                 <SCOPE Class = "RCS">
                     <VAR name = "Version">
                         <STRING>&quot;1.0.0 a&quot;</STRING>
+                    </VAR>
+                    <VAR name = "STKVersion">
+                        <INT>1161</INT>
                     </VAR>
                     <VAR name = "ComponentName">
                         <STRING>&quot;Radar_Cross_Section&quot;</STRING>
@@ -1329,14 +1388,17 @@ BEGIN Extensions
             </VAR>
         </VAR>
     </SCOPE>
-</VAR>    END RadarCrossSection
-    
-    BEGIN RadarClutter
+</VAR>        END RadarCrossSection
+
+        BEGIN RadarClutter
 <?xml version = "1.0" standalone = "yes"?>
 <VAR name = "STK_Radar_Clutter_Extension">
     <SCOPE Class = "RadarClutterExtension">
         <VAR name = "Version">
             <STRING>&quot;1.0.0 a&quot;</STRING>
+        </VAR>
+        <VAR name = "STKVersion">
+            <INT>1161</INT>
         </VAR>
         <VAR name = "ComponentName">
             <STRING>&quot;STK_Radar_Clutter_Extension&quot;</STRING>
@@ -1377,780 +1439,767 @@ BEGIN Extensions
             </VAR>
         </VAR>
     </SCOPE>
-</VAR>    END RadarClutter
-    
-    BEGIN Gator
-    END Gator
-    
-    BEGIN Crdn
-    END Crdn
-    
-    BEGIN ScenSpaceEnvironment
-
-        Begin RadiationEnvironment
-
-           NasaModelsActivity      SolarMin
-           CrresProActivity        Quiet
-           CrresRadActivity        Average
-           UseDefaultNasaEnergies  Yes
-
-        End RadiationEnvironment
-
-    END ScenSpaceEnvironment
-    
-    BEGIN SpiceExt
-    END SpiceExt
-    
-    BEGIN FlightScenExt
-    END FlightScenExt
-    
-    BEGIN Graphics
-
-BEGIN Animation
-
-    StartTime          6 Aug 2019 16:00:00.000000000
-    EndTime            6 Aug 2020 16:00:00.000000000
-    CurrentTime        25 Jun 2020 01:43:37.000000000
-    Direction          Forward
-    UpdateDelta        10.000000
-    RefreshDelta       0.010000
-    XRealTimeMult      1.000000
-    RealTimeOffset     0.000000
-    XRtStartFromPause  Yes
-
-END Animation
-
-
-        BEGIN DisplayFlags
-            ShowLabels           On
-            ShowPassLabel        Off
-            ShowElsetNum         Off
-            ShowGndTracks        On
-            ShowGndMarkers       On
-            ShowOrbitMarkers     On
-            ShowPlanetOrbits     Off
-            ShowPlanetCBIPos     On
-            ShowPlanetCBILabel   On
-            ShowPlanetGndPos     On
-            ShowPlanetGndLabel   On
-            ShowSensors          On
-            ShowWayptMarkers     Off
-            ShowWayptTurnMarkers Off
-            ShowOrbits           On
-            ShowDtedRegions      Off
-            ShowAreaTgtCentroids On
-            ShowToolBar          On
-            ShowStatusBar        On
-            ShowScrollBars       On
-            AllowAnimUpdate      On
-            AccShowLine          On
-            AccAnimHigh          On
-            AccStatHigh          On
-            ShowPrintButton      On
-            ShowAnimButtons      On
-            ShowAnimModeButtons  On
-            ShowZoomMsrButtons   On
-            ShowMapCbButton      Off
-        END DisplayFlags
-
-BEGIN WinFonts
-
-    System
-    MS Sans Serif,22,0,0
-    MS Sans Serif,28,0,0
-
-END WinFonts
-
-BEGIN MapData
-
-    Begin TerrainConverterData
-           NorthLat        0.00000000000000e+00
-           EastLon         0.00000000000000e+00
-           SouthLat        0.00000000000000e+00
-           WestLon         0.00000000000000e+00
-           ColorByRGB      No
-           AltsFromMSL     No
-           UseColorRamp    Yes
-           UseRegionMinMax Yes
-           SizeSameAsSrc   Yes
-           MinAltHSV       0.00000000000000e+00 7.00000000000000e-01 8.00000000000000e-01 4.00000000000000e-01
-           MaxAltHSV       1.00000000000000e+06 0.00000000000000e+00 2.00000000000000e-01 1.00000000000000e+00
-           SmoothColors    Yes
-           CreateChunkTrn  No
-           OutputFormat    PDTTX
-    End TerrainConverterData
-
-    DisableDefKbdActions     Off
-    TextShadowStyle          Dark
-    TextShadowColor          #000000
-    BingLevelOfDetailScale   2.000000
-    BEGIN Map
-        MapNum         1
-        TrackingMode   LatLon
-        PickEnabled    On
-        PanEnabled     On
-
-        BEGIN MapAttributes
-            PrimaryBody          Earth
-            SecondaryBody        Sun
-            CenterLatitude       0.000000
-            CenterLongitude      0.000000
-            ProjectionAltitude   63621860.000000
-            FieldOfView          35.000000
-            OrthoDisplayDistance 20000000.000000
-            TransformTrajectory  On
-            EquatorialRadius     6378137.000000
-            BackgroundColor      #000000
-            LatLonLines          On
-            LatSpacing           30.000000
-            LonSpacing           30.000000
-            LatLonLineColor      #999999
-            LatLonLineStyle      2
-            ShowOrthoDistGrid    Off
-            OrthoGridXSpacing    5
-            OrthoGridYSpacing    5
-            OrthoGridColor       #ffffff
-            ShowImageExtents     Off
-            ImageExtentLineColor #ffffff
-            ImageExtentLineStyle 0
-            ImageExtentLineWidth 1.000000
-            ShowImageNames       Off
-            ImageNameFont        0
-            Projection           EquidistantCylindrical
-            Resolution           VeryLow
-            CoordinateSys        ECF
-            UseBackgroundImage   On
-            UseBingForBackground On
-            BingType             Aerial
-            BingLogoHorizAlign   Right
-            BingLogoVertAlign    Bottom
-            BackgroundImageFile  Basic.bmp
-            UseNightLights       Off
-            NightLightsFactor    3.500000
-            UseCloudsFile        Off
-            BEGIN ZoomLocations
-                BEGIN ZoomLocation
-                    CenterLat    0.000000
-                    CenterLon    0.000000
-                    ZoomWidth    359.999998
-                    ZoomHeight   180.000000
-                End ZoomLocation
-            END ZoomLocations
-            UseVarAspectRatio    No
-            SwapMapResolution    Yes
-            NoneToVLowSwapDist   2000000.000000
-            VLowToLowSwapDist    20000.000000
-            LowToMediumSwapDist  10000.000000
-            MediumToHighSwapDist 5000.000000
-            HighToVHighSwapDist  1000.000000
-            VHighToSHighSwapDist 100.000000
-            BEGIN Axes
-                DisplayAxes no
-                CoordSys    CBI
-                2aryCB      Sun
-                Display+x   yes
-                Label+x     yes
-                Color+x     #ffffff
-                Scale+x     3.000000
-                Display-x   yes
-                Label-x     yes
-                Color-x     #ffffff
-                Scale-x     3.000000
-                Display+y   yes
-                Label+y     yes
-                Color+y     #ffffff
-                Scale+y     3.000000
-                Display-y   yes
-                Label-y     yes
-                Color-y     #ffffff
-                Scale-y     3.000000
-                Display+z   yes
-                Label+z     yes
-                Color+z     #ffffff
-                Scale+z     3.000000
-                Display-z   yes
-                Label-z     yes
-                Color-z     #ffffff
-                Scale-z     3.000000
-            END Axes
-
-        END MapAttributes
-
-        BEGIN MapList
-            BEGIN Detail
-                Alias RWDB2_Coastlines
-                Show Yes
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_International_Borders
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Islands
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Lakes
-                Show No
-                Color #87cefa
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Provincial_Borders
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Rivers
-                Show No
-                Color #87cefa
-            END Detail
-        END MapList
-
-
-        BEGIN MapAnnotations
-        END MapAnnotations
-
-        BEGIN DisplayFlags
-            ShowLabels           On
-            ShowPassLabel        Off
-            ShowElsetNum         Off
-            ShowGndTracks        On
-            ShowGndMarkers       On
-            ShowOrbitMarkers     On
-            ShowPlanetOrbits     Off
-            ShowPlanetCBIPos     On
-            ShowPlanetCBILabel   On
-            ShowPlanetGndPos     On
-            ShowPlanetGndLabel   On
-            ShowSensors          On
-            ShowWayptMarkers     Off
-            ShowWayptTurnMarkers Off
-            ShowOrbits           On
-            ShowDtedRegions      Off
-            ShowAreaTgtCentroids On
-            ShowToolBar          On
-            ShowStatusBar        On
-            ShowScrollBars       On
-            AllowAnimUpdate      Off
-            AccShowLine          On
-            AccAnimHigh          On
-            AccStatHigh          On
-            ShowPrintButton      On
-            ShowAnimButtons      On
-            ShowAnimModeButtons  On
-            ShowZoomMsrButtons   On
-            ShowMapCbButton      Off
-        END DisplayFlags
-
-        BEGIN SoftVTR
-            OutputFormat     WMV
-            Directory        C:\Users\admin\Documents\STK 11 (x64)\CSDS_EPS_Power_Sim
-            BaseName         Frame
-            Digits           4
-            Frame            0
-            LastAnimTime     0.000000
-            OutputMode       Normal
-            HiResAssembly    Assemble
-            HRWidth          6000
-            HRHeight         4500
-            HRDPI            600.000000
-            UseSnapInterval  No
-            SnapInterval     0.000000
-            WmvCodec         "Windows Media Video 9"
-            Framerate        30
-            Bitrate          3000000
-        END SoftVTR
-
-
-        BEGIN TimeDisplay
-            Show             0
-            TextColor        #ffffff
-            TextTranslucency 0.000000
-            ShowBackground   0
-            BackColor        #4d4d4d
-            BackTranslucency 0.400000
-            XPosition        20
-            YPosition        -20
-        END TimeDisplay
-
-        BEGIN LightingData
-            DisplayAltitude              0.000000
-            SubsolarPoint                Off
-            SubsolarPointColor           #ffff00
-            SubsolarPointMarkerStyle     2
-
-            ShowUmbraLine                Off
-            UmbraLineColor               #000000
-            UmbraLineStyle               0
-            UmbraLineWidth               2
-            FillUmbra                    On
-            UmbraFillColor               #000000
-            ShowSunlightLine             Off
-            SunlightLineColor            #ffff00
-            SunlightLineStyle            0
-            SunlightLineWidth            2
-            FillSunlight                 On
-            SunlightFillColor            #ffffff
-            SunlightMinOpacity           0.000000
-            SunlightMaxOpacity           0.200000
-            UmbraMaxOpacity              0.700000
-            UmbraMinOpacity              0.400000
-        END LightingData
-    END Map
-
-    BEGIN MapStyles
-
-        UseStyleTime        No
-
-        BEGIN Style
-        Name                DefaultWithBing
-        Time                0.000000
-        UpdateDelta         10.000000
-
-        BEGIN MapAttributes
-            PrimaryBody          Earth
-            SecondaryBody        Sun
-            CenterLatitude       0.000000
-            CenterLongitude      0.000000
-            ProjectionAltitude   63621860.000000
-            FieldOfView          35.000000
-            OrthoDisplayDistance 20000000.000000
-            TransformTrajectory  On
-            EquatorialRadius     6378137.000000
-            BackgroundColor      #000000
-            LatLonLines          On
-            LatSpacing           30.000000
-            LonSpacing           30.000000
-            LatLonLineColor      #999999
-            LatLonLineStyle      2
-            ShowOrthoDistGrid    Off
-            OrthoGridXSpacing    5
-            OrthoGridYSpacing    5
-            OrthoGridColor       #ffffff
-            ShowImageExtents     Off
-            ImageExtentLineColor #ffffff
-            ImageExtentLineStyle 0
-            ImageExtentLineWidth 1.000000
-            ShowImageNames       Off
-            ImageNameFont        0
-            Projection           EquidistantCylindrical
-            Resolution           VeryLow
-            CoordinateSys        ECF
-            UseBackgroundImage   On
-            UseBingForBackground On
-            BingType             Aerial
-            BingLogoHorizAlign   Right
-            BingLogoVertAlign    Bottom
-            BackgroundImageFile  Basic.bmp
-            UseNightLights       Off
-            NightLightsFactor    3.500000
-            UseCloudsFile        Off
-            BEGIN ZoomLocations
-                BEGIN ZoomLocation
-                    CenterLat    0.000000
-                    CenterLon    0.000000
-                    ZoomWidth    359.999998
-                    ZoomHeight   180.000000
-                End ZoomLocation
-            END ZoomLocations
-            UseVarAspectRatio    No
-            SwapMapResolution    Yes
-            NoneToVLowSwapDist   2000000.000000
-            VLowToLowSwapDist    20000.000000
-            LowToMediumSwapDist  10000.000000
-            MediumToHighSwapDist 5000.000000
-            HighToVHighSwapDist  1000.000000
-            VHighToSHighSwapDist 100.000000
-            BEGIN Axes
-                DisplayAxes no
-                CoordSys    CBI
-                2aryCB      Sun
-                Display+x   yes
-                Label+x     yes
-                Color+x     #ffffff
-                Scale+x     3.000000
-                Display-x   yes
-                Label-x     yes
-                Color-x     #ffffff
-                Scale-x     3.000000
-                Display+y   yes
-                Label+y     yes
-                Color+y     #ffffff
-                Scale+y     3.000000
-                Display-y   yes
-                Label-y     yes
-                Color-y     #ffffff
-                Scale-y     3.000000
-                Display+z   yes
-                Label+z     yes
-                Color+z     #ffffff
-                Scale+z     3.000000
-                Display-z   yes
-                Label-z     yes
-                Color-z     #ffffff
-                Scale-z     3.000000
-            END Axes
-
-        END MapAttributes
-
-        BEGIN MapList
-            BEGIN Detail
-                Alias RWDB2_Coastlines
-                Show Yes
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_International_Borders
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Islands
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Lakes
-                Show No
-                Color #87cefa
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Provincial_Borders
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Rivers
-                Show No
-                Color #87cefa
-            END Detail
-        END MapList
-
-
-        BEGIN MapAnnotations
-        END MapAnnotations
-
-        BEGIN SoftVTR
-            OutputFormat     WMV
-            Directory        C:\Users\admin\Documents\STK 11 (x64)\CSDS_EPS_Power_Sim
-            BaseName         Frame
-            Digits           4
-            Frame            0
-            LastAnimTime     0.000000
-            OutputMode       Normal
-            HiResAssembly    Assemble
-            HRWidth          6000
-            HRHeight         4500
-            HRDPI            600.000000
-            UseSnapInterval  No
-            SnapInterval     0.000000
-            WmvCodec         "Windows Media Video 9"
-            Framerate        30
-            Bitrate          3000000
-        END SoftVTR
-
-
-        BEGIN TimeDisplay
-            Show             0
-            TextColor        #ffffff
-            TextTranslucency 0.000000
-            ShowBackground   0
-            BackColor        #4d4d4d
-            BackTranslucency 0.400000
-            XPosition        20
-            YPosition        -20
-        END TimeDisplay
-
-        BEGIN LightingData
-            DisplayAltitude              0.000000
-            SubsolarPoint                Off
-            SubsolarPointColor           #ffff00
-            SubsolarPointMarkerStyle     2
-
-            ShowUmbraLine                Off
-            UmbraLineColor               #000000
-            UmbraLineStyle               0
-            UmbraLineWidth               2
-            FillUmbra                    On
-            UmbraFillColor               #000000
-            ShowSunlightLine             Off
-            SunlightLineColor            #ffff00
-            SunlightLineStyle            0
-            SunlightLineWidth            2
-            FillSunlight                 On
-            SunlightFillColor            #ffffff
-            SunlightMinOpacity           0.000000
-            SunlightMaxOpacity           0.200000
-            UmbraMaxOpacity              0.700000
-            UmbraMinOpacity              0.400000
-        END LightingData
-
-        ShowDtedRegions     Off
-
-        End Style
-
-        BEGIN Style
-        Name                DefaultWithoutBing
-        Time                0.000000
-        UpdateDelta         10.000000
-
-        BEGIN MapAttributes
-            PrimaryBody          Earth
-            SecondaryBody        Sun
-            CenterLatitude       0.000000
-            CenterLongitude      0.000000
-            ProjectionAltitude   63621860.000000
-            FieldOfView          35.000000
-            OrthoDisplayDistance 20000000.000000
-            TransformTrajectory  On
-            EquatorialRadius     6378137.000000
-            BackgroundColor      #000000
-            LatLonLines          On
-            LatSpacing           30.000000
-            LonSpacing           30.000000
-            LatLonLineColor      #999999
-            LatLonLineStyle      2
-            ShowOrthoDistGrid    Off
-            OrthoGridXSpacing    5
-            OrthoGridYSpacing    5
-            OrthoGridColor       #ffffff
-            ShowImageExtents     Off
-            ImageExtentLineColor #ffffff
-            ImageExtentLineStyle 0
-            ImageExtentLineWidth 1.000000
-            ShowImageNames       Off
-            ImageNameFont        0
-            Projection           EquidistantCylindrical
-            Resolution           VeryLow
-            CoordinateSys        ECF
-            UseBackgroundImage   On
-            UseBingForBackground Off
-            BingType             Aerial
-            BingLogoHorizAlign   Right
-            BingLogoVertAlign    Bottom
-            BackgroundImageFile  Basic.bmp
-            UseNightLights       Off
-            NightLightsFactor    3.500000
-            UseCloudsFile        Off
-            BEGIN ZoomLocations
-                BEGIN ZoomLocation
-                    CenterLat    0.000000
-                    CenterLon    0.000000
-                    ZoomWidth    359.999998
-                    ZoomHeight   180.000000
-                End ZoomLocation
-            END ZoomLocations
-            UseVarAspectRatio    No
-            SwapMapResolution    Yes
-            NoneToVLowSwapDist   2000000.000000
-            VLowToLowSwapDist    20000.000000
-            LowToMediumSwapDist  10000.000000
-            MediumToHighSwapDist 5000.000000
-            HighToVHighSwapDist  1000.000000
-            VHighToSHighSwapDist 100.000000
-            BEGIN Axes
-                DisplayAxes no
-                CoordSys    CBI
-                2aryCB      Sun
-                Display+x   yes
-                Label+x     yes
-                Color+x     #ffffff
-                Scale+x     3.000000
-                Display-x   yes
-                Label-x     yes
-                Color-x     #ffffff
-                Scale-x     3.000000
-                Display+y   yes
-                Label+y     yes
-                Color+y     #ffffff
-                Scale+y     3.000000
-                Display-y   yes
-                Label-y     yes
-                Color-y     #ffffff
-                Scale-y     3.000000
-                Display+z   yes
-                Label+z     yes
-                Color+z     #ffffff
-                Scale+z     3.000000
-                Display-z   yes
-                Label-z     yes
-                Color-z     #ffffff
-                Scale-z     3.000000
-            END Axes
-
-        END MapAttributes
-
-        BEGIN MapList
-            BEGIN Detail
-                Alias RWDB2_Coastlines
-                Show Yes
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_International_Borders
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Islands
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Lakes
-                Show No
-                Color #87cefa
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Provincial_Borders
-                Show No
-                Color #8fbc8f
-            END Detail
-            BEGIN Detail
-                Alias RWDB2_Rivers
-                Show No
-                Color #87cefa
-            END Detail
-        END MapList
-
-
-        BEGIN MapAnnotations
-        END MapAnnotations
-
-        BEGIN SoftVTR
-            OutputFormat     WMV
-            Directory        C:\Users\admin\Documents\STK 11 (x64)\CSDS_EPS_Power_Sim
-            BaseName         Frame
-            Digits           4
-            Frame            0
-            LastAnimTime     0.000000
-            OutputMode       Normal
-            HiResAssembly    Assemble
-            HRWidth          6000
-            HRHeight         4500
-            HRDPI            600.000000
-            UseSnapInterval  No
-            SnapInterval     0.000000
-            WmvCodec         "Windows Media Video 9"
-            Framerate        30
-            Bitrate          3000000
-        END SoftVTR
-
-
-        BEGIN TimeDisplay
-            Show             0
-            TextColor        #ffffff
-            TextTranslucency 0.000000
-            ShowBackground   0
-            BackColor        #4d4d4d
-            BackTranslucency 0.400000
-            XPosition        20
-            YPosition        -20
-        END TimeDisplay
-
-        BEGIN LightingData
-            DisplayAltitude              0.000000
-            SubsolarPoint                Off
-            SubsolarPointColor           #ffff00
-            SubsolarPointMarkerStyle     2
-
-            ShowUmbraLine                Off
-            UmbraLineColor               #000000
-            UmbraLineStyle               0
-            UmbraLineWidth               2
-            FillUmbra                    On
-            UmbraFillColor               #000000
-            ShowSunlightLine             Off
-            SunlightLineColor            #ffff00
-            SunlightLineStyle            0
-            SunlightLineWidth            2
-            FillSunlight                 On
-            SunlightFillColor            #ffffff
-            SunlightMinOpacity           0.000000
-            SunlightMaxOpacity           0.200000
-            UmbraMaxOpacity              0.700000
-            UmbraMinOpacity              0.400000
-        END LightingData
-
-        ShowDtedRegions     Off
-
-        End Style
-
-    END MapStyles
-
-END MapData
-
-        BEGIN GfxClassPref
-
-        END GfxClassPref
-
-
-        BEGIN ConnectGraphicsOptions
-
-            AsyncPickReturnUnique          OFF
-
-        END ConnectGraphicsOptions
-
-    END Graphics
-    
-    BEGIN Overlays
-    END Overlays
-    
-    BEGIN VO
-    END VO
-    
-    BEGIN ScenSpaceEnvironmentGfx
-
-        Begin Gfx
-
-           Begin MagFieldGfx
-               Show               No
-               ColorBy            Magnitude
-               ColorScale         Log
-               ColorRampStart     #0000ff
-               ColorRampStart     #0000ff
-               ColorRampStop      #ff0000
-               MaxTranslucency    0.700000
-               LineStyle          0
-               LineWidth          2.000000
-               FieldLineRefresh   300.000000
-               NumLats            8
-               NumLongs           6
-               StartLat           15.000000
-               StopLat            85.000000
-               RefLongitude       3.141593
-               MainField          IGRF
-               ExternalField      None
-               IGRF_UpdateRate    86400.000000
-           End MagFieldGfx
-
-        End Gfx
-
-    END ScenSpaceEnvironmentGfx
-
-END Extensions
-
-BEGIN SubObjects
-
-Class Satellite
-
-	Selfie-Sat
-
-END Class
-
-END SubObjects
-
-BEGIN References
-    Instance *
-        *
-    END Instance
-    Instance Satellite/Selfie-Sat
-        *
-        Satellite/Selfie-Sat
-    END Instance
-END References
+</VAR>        END RadarClutter
+
+        BEGIN Gator
+        END Gator
+
+        BEGIN Crdn
+        END Crdn
+
+        BEGIN SpiceExt
+        END SpiceExt
+
+        BEGIN FlightScenExt
+        END FlightScenExt
+
+        BEGIN Graphics
+
+            BEGIN Animation
+
+                StartTime		 6 Aug 2019 16:00:00.000000000
+                EndTime		 6 Aug 2020 16:00:00.000000000
+                CurrentTime		 25 Jun 2020 01:43:37.000000000
+                Direction		 Forward
+                UpdateDelta		 10
+                RefreshDelta		 0.010000
+                XRealTimeMult		 1
+                RealTimeOffset		 0
+                XRtStartFromPause		                Yes		
+
+            END Animation
+
+
+            BEGIN DisplayFlags
+                ShowLabels		 On
+                ShowPassLabel		 Off
+                ShowElsetNum		 Off
+                ShowGndTracks		 On
+                ShowGndMarkers		 On
+                ShowOrbitMarkers		 On
+                ShowPlanetOrbits		 Off
+                ShowPlanetCBIPos		 On
+                ShowPlanetCBILabel		 On
+                ShowPlanetGndPos		 On
+                ShowPlanetGndLabel		 On
+                ShowSensors		 On
+                ShowWayptMarkers		 Off
+                ShowWayptTurnMarkers		 Off
+                ShowOrbits		 On
+                ShowDtedRegions		 Off
+                ShowAreaTgtCentroids		 On
+                ShowToolBar		 On
+                ShowStatusBar		 On
+                ShowScrollBars		 On
+                AllowAnimUpdate		 On
+                AccShowLine		 On
+                AccAnimHigh		 On
+                AccStatHigh		 On
+                ShowPrintButton		 On
+                ShowAnimButtons		 On
+                ShowAnimModeButtons		 On
+                ShowZoomMsrButtons		 On
+                ShowMapCbButton		 Off
+            END DisplayFlags
+
+            BEGIN WinFonts
+
+                System
+                MS Sans Serif,22,0,0
+                MS Sans Serif,28,0,0
+
+            END WinFonts
+
+            BEGIN MapData
+
+                BEGIN TerrainConverterData
+                    NorthLat		  0.0000000000000000e+00
+                    EastLon		  0.0000000000000000e+00
+                    SouthLat		  0.0000000000000000e+00
+                    WestLon		  0.0000000000000000e+00
+                    ColorByRGB		 No
+                    AltsFromMSL		 No
+                    UseColorRamp		 Yes
+                    UseRegionMinMax		 Yes
+                    SizeSameAsSrc		 Yes
+                    MinAltHSV		  0.0000000000000000e+00  6.9999999999999996e-01  8.0000000000000004e-01  4.0000000000000002e-01
+                    MaxAltHSV		  1.0000000000000000e+06  0.0000000000000000e+00  2.0000000000000001e-01  1.0000000000000000e+00
+                    SmoothColors		 Yes
+                    CreateChunkTrn		 No
+                    OutputFormat		 PDTTX
+                END TerrainConverterData
+
+                DisableDefKbdActions		 Off
+                TextShadowStyle		 Dark
+                TextShadowColor		 #000000
+                BingLevelOfDetailScale		 2
+                BEGIN Map
+                    MapNum		 1
+                    TrackingMode		 LatLon
+                    PickEnabled		 On
+                    PanEnabled		 On
+
+                    BEGIN MapAttributes
+                        PrimaryBody		 Earth
+                        SecondaryBody		 Sun
+                        CenterLatitude		 0
+                        CenterLongitude		 0
+                        ProjectionAltitude		 63621860
+                        FieldOfView		 35
+                        OrthoDisplayDistance		 20000000
+                        TransformTrajectory		 On
+                        EquatorialRadius		 6378137
+                        BackgroundColor		 #000000
+                        LatLonLines		 On
+                        LatSpacing		 30
+                        LonSpacing		 30
+                        LatLonLineColor		 #999999
+                        LatLonLineStyle		 2
+                        ShowOrthoDistGrid		 Off
+                        OrthoGridXSpacing		 5
+                        OrthoGridYSpacing		 5
+                        OrthoGridColor		 #ffffff
+                        ShowImageExtents		 Off
+                        ImageExtentLineColor		 #ffffff
+                        ImageExtentLineStyle		 0
+                        ImageExtentLineWidth		 1
+                        ShowImageNames		 Off
+                        ImageNameFont		 0
+                        Projection		 EquidistantCylindrical
+                        Resolution		 VeryLow
+                        CoordinateSys		 ECF
+                        UseBackgroundImage		 On
+                        UseBingForBackground		 On
+                        BingType		 Aerial
+                        BingLogoHorizAlign		 Right
+                        BingLogoVertAlign		 Bottom
+                        BackgroundImageFile		 Basic.bmp
+                        UseNightLights		 Off
+                        NightLightsFactor		 3.5
+                        UseCloudsFile		 Off
+                        BEGIN ZoomLocations
+                            BEGIN ZoomLocation
+                                CenterLat		 0
+                                CenterLon		 0
+                                ZoomWidth		 359.999998
+                                ZoomHeight		 180
+                            END ZoomLocation
+                        END ZoomLocations
+                        UseVarAspectRatio		 No
+                        SwapMapResolution		 Yes
+                        NoneToVLowSwapDist		 2000000
+                        VLowToLowSwapDist		 20000
+                        LowToMediumSwapDist		 10000
+                        MediumToHighSwapDist		 5000
+                        HighToVHighSwapDist		 1000
+                        VHighToSHighSwapDist		 100
+                        BEGIN Axes
+                            DisplayAxes		 no
+                            CoordSys		 CBI
+                            2aryCB		 Sun
+                            Display+x		 yes
+                            Label+x		 yes
+                            Color+x		 #ffffff
+                            Scale+x		 3
+                            Display-x		 yes
+                            Label-x		 yes
+                            Color-x		 #ffffff
+                            Scale-x		 3
+                            Display+y		 yes
+                            Label+y		 yes
+                            Color+y		 #ffffff
+                            Scale+y		 3
+                            Display-y		 yes
+                            Label-y		 yes
+                            Color-y		 #ffffff
+                            Scale-y		 3
+                            Display+z		 yes
+                            Label+z		 yes
+                            Color+z		 #ffffff
+                            Scale+z		 3
+                            Display-z		 yes
+                            Label-z		 yes
+                            Color-z		 #ffffff
+                            Scale-z		 3
+                        END Axes
+
+                    END MapAttributes
+
+                    BEGIN MapList
+                        BEGIN Detail
+                            Alias		 RWDB2_Coastlines
+                            Show		 Yes
+                            Color		 #8fbc8f
+                        END Detail
+                        BEGIN Detail
+                            Alias		 RWDB2_International_Borders
+                            Show		 No
+                            Color		 #8fbc8f
+                        END Detail
+                        BEGIN Detail
+                            Alias		 RWDB2_Islands
+                            Show		 No
+                            Color		 #8fbc8f
+                        END Detail
+                        BEGIN Detail
+                            Alias		 RWDB2_Lakes
+                            Show		 No
+                            Color		 #87cefa
+                        END Detail
+                        BEGIN Detail
+                            Alias		 RWDB2_Provincial_Borders
+                            Show		 No
+                            Color		 #8fbc8f
+                        END Detail
+                        BEGIN Detail
+                            Alias		 RWDB2_Rivers
+                            Show		 No
+                            Color		 #87cefa
+                        END Detail
+                    END MapList
+
+
+                    BEGIN MapAnnotations
+                    END MapAnnotations
+
+                    BEGIN DisplayFlags
+                        ShowLabels		 On
+                        ShowPassLabel		 Off
+                        ShowElsetNum		 Off
+                        ShowGndTracks		 On
+                        ShowGndMarkers		 On
+                        ShowOrbitMarkers		 On
+                        ShowPlanetOrbits		 Off
+                        ShowPlanetCBIPos		 On
+                        ShowPlanetCBILabel		 On
+                        ShowPlanetGndPos		 On
+                        ShowPlanetGndLabel		 On
+                        ShowSensors		 On
+                        ShowWayptMarkers		 Off
+                        ShowWayptTurnMarkers		 Off
+                        ShowOrbits		 On
+                        ShowDtedRegions		 Off
+                        ShowAreaTgtCentroids		 On
+                        ShowToolBar		 On
+                        ShowStatusBar		 On
+                        ShowScrollBars		 On
+                        AllowAnimUpdate		 Off
+                        AccShowLine		 On
+                        AccAnimHigh		 On
+                        AccStatHigh		 On
+                        ShowPrintButton		 On
+                        ShowAnimButtons		 On
+                        ShowAnimModeButtons		 On
+                        ShowZoomMsrButtons		 On
+                        ShowMapCbButton		 Off
+                    END DisplayFlags
+
+                    BEGIN RecordMovie
+                        OutputFormat		 WMV
+                        Directory		 C:\Users\admin\Documents\STK 11 (x64)\CSDS_EPS_Power_Sim
+                        BaseName		 Frame
+                        Digits		 4
+                        Frame		 0
+                        LastAnimTime		 0
+                        OutputMode		 Normal
+                        HiResAssembly		 Assemble
+                        HRWidth		 6000
+                        HRHeight		 4500
+                        HRDPI		 600
+                        UseSnapInterval		 No
+                        SnapInterval		 0
+                        WmvCodec		 "Windows Media Video 9"
+                        Framerate		 30
+                        Bitrate		 3000000
+                    END RecordMovie
+
+
+                    BEGIN TimeDisplay
+                        Show		 0
+                        TextColor		 #ffffff
+                        TextTranslucency		 0
+                        ShowBackground		 0
+                        BackColor		 #4d4d4d
+                        BackTranslucency		 0.4
+                        XPosition		 20
+                        YPosition		 -20
+                    END TimeDisplay
+
+                    BEGIN LightingData
+                        DisplayAltitude		 0
+                        SubsolarPoint		 Off
+                        SubsolarPointColor		 #ffff00
+                        SubsolarPointMarkerStyle		 2
+
+                        ShowUmbraLine		 Off
+                        UmbraLineColor		 #000000
+                        UmbraLineStyle		 0
+                        UmbraLineWidth		 2
+                        FillUmbra		 On
+                        UmbraFillColor		 #000000
+                        ShowSunlightLine		 Off
+                        SunlightLineColor		 #ffff00
+                        SunlightLineStyle		 0
+                        SunlightLineWidth		 2
+                        FillSunlight		 On
+                        SunlightFillColor		 #ffffff
+                        SunlightMinOpacity		 0
+                        SunlightMaxOpacity		 0.2
+                        UmbraMaxOpacity		 0.7
+                        UmbraMinOpacity		 0.4
+                    END LightingData
+                END Map
+
+                BEGIN MapStyles
+
+                    UseStyleTime		 No
+
+                    BEGIN Style
+                        Name		 DefaultWithBing
+                        Time		 0
+                        UpdateDelta		 10
+
+                        BEGIN MapAttributes
+                            PrimaryBody		 Earth
+                            SecondaryBody		 Sun
+                            CenterLatitude		 0
+                            CenterLongitude		 0
+                            ProjectionAltitude		 63621860
+                            FieldOfView		 35
+                            OrthoDisplayDistance		 20000000
+                            TransformTrajectory		 On
+                            EquatorialRadius		 6378137
+                            BackgroundColor		 #000000
+                            LatLonLines		 On
+                            LatSpacing		 30
+                            LonSpacing		 30
+                            LatLonLineColor		 #999999
+                            LatLonLineStyle		 2
+                            ShowOrthoDistGrid		 Off
+                            OrthoGridXSpacing		 5
+                            OrthoGridYSpacing		 5
+                            OrthoGridColor		 #ffffff
+                            ShowImageExtents		 Off
+                            ImageExtentLineColor		 #ffffff
+                            ImageExtentLineStyle		 0
+                            ImageExtentLineWidth		 1
+                            ShowImageNames		 Off
+                            ImageNameFont		 0
+                            Projection		 EquidistantCylindrical
+                            Resolution		 VeryLow
+                            CoordinateSys		 ECF
+                            UseBackgroundImage		 On
+                            UseBingForBackground		 On
+                            BingType		 Aerial
+                            BingLogoHorizAlign		 Right
+                            BingLogoVertAlign		 Bottom
+                            BackgroundImageFile		 Basic.bmp
+                            UseNightLights		 Off
+                            NightLightsFactor		 3.5
+                            UseCloudsFile		 Off
+                            BEGIN ZoomLocations
+                                BEGIN ZoomLocation
+                                    CenterLat		 0
+                                    CenterLon		 0
+                                    ZoomWidth		 359.999998
+                                    ZoomHeight		 180
+                                END ZoomLocation
+                            END ZoomLocations
+                            UseVarAspectRatio		 No
+                            SwapMapResolution		 Yes
+                            NoneToVLowSwapDist		 2000000
+                            VLowToLowSwapDist		 20000
+                            LowToMediumSwapDist		 10000
+                            MediumToHighSwapDist		 5000
+                            HighToVHighSwapDist		 1000
+                            VHighToSHighSwapDist		 100
+                            BEGIN Axes
+                                DisplayAxes		 no
+                                CoordSys		 CBI
+                                2aryCB		 Sun
+                                Display+x		 yes
+                                Label+x		 yes
+                                Color+x		 #ffffff
+                                Scale+x		 3
+                                Display-x		 yes
+                                Label-x		 yes
+                                Color-x		 #ffffff
+                                Scale-x		 3
+                                Display+y		 yes
+                                Label+y		 yes
+                                Color+y		 #ffffff
+                                Scale+y		 3
+                                Display-y		 yes
+                                Label-y		 yes
+                                Color-y		 #ffffff
+                                Scale-y		 3
+                                Display+z		 yes
+                                Label+z		 yes
+                                Color+z		 #ffffff
+                                Scale+z		 3
+                                Display-z		 yes
+                                Label-z		 yes
+                                Color-z		 #ffffff
+                                Scale-z		 3
+                            END Axes
+
+                        END MapAttributes
+
+                        BEGIN MapList
+                            BEGIN Detail
+                                Alias		 RWDB2_Coastlines
+                                Show		 Yes
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_International_Borders
+                                Show		 No
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Islands
+                                Show		 No
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Lakes
+                                Show		 No
+                                Color		 #87cefa
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Provincial_Borders
+                                Show		 No
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Rivers
+                                Show		 No
+                                Color		 #87cefa
+                            END Detail
+                        END MapList
+
+
+                        BEGIN MapAnnotations
+                        END MapAnnotations
+
+                        BEGIN RecordMovie
+                            OutputFormat		 WMV
+                            Directory		 C:\Users\admin\Documents\STK 11 (x64)\CSDS_EPS_Power_Sim
+                            BaseName		 Frame
+                            Digits		 4
+                            Frame		 0
+                            LastAnimTime		 0
+                            OutputMode		 Normal
+                            HiResAssembly		 Assemble
+                            HRWidth		 6000
+                            HRHeight		 4500
+                            HRDPI		 600
+                            UseSnapInterval		 No
+                            SnapInterval		 0
+                            WmvCodec		 "Windows Media Video 9"
+                            Framerate		 30
+                            Bitrate		 3000000
+                        END RecordMovie
+
+
+                        BEGIN TimeDisplay
+                            Show		 0
+                            TextColor		 #ffffff
+                            TextTranslucency		 0
+                            ShowBackground		 0
+                            BackColor		 #4d4d4d
+                            BackTranslucency		 0.4
+                            XPosition		 20
+                            YPosition		 -20
+                        END TimeDisplay
+
+                        BEGIN LightingData
+                            DisplayAltitude		 0
+                            SubsolarPoint		 Off
+                            SubsolarPointColor		 #ffff00
+                            SubsolarPointMarkerStyle		 2
+
+                            ShowUmbraLine		 Off
+                            UmbraLineColor		 #000000
+                            UmbraLineStyle		 0
+                            UmbraLineWidth		 2
+                            FillUmbra		 On
+                            UmbraFillColor		 #000000
+                            ShowSunlightLine		 Off
+                            SunlightLineColor		 #ffff00
+                            SunlightLineStyle		 0
+                            SunlightLineWidth		 2
+                            FillSunlight		 On
+                            SunlightFillColor		 #ffffff
+                            SunlightMinOpacity		 0
+                            SunlightMaxOpacity		 0.2
+                            UmbraMaxOpacity		 0.7
+                            UmbraMinOpacity		 0.4
+                        END LightingData
+
+                        ShowDtedRegions		 Off
+
+                    END Style
+
+                    BEGIN Style
+                        Name		 DefaultWithoutBing
+                        Time		 0
+                        UpdateDelta		 10
+
+                        BEGIN MapAttributes
+                            PrimaryBody		 Earth
+                            SecondaryBody		 Sun
+                            CenterLatitude		 0
+                            CenterLongitude		 0
+                            ProjectionAltitude		 63621860
+                            FieldOfView		 35
+                            OrthoDisplayDistance		 20000000
+                            TransformTrajectory		 On
+                            EquatorialRadius		 6378137
+                            BackgroundColor		 #000000
+                            LatLonLines		 On
+                            LatSpacing		 30
+                            LonSpacing		 30
+                            LatLonLineColor		 #999999
+                            LatLonLineStyle		 2
+                            ShowOrthoDistGrid		 Off
+                            OrthoGridXSpacing		 5
+                            OrthoGridYSpacing		 5
+                            OrthoGridColor		 #ffffff
+                            ShowImageExtents		 Off
+                            ImageExtentLineColor		 #ffffff
+                            ImageExtentLineStyle		 0
+                            ImageExtentLineWidth		 1
+                            ShowImageNames		 Off
+                            ImageNameFont		 0
+                            Projection		 EquidistantCylindrical
+                            Resolution		 VeryLow
+                            CoordinateSys		 ECF
+                            UseBackgroundImage		 On
+                            UseBingForBackground		 Off
+                            BingType		 Aerial
+                            BingLogoHorizAlign		 Right
+                            BingLogoVertAlign		 Bottom
+                            BackgroundImageFile		 Basic.bmp
+                            UseNightLights		 Off
+                            NightLightsFactor		 3.5
+                            UseCloudsFile		 Off
+                            BEGIN ZoomLocations
+                                BEGIN ZoomLocation
+                                    CenterLat		 0
+                                    CenterLon		 0
+                                    ZoomWidth		 359.999998
+                                    ZoomHeight		 180
+                                END ZoomLocation
+                            END ZoomLocations
+                            UseVarAspectRatio		 No
+                            SwapMapResolution		 Yes
+                            NoneToVLowSwapDist		 2000000
+                            VLowToLowSwapDist		 20000
+                            LowToMediumSwapDist		 10000
+                            MediumToHighSwapDist		 5000
+                            HighToVHighSwapDist		 1000
+                            VHighToSHighSwapDist		 100
+                            BEGIN Axes
+                                DisplayAxes		 no
+                                CoordSys		 CBI
+                                2aryCB		 Sun
+                                Display+x		 yes
+                                Label+x		 yes
+                                Color+x		 #ffffff
+                                Scale+x		 3
+                                Display-x		 yes
+                                Label-x		 yes
+                                Color-x		 #ffffff
+                                Scale-x		 3
+                                Display+y		 yes
+                                Label+y		 yes
+                                Color+y		 #ffffff
+                                Scale+y		 3
+                                Display-y		 yes
+                                Label-y		 yes
+                                Color-y		 #ffffff
+                                Scale-y		 3
+                                Display+z		 yes
+                                Label+z		 yes
+                                Color+z		 #ffffff
+                                Scale+z		 3
+                                Display-z		 yes
+                                Label-z		 yes
+                                Color-z		 #ffffff
+                                Scale-z		 3
+                            END Axes
+
+                        END MapAttributes
+
+                        BEGIN MapList
+                            BEGIN Detail
+                                Alias		 RWDB2_Coastlines
+                                Show		 Yes
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_International_Borders
+                                Show		 No
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Islands
+                                Show		 No
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Lakes
+                                Show		 No
+                                Color		 #87cefa
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Provincial_Borders
+                                Show		 No
+                                Color		 #8fbc8f
+                            END Detail
+                            BEGIN Detail
+                                Alias		 RWDB2_Rivers
+                                Show		 No
+                                Color		 #87cefa
+                            END Detail
+                        END MapList
+
+
+                        BEGIN MapAnnotations
+                        END MapAnnotations
+
+                        BEGIN RecordMovie
+                            OutputFormat		 WMV
+                            Directory		 C:\Users\admin\Documents\STK 11 (x64)\CSDS_EPS_Power_Sim
+                            BaseName		 Frame
+                            Digits		 4
+                            Frame		 0
+                            LastAnimTime		 0
+                            OutputMode		 Normal
+                            HiResAssembly		 Assemble
+                            HRWidth		 6000
+                            HRHeight		 4500
+                            HRDPI		 600
+                            UseSnapInterval		 No
+                            SnapInterval		 0
+                            WmvCodec		 "Windows Media Video 9"
+                            Framerate		 30
+                            Bitrate		 3000000
+                        END RecordMovie
+
+
+                        BEGIN TimeDisplay
+                            Show		 0
+                            TextColor		 #ffffff
+                            TextTranslucency		 0
+                            ShowBackground		 0
+                            BackColor		 #4d4d4d
+                            BackTranslucency		 0.4
+                            XPosition		 20
+                            YPosition		 -20
+                        END TimeDisplay
+
+                        BEGIN LightingData
+                            DisplayAltitude		 0
+                            SubsolarPoint		 Off
+                            SubsolarPointColor		 #ffff00
+                            SubsolarPointMarkerStyle		 2
+
+                            ShowUmbraLine		 Off
+                            UmbraLineColor		 #000000
+                            UmbraLineStyle		 0
+                            UmbraLineWidth		 2
+                            FillUmbra		 On
+                            UmbraFillColor		 #000000
+                            ShowSunlightLine		 Off
+                            SunlightLineColor		 #ffff00
+                            SunlightLineStyle		 0
+                            SunlightLineWidth		 2
+                            FillSunlight		 On
+                            SunlightFillColor		 #ffffff
+                            SunlightMinOpacity		 0
+                            SunlightMaxOpacity		 0.2
+                            UmbraMaxOpacity		 0.7
+                            UmbraMinOpacity		 0.4
+                        END LightingData
+
+                        ShowDtedRegions		 Off
+
+                    END Style
+
+                END MapStyles
+
+            END MapData
+
+            BEGIN GfxClassPref
+
+            END GfxClassPref
+
+
+            BEGIN ConnectGraphicsOptions
+
+                AsyncPickReturnUnique		 OFF
+
+            END ConnectGraphicsOptions
+
+        END Graphics
+
+        BEGIN Overlays
+        END Overlays
+
+        BEGIN VO
+        END VO
+
+        BEGIN ScenSpaceEnvironmentGfx
+
+            BEGIN Gfx
+
+                BEGIN MagFieldGfx
+                    Show		 No
+                    ColorBy		 Magnitude
+                    ColorScale		 Log
+                    ColorRampStart		 #0000ff
+                    ColorRampStart		 #0000ff
+                    ColorRampStop		 #ff0000
+                    MaxTranslucency		 0.7
+                    LineStyle		 0
+                    LineWidth		 2
+                    FieldLineRefresh		 300
+                    NumLats		 8
+                    NumLongs		 6
+                    StartLat		 15
+                    StopLat		 85
+                    RefLongitude		 3.141593
+                    MainField		 IGRF
+                    ExternalField		 None
+                    IGRF_UpdateRate		 86400
+                END MagFieldGfx
+
+            END Gfx
+
+        END ScenSpaceEnvironmentGfx
+
+    END Extensions
+
+    BEGIN SubObjects
+
+        Class Satellite
+
+            Selfie-Sat		
+
+        END Class
+
+    END SubObjects
+
+    BEGIN References
+        Instance *
+            *		
+        END Instance
+        Instance Satellite/Selfie-Sat
+            *		
+            Satellite/Selfie-Sat		
+        END Instance
+    END References
 
 END Scenario
