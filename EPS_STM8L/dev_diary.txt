@@ -1,0 +1,11 @@
+07/11/2019:
+STM's dev environment is kinda hard to set up, it cost me a whole day just to get it to complie:
+
+1) download and install STVD-STM8 (stands for "ST Visual Develop") This is the IDE for STM8 development (though not so well integrated for there is a couple of compilers missing)  
+	@https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm8-software-development-tools/stm8-programmers/stvd-stm8.html
+
+2) download and extract STSW-STM8016, which is the programming library for STM8L series, note that different STM8 series have different libraries (such as STM8S)
+	@https://www.st.com/en/embedded-software/stsw-stm8016.html
+
+3) install COSMIC compiler, which is the missing compiler I mentioned. (do this if you seem the STVD says cxstm8 is missing Also, I believe the raisonance compiler is also missing.)
+	@http://cosmic-software.com/download.php#stm8
