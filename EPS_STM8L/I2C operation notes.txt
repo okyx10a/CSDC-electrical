@@ -1,0 +1,42 @@
+/*Abbreviation  Condition
+ *S             Start
+ *P             Stop
+ *R             Read
+ *W             Write
+ *A             Acknowledge
+ *N             No acknowledge
+ */
+
+send single byte format
+
+S|SLAVE_ADDR|W|A|CMD_BYTE|A|P
+
+
+    I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+
+	/*!< Test on EV5 and clear it, check if START condition has been correctly released, I2C1 is the on board I2C address */
+	//<S|>
+	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+	{};
+	
+	/*!< Send slave address we are writting to */
+	//<SLAVE_ADDR|W|>
+	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Transmitter);
+	
+	/*!< Test on EV6 and clear it (an acknowledge has been released on the bus) */
+	//<A|>
+	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+	{};
+	
+	
+	/* send the byte8 */
+	//<CMD_BYTE|>
+	I2C_SendData(I2C1, Cmd);
+	
+	//<A|>
+	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+	{};
+	
+	/*!< Send STOP condition */
+	//<P>
+	I2C_GenerateSTOP(I2C1, ENABLE);

@@ -19,11 +19,11 @@ typedef struct sw
 
 void sw_DeInit(void);
 void sw_Init(void);
-void sw_QuickCmd(uint8_t SlaveAddr);
-void sw_WriteCmdByte(uint8_t SlaveAddr, uint8_t Cmd);
-void sw_WriteExtCmdByte(uint8_t SlaveAddr, uint8_t RegAddr, uint8_t Cmd);
-void sw_ReadVoltCurr(uint8_t SlaveAddr, sw_t* Switch);
-void sw_ReadCurrent(uint8_t SlaveAddr, sw_t* Switch);
-void sw_ReadVoltage(uint8_t SlaveAddr, sw_t* Switch);
-
+void sw_QuickCmd(uint8_t SwAddr);
+void sw_WriteCmdByte(uint8_t SwAddr, uint8_t Cmd);
+void sw_WriteExtCmdByte(uint8_t SwAddr, uint8_t RegAddr, uint8_t ExtCmd);
+void sw_ReadVoltCurr(uint8_t SwAddr, sw_t* Switch);
+void sw_ReadCurrent(uint8_t SwAddr, sw_t* Switch);
+void sw_ReadVoltage(uint8_t SwAddr, sw_t* Switch);
+void sw_ReadStatus(uint8_t SwAddr, sw_t* Switch);
 #endif

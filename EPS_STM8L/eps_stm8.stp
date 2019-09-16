@@ -73,7 +73,7 @@ Int.108=0
 String.6.0=2019,7,11,17,22,31
 String.100.0=$(TargetFName)
 String.101.0=
-String.103.0=.\;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc;stm8l_stdperiph_lib\utilities\misc;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src;
+String.103.0=.\;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc;
 
 [Root.Config.0.Settings.2]
 String.2.0=
@@ -153,7 +153,7 @@ Int.108=0
 String.6.0=2019,7,11,17,22,31
 String.100.0=$(TargetFName)
 String.101.0=
-String.103.0=.\;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc;stm8l_stdperiph_lib\utilities\misc;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src;
+String.103.0=.\;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src;stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc;
 
 [Root.Config.1.Settings.2]
 String.2.0=
@@ -299,147 +299,147 @@ Next=Root.Source Files.Source Files\Native library
 [Root.Source Files.Source Files\Native library]
 ElemType=Folder
 PathName=Source Files\Native library
-Child=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_adc.c
+Child=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c
 Next=Root.Source Files.main.c
 
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_adc.c]
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c]
 ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_adc.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_aes.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_aes.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_aes.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_beep.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_beep.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_beep.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_clk.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_comp.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_comp.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_comp.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dac.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dac.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dac.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dma.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dma.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dma.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_exti.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_exti.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_exti.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_flash.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_flash.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_flash.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_i2c.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_i2c.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_i2c.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_irtim.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_irtim.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_irtim.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_itc.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_itc.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_itc.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_iwdg.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_iwdg.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_iwdg.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_pwr.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_pwr.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_pwr.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rst.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rst.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rst.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_spi.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_spi.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_spi.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_syscfg.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_syscfg.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_syscfg.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim1.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim1.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim1.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim2.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim2.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim2.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim3.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim3.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim3.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim4.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim4.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim4.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim5.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim5.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim5.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c
-
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c
 Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wfe.c
 
 [Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wfe.c]
 ElemType=File
 PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wfe.c
-Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c
 
-[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c]
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c]
 ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim5.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim5.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim5.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim4.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim4.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim4.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim3.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim3.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim3.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim2.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim2.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim2.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim1.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim1.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_tim1.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_syscfg.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_syscfg.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_syscfg.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_spi.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_spi.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_spi.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rtc.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rst.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rst.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_rst.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_pwr.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_pwr.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_pwr.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_lcd.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_iwdg.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_iwdg.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_iwdg.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_itc.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_itc.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_itc.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_irtim.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_irtim.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_irtim.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_i2c.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_i2c.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_i2c.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_flash.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_flash.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_flash.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_exti.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_exti.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_exti.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dma.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dma.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dma.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dac.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dac.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_dac.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_comp.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_comp.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_comp.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_clk.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_clk.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_beep.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_beep.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_beep.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_aes.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_aes.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_aes.c
+Next=Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_adc.c
+
+[Root.Source Files.Source Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_adc.c]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_adc.c
 
 [Root.Source Files.main.c]
 ElemType=File
@@ -536,158 +536,153 @@ Next=Root.Include Files.Include Files\Native library
 [Root.Include Files.Include Files\Native library]
 ElemType=Folder
 PathName=Include Files\Native library
-Child=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h
+Child=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h
 
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h]
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h]
 ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_comp.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_comp.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_comp.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_conf.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_conf.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_conf.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dac.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dac.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dac.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dma.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dma.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dma.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_flash.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_flash.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_flash.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_i2c.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_i2c.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_i2c.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_irtim.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_irtim.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_irtim.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_itc.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_itc.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_itc.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_iwdg.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_iwdg.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_iwdg.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_pwr.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_pwr.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_pwr.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rst.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rst.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rst.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_spi.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_spi.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_spi.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_syscfg.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_syscfg.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_syscfg.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim1.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim1.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim1.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim2.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim2.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim2.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim3.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim3.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim3.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim4.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim4.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim4.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim5.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim5.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim5.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h
-
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h]
-ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h
 Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wfe.h
 
 [Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wfe.h]
 ElemType=File
 PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wfe.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h
 
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h]
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h]
 ElemType=File
-PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h
-Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\utilities\misc\timing_delay.h
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim5.h
 
-[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\utilities\misc\timing_delay.h]
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim5.h]
 ElemType=File
-PathName=stm8l_stdperiph_lib\utilities\misc\timing_delay.h
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim5.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim4.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim4.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim4.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim3.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim3.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim3.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim2.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim2.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim2.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim1.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim1.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_tim1.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_syscfg.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_syscfg.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_syscfg.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_spi.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_spi.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_spi.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rtc.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rst.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rst.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_rst.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_pwr.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_pwr.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_pwr.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_lcd.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_iwdg.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_iwdg.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_iwdg.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_itc.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_itc.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_itc.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_irtim.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_irtim.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_irtim.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_i2c.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_i2c.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_i2c.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_flash.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_flash.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_flash.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_exti.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dma.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dma.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dma.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dac.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dac.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_dac.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_conf.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_conf.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_conf.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_comp.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_comp.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_comp.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_clk.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h
+Next=Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h
+
+[Root.Include Files.Include Files\Native library.stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h]
+ElemType=File
+PathName=stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h
