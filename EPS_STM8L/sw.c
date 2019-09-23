@@ -1,7 +1,5 @@
 #include "sw.h"
 
-sw_t Switch[NUM_SW];
-
 
 
 void sw_DeInit(void)
@@ -12,13 +10,14 @@ void sw_DeInit(void)
 void sw_Init(void)
 {
   I2C_LowLevel_Init();
+	
+	GPIOB->DDR = 0b11111111;
 
   /*!< I2C configuration */
   /* I2C Peripheral Enable */
   I2C_Cmd(I2C, ENABLE);
   /* I2C configuration after enabling it */
-  I2C_Init(I2C, I2C_SPEED, OWN_ADDR, I2C_Mode_I2C, I2C_DutyCycle_2,
-           I2C_Ack_Enable, I2C_AcknowledgedAddress_7bit);
+  I2C_Init(I2C, SW_I2C_SPEED, OWN_ADDR, I2C_Mode_I2C, I2C_DutyCycle_2, I2C_Ack_Enable, I2C_AcknowledgedAddress_7bit);
 
   /* Enable the I2C peripheral DMA requests */
   I2C_DMACmd(I2C, ENABLE);
@@ -296,3 +295,27 @@ void sw_ReadStatus(uint8_t SwAddr, sw_t* Switch)
 
 }
 
+void sw_on(uint8_t SwAddr)
+{
+	swtich(SwAddr)
+	{
+		case SW1_ADDRESS:
+			setBit(GPIOB->ODR, 0);
+			break;
+		case SW2_ADDRESS:
+			setBit(GPIOB->ODR, 1);
+			break;
+	}
+}
+void sw_off(uint8_t SwAddr)
+{
+	swtich(SwAddr)
+	{
+		case SW1_ADDRESS:
+			clearBit(GPIOB->ODR, 0);
+			break;
+		case SW2_ADDRESS:
+			clearBit(GPIOB->ODR, 1);
+			break;
+	}
+}

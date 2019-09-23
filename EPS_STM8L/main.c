@@ -8,8 +8,8 @@
 
 void main(void)
 {
-	sw_QuickCmd(I2C_SW1_ADDRESS);
-	sw_QuickCmd(I2C_SW2_ADDRESS);
+	sw_QuickCmd(SW1_ADDRESS);
+	sw_QuickCmd(SW2_ADDRESS);
 	while (1)
 	{
 		

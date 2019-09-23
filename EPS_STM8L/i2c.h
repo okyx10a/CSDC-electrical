@@ -6,7 +6,6 @@
 
 #include "stm8l15x.h"
 
-#define I2C_SPEED              				200000
 #define OWN_ADDR							 				0xA0 //stm8's own address when acting as a master
 
 /* Defintions for the state of the DMA transfer */   

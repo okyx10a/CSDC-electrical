@@ -1,5 +1,5 @@
 
-Map of Debug\eps_stm8.sm8 from link file Debug\eps_stm8.lkf - Sun Sep 15 22:38:35 2019
+Map of Debug\eps_stm8.sm8 from link file Debug\eps_stm8.lkf - Mon Sep 16 20:59:19 2019
 
 
                                --------
@@ -16,7 +16,7 @@ start 0000000a end 0000000a length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 00000100 length     0 segment .bss
 start 00000000 end 00001378 length  4984 segment .info.
-start 00000000 end 00026994 length 158100 segment .debug
+start 00000000 end 0002696c length 158060 segment .debug
 start 00008000 end 00008080 length   128 segment .const
 start 00008099 end 0000809c length     3 segment .init
 
@@ -33,163 +33,162 @@ start 00000000 end 00000030 length    48 section .info.
 
 Debug\sw.o:
 start 000080e7 end 000084b8 length   977 section .text
-start ******** end ******** length     0 section .ubsct *** removed ***
-start 00000000 end 00000554 length  1364 section .debug
+start 00000000 end 0000052c length  1324 section .debug
 start 00000030 end 0000009b length   107 section .info.
 start 00008080 end 00008088 length     8 section .const
 
 Debug\i2c.o:
 start 000084b8 end 000085c4 length   268 section .text
-start 00000554 end 00000789 length   565 section .debug
+start 0000052c end 00000761 length   565 section .debug
 start 0000009b end 00000107 length   108 section .info.
 
 Debug\stm8l15x_wwdg.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000789 end 00000a4c length   707 section .debug
+start 00000761 end 00000a24 length   707 section .debug
 start 00000107 end 0000017d length   118 section .info.
 
 Debug\stm8l15x_wfe.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000a4c end 0000112b length  1759 section .debug
+start 00000a24 end 00001103 length  1759 section .debug
 start 0000017d end 000001f2 length   117 section .info.
 
 Debug\stm8l15x_usart.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0000112b end 00002908 length  6109 section .debug
+start 00001103 end 000028e0 length  6109 section .debug
 start 000001f2 end 00000269 length   119 section .info.
 
 Debug\stm8l15x_tim5.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00002908 end 00005cab length 13219 section .debug
+start 000028e0 end 00005c83 length 13219 section .debug
 start 00000269 end 000002df length   118 section .info.
 
 Debug\stm8l15x_tim4.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00005cab end 00006f4c length  4769 section .debug
+start 00005c83 end 00006f24 length  4769 section .debug
 start 000002df end 00000355 length   118 section .info.
 
 Debug\stm8l15x_tim3.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00006f4c end 0000a2ef length 13219 section .debug
+start 00006f24 end 0000a2c7 length 13219 section .debug
 start 00000355 end 000003cb length   118 section .info.
 
 Debug\stm8l15x_tim2.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0000a2ef end 0000d692 length 13219 section .debug
+start 0000a2c7 end 0000d66a length 13219 section .debug
 start 000003cb end 00000441 length   118 section .info.
 
 Debug\stm8l15x_tim1.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0000d692 end 000123a8 length 19734 section .debug
+start 0000d66a end 00012380 length 19734 section .debug
 start 00000441 end 000004b7 length   118 section .info.
 
 Debug\stm8l15x_syscfg.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000123a8 end 000137ef length  5191 section .debug
+start 00012380 end 000137c7 length  5191 section .debug
 start 000004b7 end 0000052f length   120 section .info.
 
 Debug\stm8l15x_spi.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000137ef end 00014b39 length  4938 section .debug
+start 000137c7 end 00014b11 length  4938 section .debug
 start 0000052f end 000005a4 length   117 section .info.
 
 Debug\stm8l15x_rtc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00014b39 end 000179dc length 11939 section .debug
+start 00014b11 end 000179b4 length 11939 section .debug
 start 000005a4 end 00000619 length   117 section .info.
 
 Debug\stm8l15x_rst.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000179dc end 00017c71 length   661 section .debug
+start 000179b4 end 00017c49 length   661 section .debug
 start 00000619 end 0000068e length   117 section .info.
 
 Debug\stm8l15x_pwr.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00017c71 end 00018309 length  1688 section .debug
+start 00017c49 end 000182e1 length  1688 section .debug
 start 0000068e end 00000703 length   117 section .info.
 
 Debug\stm8l15x_lcd.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00018309 end 00019b30 length  6183 section .debug
+start 000182e1 end 00019b08 length  6183 section .debug
 start 00000703 end 00000778 length   117 section .info.
 
 Debug\stm8l15x_iwdg.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00019b30 end 00019ed5 length   933 section .debug
+start 00019b08 end 00019ead length   933 section .debug
 start 00000778 end 000007ee length   118 section .info.
 
 Debug\stm8l15x_itc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00019ed5 end 0001a5c7 length  1778 section .debug
+start 00019ead end 0001a59f length  1778 section .debug
 start 000007ee end 00000863 length   117 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 
 Debug\stm8l15x_irtim.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001a5c7 end 0001a822 length   603 section .debug
+start 0001a59f end 0001a7fa length   603 section .debug
 start 00000863 end 000008da length   119 section .info.
 
 Debug\stm8l15x_i2c.o:
 start 000085c4 end 00008a90 length  1228 section .text
-start 0001a822 end 0001cc70 length  9294 section .debug
+start 0001a7fa end 0001cc48 length  9294 section .debug
 start 000008da end 0000094f length   117 section .info.
 start 00008088 end 00008094 length    12 section .const
 
 Debug\stm8l15x_gpio.o:
 start 00008a90 end 00008b5c length   204 section .text
-start 0001cc70 end 0001d7b1 length  2881 section .debug
+start 0001cc48 end 0001d789 length  2881 section .debug
 start 0000094f end 000009c5 length   118 section .info.
 
 Debug\stm8l15x_flash.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001d7b1 end 0001e69c length  3819 section .debug
+start 0001d789 end 0001e674 length  3819 section .debug
 start 000009c5 end 00000a3c length   119 section .info.
 
 Debug\stm8l15x_exti.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001e69c end 0001f1fa length  2910 section .debug
+start 0001e674 end 0001f1d2 length  2910 section .debug
 start 00000a3c end 00000ab2 length   118 section .info.
 
 Debug\stm8l15x_dma.o:
 start 00008b5c end 00008d51 length   501 section .text
-start 0001f1fa end 00020252 length  4184 section .debug
+start 0001f1d2 end 0002022a length  4184 section .debug
 start 00000ab2 end 00000b27 length   117 section .info.
 
 Debug\stm8l15x_dac.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00020252 end 000215fa length  5032 section .debug
+start 0002022a end 000215d2 length  5032 section .debug
 start 00000b27 end 00000b9c length   117 section .info.
 
 Debug\stm8l15x_comp.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000215fa end 000222fe length  3332 section .debug
+start 000215d2 end 000222d6 length  3332 section .debug
 start 00000b9c end 00000c12 length   118 section .info.
 
 Debug\stm8l15x_clk.o:
 start 00008d51 end 000090ae length   861 section .text
-start 000222fe end 00023cdd length  6623 section .debug
+start 000222d6 end 00023cb5 length  6623 section .debug
 start 00000c12 end 00000c87 length   117 section .info.
 start 00008094 end 00008099 length     5 section .const
 
 Debug\stm8l15x_beep.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00023cdd end 0002402e length   849 section .debug
+start 00023cb5 end 00024006 length   849 section .debug
 start 00000c87 end 00000cfd length   118 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 
 Debug\stm8l15x_aes.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0002402e end 00024841 length  2067 section .debug
+start 00024006 end 00024819 length  2067 section .debug
 start 00000cfd end 00000d72 length   117 section .info.
 
 Debug\stm8l15x_adc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00024841 end 0002677b length  7994 section .debug
+start 00024819 end 00026753 length  7994 section .debug
 start 00000d72 end 00000de7 length   117 section .info.
 
 Debug\main.o:
 start 000090ae end 000090ba length    12 section .text
-start 0002677b end 00026829 length   174 section .debug
+start 00026753 end 00026801 length   174 section .debug
 start 00000de7 end 00000e54 length   109 section .info.
 
 (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o:
@@ -290,7 +289,7 @@ start 00001294 end 000012c3 length    47 section .info.
 
 Debug\stm8_interrupt_vector.o:
 start 000094a4 end 000094a5 length     1 section .text
-start 00026829 end 00026994 length   363 section .debug
+start 00026801 end 0002696c length   363 section .debug
 start 000012c3 end 00001341 length   126 section .info.
 start 00008000 end 00008080 length   128 section .const
 
@@ -1012,7 +1011,6 @@ _SYSCFG_RIIOSwitchConfig              ********   *** removed from Debug\stm8l15x
 _SYSCFG_RIResistorConfig              ********   *** removed from Debug\stm8l15x_syscfg.o ***
 _SYSCFG_RITIMInputCaptureConfig       ********   *** removed from Debug\stm8l15x_syscfg.o ***
 _SYSDivFactor                         00008094   defined in Debug\stm8l15x_clk.o section .const
-_Switch                               ********   *** removed from Debug\sw.o ***
 _TIM1_ARRPreloadConfig                ********   *** removed from Debug\stm8l15x_tim1.o ***
 _TIM1_BDTRConfig                      ********   *** removed from Debug\stm8l15x_tim1.o ***
 _TIM1_CCPreloadControl                ********   *** removed from Debug\stm8l15x_tim1.o ***

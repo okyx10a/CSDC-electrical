@@ -5,10 +5,10 @@
   44                     ; 10 {
   46                     	switch	.text
   47  0000               _main:
-  51                     ; 11 	sw_QuickCmd(I2C_SW1_ADDRESS);
+  51                     ; 11 	sw_QuickCmd(SW1_ADDRESS);
   53  0000 a680          	ld	a,#128
   54  0002 cd0000        	call	_sw_QuickCmd
-  56                     ; 12 	sw_QuickCmd(I2C_SW2_ADDRESS);
+  56                     ; 12 	sw_QuickCmd(SW2_ADDRESS);
   58  0005 a682          	ld	a,#130
   59  0007 cd0000        	call	_sw_QuickCmd
   61  000a               L12:
