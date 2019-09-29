@@ -174,10 +174,10 @@ BEGIN Scenario
             FrameType		 0
             DockCircleID		 0
             DockID		 0
-            WindowRectLeft		 546
-            WindowRectTop		 745
-            WindowRectRight		 706
-            WindowRectBottom		 773
+            WindowRectLeft		 226
+            WindowRectTop		 131
+            WindowRectRight		 1707
+            WindowRectBottom		 605
         END Report
 
         BEGIN Report
@@ -660,12 +660,12 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Report
                     BaseDir		 Install
-                    Style		 Lighting Times
+                    Style		 Beta Angle
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Lighting Times
+                    Style		 Beta Angle
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
@@ -675,12 +675,12 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Beta Angle
+                    Style		 Lighting Times
                 END Favorite
                 BEGIN Favorite
                     Type		 Report
                     BaseDir		 Install
-                    Style		 Beta Angle
+                    Style		 Lighting Times
                 END Favorite
             END Class
         END ReportFavorites
@@ -1459,9 +1459,9 @@ BEGIN Scenario
 
                 StartTime		 6 Aug 2019 16:00:00.000000000
                 EndTime		 6 Aug 2020 16:00:00.000000000
-                CurrentTime		 25 Jun 2020 01:43:37.000000000
+                CurrentTime		 19 Aug 2019 00:00:00.000000000
                 Direction		 Forward
-                UpdateDelta		 10
+                UpdateDelta		 0.1
                 RefreshDelta		 0.010000
                 XRealTimeMult		 1
                 RealTimeOffset		 0
@@ -1543,7 +1543,7 @@ BEGIN Scenario
                         PrimaryBody		 Earth
                         SecondaryBody		 Sun
                         CenterLatitude		 0
-                        CenterLongitude		 0
+                        CenterLongitude		 0.5875348888148355
                         ProjectionAltitude		 63621860
                         FieldOfView		 35
                         OrthoDisplayDistance		 20000000
@@ -1580,8 +1580,8 @@ BEGIN Scenario
                         BEGIN ZoomLocations
                             BEGIN ZoomLocation
                                 CenterLat		 0
-                                CenterLon		 0
-                                ZoomWidth		 359.999998
+                                CenterLon		 0.5875348888148355
+                                ZoomWidth		 360
                                 ZoomHeight		 180
                             END ZoomLocation
                         END ZoomLocations
@@ -2184,6 +2184,12 @@ BEGIN Scenario
 
     BEGIN SubObjects
 
+        Class Facility
+
+            PetrieRoof		
+
+        END Class
+
         Class Satellite
 
             Selfie-Sat		
@@ -2196,9 +2202,28 @@ BEGIN Scenario
         Instance *
             *		
         END Instance
+        Instance Facility/PetrieRoof
+            Facility/PetrieRoof		
+            Facility/PetrieRoof/Receiver/YUSendRx		
+            Facility/PetrieRoof/Transmitter/YUSendTx		
+        END Instance
+        Instance Facility/PetrieRoof/Receiver/YUSendRx
+            Facility/PetrieRoof/Receiver/YUSendRx		
+        END Instance
+        Instance Facility/PetrieRoof/Transmitter/YUSendTx
+            Facility/PetrieRoof/Transmitter/YUSendTx		
+        END Instance
         Instance Satellite/Selfie-Sat
             *		
             Satellite/Selfie-Sat		
+            Satellite/Selfie-Sat/Receiver/NanoAvionicsRx		
+            Satellite/Selfie-Sat/Transmitter/NanoAvonicsTx		
+        END Instance
+        Instance Satellite/Selfie-Sat/Receiver/NanoAvionicsRx
+            Satellite/Selfie-Sat/Receiver/NanoAvionicsRx		
+        END Instance
+        Instance Satellite/Selfie-Sat/Transmitter/NanoAvonicsTx
+            Satellite/Selfie-Sat/Transmitter/NanoAvonicsTx		
         END Instance
     END References
 

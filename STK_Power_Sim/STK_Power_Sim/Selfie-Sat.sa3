@@ -520,17 +520,17 @@ END Point
 SolarSmartInterval		
 BEGIN EVENTINTERVAL
     BEGIN Interval
-        Start		 25 Jun 2020 11:00:00.000000000
-        Stop		 25 Jun 2020 15:00:00.000000000
+        Start		 19 Aug 2019 00:00:00.000000000
+        Stop		 21 Aug 2019 00:00:00.000000000
     END Interval
     IntervalState		 Explicit
 END EVENTINTERVAL
 
 UseSolarToolOnjIntvl		 No
-SolarStartTime		 27975600
-SolarStopTime		 27990000
+SolarStartTime		 1065600
+SolarStopTime		 1238400
 SolarTimeStep		 5
-    SolarGroupName            All
+    SolarGroupName            Plus-Y
 UseSolarToolBoundRadius		 Yes
 SolarPowerEquation		 Basic
 SolarToolBoundRadius		 0.28

@@ -9,7 +9,7 @@ R=6378;
 beta_crit = asind((R)/(R+h)); %calculate critical beta angle
 
 M = csvread('Beta_Angle-One_Year.csv',1,0); %import data
-
+avg_beta = mean(abs(M(:,2)));
 no_eclipse = abs(M(:,2)) > beta_crit; %find where we are above critical beta
 j=1;
 k=1;
