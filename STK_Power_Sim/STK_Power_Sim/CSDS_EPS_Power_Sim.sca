@@ -4,7 +4,7 @@ BEGIN Access
     Scenario/CSDS_EPS_Power_Sim/Satellite/Selfie-Sat
     Scenario/CSDS_EPS_Power_Sim/Facility/PetrieRoof/Receiver/YUSendRx
 
-    IsComputed		 Yes
+    IsComputed		 No
     UpdateOnReference		 Yes
     DupIsDifferent		 No
     UIOrderReversed		 No

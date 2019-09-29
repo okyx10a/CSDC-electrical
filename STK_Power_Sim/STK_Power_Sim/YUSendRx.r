@@ -264,12 +264,6 @@ BEGIN Extensions
     END ObjectCoverage
 
     BEGIN Desc
-        BEGIN ShortText
-
-        END ShortText
-        BEGIN LongText
-
-        END LongText
     END Desc
 
     BEGIN Refraction
@@ -295,7 +289,7 @@ BEGIN Extensions
 
         BEGIN Graphics
 
-            ShowGfx		 On
+            ShowGfx		 Off
             Relative		 Off
             ShowBoresight		 On
             BoresightMarker		 4

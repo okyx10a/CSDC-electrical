@@ -660,12 +660,12 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Report
                     BaseDir		 Install
-                    Style		 Beta Angle
+                    Style		 Lighting Times
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Beta Angle
+                    Style		 Lighting Times
                 END Favorite
                 BEGIN Favorite
                     Type		 Graph
@@ -675,12 +675,12 @@ BEGIN Scenario
                 BEGIN Favorite
                     Type		 Graph
                     BaseDir		 Install
-                    Style		 Lighting Times
+                    Style		 Beta Angle
                 END Favorite
                 BEGIN Favorite
                     Type		 Report
                     BaseDir		 Install
-                    Style		 Lighting Times
+                    Style		 Beta Angle
                 END Favorite
             END Class
         END ReportFavorites
@@ -1459,9 +1459,9 @@ BEGIN Scenario
 
                 StartTime		 6 Aug 2019 16:00:00.000000000
                 EndTime		 6 Aug 2020 16:00:00.000000000
-                CurrentTime		 19 Aug 2019 00:00:00.000000000
+                CurrentTime		 6 Aug 2019 16:00:00.000000000
                 Direction		 Forward
-                UpdateDelta		 0.1
+                UpdateDelta		 10
                 RefreshDelta		 0.010000
                 XRealTimeMult		 1
                 RealTimeOffset		 0
@@ -1543,7 +1543,7 @@ BEGIN Scenario
                         PrimaryBody		 Earth
                         SecondaryBody		 Sun
                         CenterLatitude		 0
-                        CenterLongitude		 0.5875348888148355
+                        CenterLongitude		 -57.64162283038655
                         ProjectionAltitude		 63621860
                         FieldOfView		 35
                         OrthoDisplayDistance		 20000000
@@ -1580,7 +1580,7 @@ BEGIN Scenario
                         BEGIN ZoomLocations
                             BEGIN ZoomLocation
                                 CenterLat		 0
-                                CenterLon		 0.5875348888148355
+                                CenterLon		 -57.64162283038655
                                 ZoomWidth		 360
                                 ZoomHeight		 180
                             END ZoomLocation
