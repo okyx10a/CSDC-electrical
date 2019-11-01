@@ -297,10 +297,10 @@ void sw_ReadStatus(uint8_t SwAddr, sw_t* Switch)
 
 void sw_on(uint8_t SwAddr)
 {
-	swtich(SwAddr)
+	switch(SwAddr)
 	{
 		case SW1_ADDRESS:
-			setBit(GPIOB->ODR, 0);
+			setBit(GPIOB->ODR, 1);
 			break;
 		case SW2_ADDRESS:
 			setBit(GPIOB->ODR, 1);
@@ -309,13 +309,13 @@ void sw_on(uint8_t SwAddr)
 }
 void sw_off(uint8_t SwAddr)
 {
-	swtich(SwAddr)
+	switch(SwAddr)
 	{
 		case SW1_ADDRESS:
 			clearBit(GPIOB->ODR, 0);
 			break;
 		case SW2_ADDRESS:
-			clearBit(GPIOB->ODR, 1);
+			clearBit(GPIOB->ODR, 0);
 			break;
 	}
 }

@@ -52,6 +52,7 @@ crtsi0.sm8
 #<BEGIN OBJECT_FILES>
 Debug\sw.o
 Debug\i2c.o
+Debug\timing_delay.o
 Debug\stm8l15x_wwdg.o
 Debug\stm8l15x_wfe.o
 Debug\stm8l15x_usart.o

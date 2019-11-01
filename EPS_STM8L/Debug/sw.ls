@@ -15,662 +15,716 @@
   87  0004               _sw_Init:
   91                     ; 12   I2C_LowLevel_Init();
   93  0004 cd0000        	call	_I2C_LowLevel_Init
-  95                     ; 16   I2C_Cmd(I2C, ENABLE);
-  97  0007 4b01          	push	#1
-  98  0009 ae5210        	ldw	x,#21008
-  99  000c cd0000        	call	_I2C_Cmd
- 101  000f 84            	pop	a
- 102                     ; 18   I2C_Init(I2C, SW_I2C_SPEED, OWN_ADDR, I2C_Mode_I2C, I2C_DutyCycle_2, I2C_Ack_Enable, I2C_AcknowledgedAddress_7bit);
- 104  0010 4b00          	push	#0
- 105  0012 4b04          	push	#4
- 106  0014 4b00          	push	#0
- 107  0016 4b00          	push	#0
- 108  0018 ae00a0        	ldw	x,#160
- 109  001b 89            	pushw	x
- 110  001c ae86a0        	ldw	x,#34464
- 111  001f 89            	pushw	x
- 112  0020 ae0001        	ldw	x,#1
- 113  0023 89            	pushw	x
- 114  0024 ae5210        	ldw	x,#21008
- 115  0027 cd0000        	call	_I2C_Init
- 117  002a 5b0a          	addw	sp,#10
- 118                     ; 21   I2C_DMACmd(I2C, ENABLE);
- 120  002c 4b01          	push	#1
- 121  002e ae5210        	ldw	x,#21008
- 122  0031 cd0000        	call	_I2C_DMACmd
- 124  0034 84            	pop	a
- 125                     ; 22 }
- 128  0035 81            	ret
- 166                     ; 24 void sw_QuickCmd(uint8_t slave_addr)
- 166                     ; 25 {
- 167                     	switch	.text
- 168  0036               _sw_QuickCmd:
- 170  0036 88            	push	a
- 171       00000000      OFST:	set	0
- 174                     ; 26 	I2C_GenerateSTART(I2C1, ENABLE);
- 176  0037 4b01          	push	#1
- 177  0039 ae5210        	ldw	x,#21008
- 178  003c cd0000        	call	_I2C_GenerateSTART
- 180  003f 84            	pop	a
- 182  0040               L15:
- 183                     ; 29   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
- 185  0040 ae0301        	ldw	x,#769
- 186  0043 89            	pushw	x
- 187  0044 ae5210        	ldw	x,#21008
- 188  0047 cd0000        	call	_I2C_CheckEvent
- 190  004a 85            	popw	x
- 191  004b 4d            	tnz	a
- 192  004c 27f2          	jreq	L15
- 193                     ; 33   I2C_Send7bitAddress(I2C1, slave_addr, I2C_Direction_Transmitter);
- 196  004e 4b00          	push	#0
- 197  0050 7b02          	ld	a,(OFST+2,sp)
- 198  0052 88            	push	a
- 199  0053 ae5210        	ldw	x,#21008
- 200  0056 cd0000        	call	_I2C_Send7bitAddress
- 202  0059 85            	popw	x
- 204  005a               L75:
- 205                     ; 36   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
- 207  005a ae0782        	ldw	x,#1922
- 208  005d 89            	pushw	x
- 209  005e ae5210        	ldw	x,#21008
- 210  0061 cd0000        	call	_I2C_CheckEvent
- 212  0064 85            	popw	x
- 213  0065 4d            	tnz	a
- 214  0066 27f2          	jreq	L75
- 215                     ; 40   I2C_GenerateSTOP(I2C1, ENABLE);
- 217  0068 4b01          	push	#1
- 218  006a ae5210        	ldw	x,#21008
- 219  006d cd0000        	call	_I2C_GenerateSTOP
- 221  0070 84            	pop	a
- 222                     ; 41 }
- 225  0071 84            	pop	a
- 226  0072 81            	ret
- 274                     ; 43 void sw_WriteCmdByte(uint8_t SwAddr, uint8_t Cmd)
- 274                     ; 44 {
- 275                     	switch	.text
- 276  0073               _sw_WriteCmdByte:
- 278  0073 89            	pushw	x
- 279       00000000      OFST:	set	0
- 282                     ; 45 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
- 284  0074 4b01          	push	#1
- 285  0076 ae5210        	ldw	x,#21008
- 286  0079 cd0000        	call	_I2C_GenerateSTART
- 288  007c 84            	pop	a
- 290  007d               L701:
- 291                     ; 49 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
- 293  007d ae0301        	ldw	x,#769
- 294  0080 89            	pushw	x
- 295  0081 ae5210        	ldw	x,#21008
- 296  0084 cd0000        	call	_I2C_CheckEvent
- 298  0087 85            	popw	x
- 299  0088 4d            	tnz	a
- 300  0089 27f2          	jreq	L701
- 301                     ; 54 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Transmitter);
- 303  008b 4b00          	push	#0
- 304  008d 7b02          	ld	a,(OFST+2,sp)
- 305  008f 88            	push	a
- 306  0090 ae5210        	ldw	x,#21008
- 307  0093 cd0000        	call	_I2C_Send7bitAddress
- 309  0096 85            	popw	x
- 311  0097               L511:
- 312                     ; 58 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
- 314  0097 ae0782        	ldw	x,#1922
- 315  009a 89            	pushw	x
- 316  009b ae5210        	ldw	x,#21008
- 317  009e cd0000        	call	_I2C_CheckEvent
- 319  00a1 85            	popw	x
- 320  00a2 4d            	tnz	a
- 321  00a3 27f2          	jreq	L511
- 322                     ; 63 	I2C_SendData(I2C1, Cmd);
- 324  00a5 7b02          	ld	a,(OFST+2,sp)
- 325  00a7 88            	push	a
- 326  00a8 ae5210        	ldw	x,#21008
- 327  00ab cd0000        	call	_I2C_SendData
- 329  00ae 84            	pop	a
- 331  00af               L321:
- 332                     ; 66 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
- 334  00af ae0784        	ldw	x,#1924
- 335  00b2 89            	pushw	x
- 336  00b3 ae5210        	ldw	x,#21008
- 337  00b6 cd0000        	call	_I2C_CheckEvent
- 339  00b9 85            	popw	x
- 340  00ba 4d            	tnz	a
- 341  00bb 27f2          	jreq	L321
- 342                     ; 71 	I2C_GenerateSTOP(I2C1, ENABLE);
- 344  00bd 4b01          	push	#1
- 345  00bf ae5210        	ldw	x,#21008
- 346  00c2 cd0000        	call	_I2C_GenerateSTOP
- 348  00c5 84            	pop	a
- 349                     ; 72 }
- 352  00c6 85            	popw	x
- 353  00c7 81            	ret
- 410                     ; 74 void sw_WriteExtCmdByte(uint8_t SwAddr, uint8_t RegAddr, uint8_t ExtCmd)
- 410                     ; 75 {
- 411                     	switch	.text
- 412  00c8               _sw_WriteExtCmdByte:
- 414  00c8 89            	pushw	x
- 415       00000000      OFST:	set	0
- 418                     ; 76 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
- 420  00c9 4b01          	push	#1
- 421  00cb ae5210        	ldw	x,#21008
- 422  00ce cd0000        	call	_I2C_GenerateSTART
- 424  00d1 84            	pop	a
- 426  00d2               L751:
- 427                     ; 80 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
- 429  00d2 ae0301        	ldw	x,#769
- 430  00d5 89            	pushw	x
- 431  00d6 ae5210        	ldw	x,#21008
- 432  00d9 cd0000        	call	_I2C_CheckEvent
- 434  00dc 85            	popw	x
- 435  00dd 4d            	tnz	a
- 436  00de 27f2          	jreq	L751
- 437                     ; 85 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Transmitter);
- 439  00e0 4b00          	push	#0
- 440  00e2 7b02          	ld	a,(OFST+2,sp)
- 441  00e4 88            	push	a
- 442  00e5 ae5210        	ldw	x,#21008
- 443  00e8 cd0000        	call	_I2C_Send7bitAddress
- 445  00eb 85            	popw	x
- 447  00ec               L561:
- 448                     ; 89 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
- 450  00ec ae0782        	ldw	x,#1922
- 451  00ef 89            	pushw	x
- 452  00f0 ae5210        	ldw	x,#21008
- 453  00f3 cd0000        	call	_I2C_CheckEvent
- 455  00f6 85            	popw	x
- 456  00f7 4d            	tnz	a
- 457  00f8 27f2          	jreq	L561
- 458                     ; 95 	I2C_SendData(I2C1, RegAddr);
- 460  00fa 7b02          	ld	a,(OFST+2,sp)
- 461  00fc 88            	push	a
- 462  00fd ae5210        	ldw	x,#21008
- 463  0100 cd0000        	call	_I2C_SendData
- 465  0103 84            	pop	a
- 467  0104               L371:
- 468                     ; 98 	while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
- 470  0104 ae0784        	ldw	x,#1924
- 471  0107 89            	pushw	x
- 472  0108 ae5210        	ldw	x,#21008
- 473  010b cd0000        	call	_I2C_CheckEvent
- 475  010e 85            	popw	x
- 476  010f 4d            	tnz	a
- 477  0110 27f2          	jreq	L371
- 478                     ; 103 	I2C_SendData(I2C1, ExtCmd);
- 480  0112 7b05          	ld	a,(OFST+5,sp)
- 481  0114 88            	push	a
- 482  0115 ae5210        	ldw	x,#21008
- 483  0118 cd0000        	call	_I2C_SendData
- 485  011b 84            	pop	a
- 487  011c               L102:
- 488                     ; 107 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
- 490  011c ae0784        	ldw	x,#1924
- 491  011f 89            	pushw	x
- 492  0120 ae5210        	ldw	x,#21008
- 493  0123 cd0000        	call	_I2C_CheckEvent
- 495  0126 85            	popw	x
- 496  0127 4d            	tnz	a
- 497  0128 27f2          	jreq	L102
- 498                     ; 112 	I2C_GenerateSTOP(I2C1, ENABLE);
- 500  012a 4b01          	push	#1
- 501  012c ae5210        	ldw	x,#21008
- 502  012f cd0000        	call	_I2C_GenerateSTOP
- 504  0132 84            	pop	a
- 505                     ; 113 }
- 508  0133 85            	popw	x
- 509  0134 81            	ret
- 600                     ; 115 void sw_ReadVoltCurr(uint8_t SwAddr, sw_t* Switch)
- 600                     ; 116 {
- 601                     	switch	.text
- 602  0135               _sw_ReadVoltCurr:
- 604  0135 88            	push	a
- 605  0136 5205          	subw	sp,#5
- 606       00000005      OFST:	set	5
- 609  0138               L152:
- 610                     ; 119   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
- 612  0138 ae0302        	ldw	x,#770
- 613  013b 89            	pushw	x
- 614  013c ae5210        	ldw	x,#21008
- 615  013f cd0000        	call	_I2C_GetFlagStatus
- 617  0142 85            	popw	x
- 618  0143 4d            	tnz	a
- 619  0144 26f2          	jrne	L152
- 620                     ; 122 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
- 622  0146 4b01          	push	#1
- 623  0148 ae5210        	ldw	x,#21008
- 624  014b cd0000        	call	_I2C_GenerateSTART
- 626  014e 84            	pop	a
- 628  014f               L752:
- 629                     ; 126 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
- 631  014f ae0301        	ldw	x,#769
- 632  0152 89            	pushw	x
- 633  0153 ae5210        	ldw	x,#21008
- 634  0156 cd0000        	call	_I2C_CheckEvent
- 636  0159 85            	popw	x
- 637  015a 4d            	tnz	a
- 638  015b 27f2          	jreq	L752
- 639                     ; 131 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
- 641  015d 4b01          	push	#1
- 642  015f 7b07          	ld	a,(OFST+2,sp)
- 643  0161 88            	push	a
- 644  0162 ae5210        	ldw	x,#21008
- 645  0165 cd0000        	call	_I2C_Send7bitAddress
- 647  0168 85            	popw	x
- 649  0169               L562:
- 650                     ; 134   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
- 652  0169 ae0302        	ldw	x,#770
- 653  016c 89            	pushw	x
- 654  016d ae5210        	ldw	x,#21008
- 655  0170 cd0000        	call	_I2C_CheckEvent
- 657  0173 85            	popw	x
- 658  0174 4d            	tnz	a
- 659  0175 27f2          	jreq	L562
- 661  0177               L372:
- 662                     ; 141   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
- 664  0177 ae0340        	ldw	x,#832
- 665  017a 89            	pushw	x
- 666  017b ae5210        	ldw	x,#21008
- 667  017e cd0000        	call	_I2C_CheckEvent
- 669  0181 85            	popw	x
- 670  0182 4d            	tnz	a
- 671  0183 27f2          	jreq	L372
- 672                     ; 144 	buffer[0] = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
- 674  0185 ae5210        	ldw	x,#21008
- 675  0188 cd0000        	call	_I2C_ReceiveData
- 677  018b 6b03          	ld	(OFST-2,sp),a
- 679  018d               L303:
- 680                     ; 148   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
- 682  018d ae0340        	ldw	x,#832
- 683  0190 89            	pushw	x
- 684  0191 ae5210        	ldw	x,#21008
- 685  0194 cd0000        	call	_I2C_CheckEvent
- 687  0197 85            	popw	x
- 688  0198 4d            	tnz	a
- 689  0199 27f2          	jreq	L303
- 690                     ; 151 	buffer[1] = I2C_ReceiveData(I2C1); //meanwhile the slave send the third byte
- 692  019b ae5210        	ldw	x,#21008
- 693  019e cd0000        	call	_I2C_ReceiveData
- 695  01a1 6b04          	ld	(OFST-1,sp),a
- 696                     ; 154   I2C_AcknowledgeConfig(I2C1, DISABLE);
- 698  01a3 4b00          	push	#0
- 699  01a5 ae5210        	ldw	x,#21008
- 700  01a8 cd0000        	call	_I2C_AcknowledgeConfig
- 702  01ab 84            	pop	a
- 703                     ; 157   I2C_GenerateSTOP(I2C1, ENABLE);
- 705  01ac 4b01          	push	#1
- 706  01ae ae5210        	ldw	x,#21008
- 707  01b1 cd0000        	call	_I2C_GenerateSTOP
- 709  01b4 84            	pop	a
- 711  01b5               L113:
- 712                     ; 161   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_RXNE) == RESET)
- 714  01b5 ae0140        	ldw	x,#320
- 715  01b8 89            	pushw	x
- 716  01b9 ae5210        	ldw	x,#21008
- 717  01bc cd0000        	call	_I2C_GetFlagStatus
- 719  01bf 85            	popw	x
- 720  01c0 4d            	tnz	a
- 721  01c1 27f2          	jreq	L113
- 722                     ; 164 	buffer[2] = I2C_ReceiveData(I2C1);// receieve the third bit
- 724  01c3 ae5210        	ldw	x,#21008
- 725  01c6 cd0000        	call	_I2C_ReceiveData
- 727  01c9 6b05          	ld	(OFST+0,sp),a
- 728                     ; 166 	Switch->voltage = (6.65/4096)*(buffer[0]<<4|buffer[2]>>4);//in unit V
- 730  01cb 1e09          	ldw	x,(OFST+4,sp)
- 731  01cd 89            	pushw	x
- 732  01ce 7b07          	ld	a,(OFST+2,sp)
- 733  01d0 4e            	swap	a
- 734  01d1 a40f          	and	a,#15
- 735  01d3 5f            	clrw	x
- 736  01d4 97            	ld	xl,a
- 737  01d5 1f03          	ldw	(OFST-2,sp),x
- 738  01d7 7b05          	ld	a,(OFST+0,sp)
- 739  01d9 97            	ld	xl,a
- 740  01da a610          	ld	a,#16
- 741  01dc 42            	mul	x,a
- 742  01dd 01            	rrwa	x,a
- 743  01de 1a04          	or	a,(OFST-1,sp)
- 744  01e0 41            	exg	a,xl
- 745  01e1 1a03          	or	a,(OFST-2,sp)
- 746  01e3 41            	exg	a,xl
- 747  01e4 02            	rlwa	x,a
- 748  01e5 cd0000        	call	c_itof
- 750  01e8 ae0004        	ldw	x,#L123
- 751  01eb cd0000        	call	c_fmul
- 753  01ee cd0000        	call	c_ftoi
- 755  01f1 9085          	popw	y
- 756  01f3 90ff          	ldw	(y),x
- 757                     ; 167 	Switch->current = (105.84/4096)*(buffer[1]<<4|buffer[2]&0b1111);// in unit mA
- 759  01f5 1e09          	ldw	x,(OFST+4,sp)
- 760  01f7 89            	pushw	x
- 761  01f8 7b07          	ld	a,(OFST+2,sp)
- 762  01fa a40f          	and	a,#15
- 763  01fc 6b04          	ld	(OFST-1,sp),a
- 764  01fe 7b06          	ld	a,(OFST+1,sp)
- 765  0200 97            	ld	xl,a
- 766  0201 a610          	ld	a,#16
- 767  0203 42            	mul	x,a
- 768  0204 01            	rrwa	x,a
- 769  0205 1a04          	or	a,(OFST-1,sp)
- 770  0207 02            	rlwa	x,a
- 771  0208 cd0000        	call	c_itof
- 773  020b ae0000        	ldw	x,#L133
- 774  020e cd0000        	call	c_fmul
- 776  0211 cd0000        	call	c_ftoi
- 778  0214 9085          	popw	y
- 779  0216 90ef02        	ldw	(2,y),x
- 780                     ; 168 }
- 783  0219 5b06          	addw	sp,#6
- 784  021b 81            	ret
- 847                     ; 170 void sw_ReadCurrent(uint8_t SwAddr, sw_t* Switch)
- 847                     ; 171 {
- 848                     	switch	.text
- 849  021c               _sw_ReadCurrent:
- 851  021c 88            	push	a
- 852  021d 5204          	subw	sp,#4
- 853       00000004      OFST:	set	4
- 856  021f               L763:
- 857                     ; 174   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
- 859  021f ae0302        	ldw	x,#770
- 860  0222 89            	pushw	x
- 861  0223 ae5210        	ldw	x,#21008
- 862  0226 cd0000        	call	_I2C_GetFlagStatus
- 864  0229 85            	popw	x
- 865  022a 4d            	tnz	a
- 866  022b 26f2          	jrne	L763
- 867                     ; 177 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
- 869  022d 4b01          	push	#1
- 870  022f ae5210        	ldw	x,#21008
- 871  0232 cd0000        	call	_I2C_GenerateSTART
- 873  0235 84            	pop	a
- 875  0236               L573:
- 876                     ; 181 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
- 878  0236 ae0301        	ldw	x,#769
- 879  0239 89            	pushw	x
- 880  023a ae5210        	ldw	x,#21008
- 881  023d cd0000        	call	_I2C_CheckEvent
- 883  0240 85            	popw	x
- 884  0241 4d            	tnz	a
- 885  0242 27f2          	jreq	L573
- 886                     ; 186 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
- 888  0244 4b01          	push	#1
- 889  0246 7b06          	ld	a,(OFST+2,sp)
- 890  0248 88            	push	a
- 891  0249 ae5210        	ldw	x,#21008
- 892  024c cd0000        	call	_I2C_Send7bitAddress
- 894  024f 85            	popw	x
- 896  0250               L304:
- 897                     ; 189   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
- 899  0250 ae0302        	ldw	x,#770
- 900  0253 89            	pushw	x
- 901  0254 ae5210        	ldw	x,#21008
- 902  0257 cd0000        	call	_I2C_CheckEvent
- 904  025a 85            	popw	x
- 905  025b 4d            	tnz	a
- 906  025c 27f2          	jreq	L304
- 908  025e               L114:
- 909                     ; 196   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
- 911  025e ae0340        	ldw	x,#832
- 912  0261 89            	pushw	x
- 913  0262 ae5210        	ldw	x,#21008
- 914  0265 cd0000        	call	_I2C_CheckEvent
- 916  0268 85            	popw	x
- 917  0269 4d            	tnz	a
- 918  026a 27f2          	jreq	L114
- 919                     ; 199 	buffer[0] = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
- 921  026c ae5210        	ldw	x,#21008
- 922  026f cd0000        	call	_I2C_ReceiveData
- 924  0272 6b03          	ld	(OFST-1,sp),a
- 925                     ; 202   I2C_AcknowledgeConfig(I2C1, DISABLE);
- 927  0274 4b00          	push	#0
- 928  0276 ae5210        	ldw	x,#21008
- 929  0279 cd0000        	call	_I2C_AcknowledgeConfig
- 931  027c 84            	pop	a
- 932                     ; 205   I2C_GenerateSTOP(I2C1, ENABLE);
- 934  027d 4b01          	push	#1
- 935  027f ae5210        	ldw	x,#21008
- 936  0282 cd0000        	call	_I2C_GenerateSTOP
- 938  0285 84            	pop	a
- 940  0286               L714:
- 941                     ; 209   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_RXNE) == RESET)
- 943  0286 ae0140        	ldw	x,#320
- 944  0289 89            	pushw	x
- 945  028a ae5210        	ldw	x,#21008
- 946  028d cd0000        	call	_I2C_GetFlagStatus
- 948  0290 85            	popw	x
- 949  0291 4d            	tnz	a
- 950  0292 27f2          	jreq	L714
- 951                     ; 212 	buffer[2] = I2C_ReceiveData(I2C1);
- 953  0294 ae5210        	ldw	x,#21008
- 954  0297 cd0000        	call	_I2C_ReceiveData
- 956  029a 6b05          	ld	(OFST+1,sp),a
- 957                     ; 214 	Switch->current = (105.84/4096)*(buffer[0]<<4|buffer[1]>>4);// in unit mA
- 959  029c 1e08          	ldw	x,(OFST+4,sp)
- 960  029e 89            	pushw	x
- 961  029f 7b06          	ld	a,(OFST+2,sp)
- 962  02a1 4e            	swap	a
- 963  02a2 a40f          	and	a,#15
- 964  02a4 5f            	clrw	x
- 965  02a5 97            	ld	xl,a
- 966  02a6 1f03          	ldw	(OFST-1,sp),x
- 967  02a8 7b05          	ld	a,(OFST+1,sp)
- 968  02aa 97            	ld	xl,a
- 969  02ab a610          	ld	a,#16
- 970  02ad 42            	mul	x,a
- 971  02ae 01            	rrwa	x,a
- 972  02af 1a04          	or	a,(OFST+0,sp)
- 973  02b1 41            	exg	a,xl
- 974  02b2 1a03          	or	a,(OFST-1,sp)
- 975  02b4 41            	exg	a,xl
- 976  02b5 02            	rlwa	x,a
- 977  02b6 cd0000        	call	c_itof
- 979  02b9 ae0000        	ldw	x,#L133
- 980  02bc cd0000        	call	c_fmul
- 982  02bf cd0000        	call	c_ftoi
- 984  02c2 9085          	popw	y
- 985  02c4 90ef02        	ldw	(2,y),x
- 986                     ; 215 }
- 989  02c7 5b05          	addw	sp,#5
- 990  02c9 81            	ret
-1053                     ; 217 void sw_ReadVoltage(uint8_t SwAddr, sw_t* Switch)
-1053                     ; 218 {
-1054                     	switch	.text
-1055  02ca               _sw_ReadVoltage:
-1057  02ca 88            	push	a
-1058  02cb 5204          	subw	sp,#4
-1059       00000004      OFST:	set	4
-1062  02cd               L554:
-1063                     ; 221   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
-1065  02cd ae0302        	ldw	x,#770
-1066  02d0 89            	pushw	x
-1067  02d1 ae5210        	ldw	x,#21008
-1068  02d4 cd0000        	call	_I2C_GetFlagStatus
-1070  02d7 85            	popw	x
-1071  02d8 4d            	tnz	a
-1072  02d9 26f2          	jrne	L554
-1073                     ; 224 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
-1075  02db 4b01          	push	#1
-1076  02dd ae5210        	ldw	x,#21008
-1077  02e0 cd0000        	call	_I2C_GenerateSTART
-1079  02e3 84            	pop	a
-1081  02e4               L364:
-1082                     ; 228 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
-1084  02e4 ae0301        	ldw	x,#769
-1085  02e7 89            	pushw	x
-1086  02e8 ae5210        	ldw	x,#21008
-1087  02eb cd0000        	call	_I2C_CheckEvent
-1089  02ee 85            	popw	x
-1090  02ef 4d            	tnz	a
-1091  02f0 27f2          	jreq	L364
-1092                     ; 233 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
-1094  02f2 4b01          	push	#1
-1095  02f4 7b06          	ld	a,(OFST+2,sp)
-1096  02f6 88            	push	a
-1097  02f7 ae5210        	ldw	x,#21008
-1098  02fa cd0000        	call	_I2C_Send7bitAddress
-1100  02fd 85            	popw	x
-1102  02fe               L174:
-1103                     ; 236   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
-1105  02fe ae0302        	ldw	x,#770
-1106  0301 89            	pushw	x
-1107  0302 ae5210        	ldw	x,#21008
-1108  0305 cd0000        	call	_I2C_CheckEvent
-1110  0308 85            	popw	x
-1111  0309 4d            	tnz	a
-1112  030a 27f2          	jreq	L174
-1114  030c               L774:
-1115                     ; 243   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
-1117  030c ae0340        	ldw	x,#832
-1118  030f 89            	pushw	x
-1119  0310 ae5210        	ldw	x,#21008
-1120  0313 cd0000        	call	_I2C_CheckEvent
-1122  0316 85            	popw	x
-1123  0317 4d            	tnz	a
-1124  0318 27f2          	jreq	L774
-1125                     ; 246 	buffer[0] = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
-1127  031a ae5210        	ldw	x,#21008
-1128  031d cd0000        	call	_I2C_ReceiveData
-1130  0320 6b03          	ld	(OFST-1,sp),a
-1131                     ; 249   I2C_AcknowledgeConfig(I2C1, DISABLE);
-1133  0322 4b00          	push	#0
-1134  0324 ae5210        	ldw	x,#21008
-1135  0327 cd0000        	call	_I2C_AcknowledgeConfig
-1137  032a 84            	pop	a
-1138                     ; 252   I2C_GenerateSTOP(I2C1, ENABLE);
-1140  032b 4b01          	push	#1
-1141  032d ae5210        	ldw	x,#21008
-1142  0330 cd0000        	call	_I2C_GenerateSTOP
-1144  0333 84            	pop	a
-1146  0334               L505:
-1147                     ; 256   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_RXNE) == RESET)
-1149  0334 ae0140        	ldw	x,#320
-1150  0337 89            	pushw	x
-1151  0338 ae5210        	ldw	x,#21008
-1152  033b cd0000        	call	_I2C_GetFlagStatus
-1154  033e 85            	popw	x
-1155  033f 4d            	tnz	a
-1156  0340 27f2          	jreq	L505
-1157                     ; 259 	buffer[2] = I2C_ReceiveData(I2C1);
-1159  0342 ae5210        	ldw	x,#21008
-1160  0345 cd0000        	call	_I2C_ReceiveData
-1162  0348 6b05          	ld	(OFST+1,sp),a
-1163                     ; 261 	Switch->voltage = (6.65/4096)*(buffer[0]<<4|buffer[1]>>4);// in unit mA
-1165  034a 1e08          	ldw	x,(OFST+4,sp)
-1166  034c 89            	pushw	x
-1167  034d 7b06          	ld	a,(OFST+2,sp)
-1168  034f 4e            	swap	a
-1169  0350 a40f          	and	a,#15
-1170  0352 5f            	clrw	x
-1171  0353 97            	ld	xl,a
-1172  0354 1f03          	ldw	(OFST-1,sp),x
-1173  0356 7b05          	ld	a,(OFST+1,sp)
-1174  0358 97            	ld	xl,a
-1175  0359 a610          	ld	a,#16
-1176  035b 42            	mul	x,a
-1177  035c 01            	rrwa	x,a
-1178  035d 1a04          	or	a,(OFST+0,sp)
-1179  035f 41            	exg	a,xl
-1180  0360 1a03          	or	a,(OFST-1,sp)
-1181  0362 41            	exg	a,xl
-1182  0363 02            	rlwa	x,a
-1183  0364 cd0000        	call	c_itof
-1185  0367 ae0004        	ldw	x,#L123
-1186  036a cd0000        	call	c_fmul
-1188  036d cd0000        	call	c_ftoi
-1190  0370 9085          	popw	y
-1191  0372 90ff          	ldw	(y),x
-1192                     ; 262 }
-1195  0374 5b05          	addw	sp,#5
-1196  0376 81            	ret
-1247                     ; 264 void sw_ReadStatus(uint8_t SwAddr, sw_t* Switch)
-1247                     ; 265 {
-1248                     	switch	.text
-1249  0377               _sw_ReadStatus:
-1251  0377 88            	push	a
-1252       00000000      OFST:	set	0
-1255  0378               L735:
-1256                     ; 267   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
-1258  0378 ae0302        	ldw	x,#770
-1259  037b 89            	pushw	x
-1260  037c ae5210        	ldw	x,#21008
-1261  037f cd0000        	call	_I2C_GetFlagStatus
-1263  0382 85            	popw	x
-1264  0383 4d            	tnz	a
-1265  0384 26f2          	jrne	L735
-1266                     ; 270 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
-1268  0386 4b01          	push	#1
-1269  0388 ae5210        	ldw	x,#21008
-1270  038b cd0000        	call	_I2C_GenerateSTART
-1272  038e 84            	pop	a
-1274  038f               L545:
-1275                     ; 274 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
-1277  038f ae0301        	ldw	x,#769
-1278  0392 89            	pushw	x
-1279  0393 ae5210        	ldw	x,#21008
-1280  0396 cd0000        	call	_I2C_CheckEvent
-1282  0399 85            	popw	x
-1283  039a 4d            	tnz	a
-1284  039b 27f2          	jreq	L545
-1285                     ; 279 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
-1287  039d 4b01          	push	#1
-1288  039f 7b02          	ld	a,(OFST+2,sp)
-1289  03a1 88            	push	a
-1290  03a2 ae5210        	ldw	x,#21008
-1291  03a5 cd0000        	call	_I2C_Send7bitAddress
-1293  03a8 85            	popw	x
-1295  03a9               L355:
-1296                     ; 282   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
-1298  03a9 ae0302        	ldw	x,#770
-1299  03ac 89            	pushw	x
-1300  03ad ae5210        	ldw	x,#21008
-1301  03b0 cd0000        	call	_I2C_CheckEvent
-1303  03b3 85            	popw	x
-1304  03b4 4d            	tnz	a
-1305  03b5 27f2          	jreq	L355
-1307  03b7               L165:
-1308                     ; 289   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
-1310  03b7 ae0340        	ldw	x,#832
-1311  03ba 89            	pushw	x
-1312  03bb ae5210        	ldw	x,#21008
-1313  03be cd0000        	call	_I2C_CheckEvent
-1315  03c1 85            	popw	x
-1316  03c2 4d            	tnz	a
-1317  03c3 27f2          	jreq	L165
-1318                     ; 292 	Switch-> status = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
-1320  03c5 ae5210        	ldw	x,#21008
-1321  03c8 cd0000        	call	_I2C_ReceiveData
-1323  03cb 1e04          	ldw	x,(OFST+4,sp)
-1324  03cd e704          	ld	(4,x),a
-1325                     ; 294 }
-1328  03cf 84            	pop	a
-1329  03d0 81            	ret
-1342                     	xdef	_sw_ReadStatus
-1343                     	xdef	_sw_ReadVoltage
-1344                     	xdef	_sw_ReadCurrent
-1345                     	xdef	_sw_ReadVoltCurr
-1346                     	xdef	_sw_WriteExtCmdByte
-1347                     	xdef	_sw_WriteCmdByte
-1348                     	xdef	_sw_QuickCmd
-1349                     	xdef	_sw_Init
-1350                     	xdef	_sw_DeInit
-1351                     	xref	_I2C_LowLevel_Init
-1352                     	xref	_I2C_LowLevel_DeInit
-1353                     	xref	_I2C_GetFlagStatus
-1354                     	xref	_I2C_CheckEvent
-1355                     	xref	_I2C_DMACmd
-1356                     	xref	_I2C_ReceiveData
-1357                     	xref	_I2C_SendData
-1358                     	xref	_I2C_Send7bitAddress
-1359                     	xref	_I2C_AcknowledgeConfig
-1360                     	xref	_I2C_GenerateSTOP
-1361                     	xref	_I2C_GenerateSTART
-1362                     	xref	_I2C_Cmd
-1363                     	xref	_I2C_Init
-1364                     .const:	section	.text
-1365  0000               L133:
-1366  0000 3cd3ae14      	dc.w	15571,-20972
-1367  0004               L123:
-1368  0004 3ad4cccc      	dc.w	15060,-13108
-1369                     	xref.b	c_x
-1389                     	xref	c_ftoi
-1390                     	xref	c_fmul
-1391                     	xref	c_itof
-1392                     	end
+  95                     ; 14 	GPIOB->DDR = 0b11111111;
+  97  0007 35ff5007      	mov	20487,#255
+  98                     ; 18   I2C_Cmd(I2C, ENABLE);
+ 100  000b 4b01          	push	#1
+ 101  000d ae5210        	ldw	x,#21008
+ 102  0010 cd0000        	call	_I2C_Cmd
+ 104  0013 84            	pop	a
+ 105                     ; 20   I2C_Init(I2C, SW_I2C_SPEED, OWN_ADDR, I2C_Mode_I2C, I2C_DutyCycle_2, I2C_Ack_Enable, I2C_AcknowledgedAddress_7bit);
+ 107  0014 4b00          	push	#0
+ 108  0016 4b04          	push	#4
+ 109  0018 4b00          	push	#0
+ 110  001a 4b00          	push	#0
+ 111  001c ae00a0        	ldw	x,#160
+ 112  001f 89            	pushw	x
+ 113  0020 ae86a0        	ldw	x,#34464
+ 114  0023 89            	pushw	x
+ 115  0024 ae0001        	ldw	x,#1
+ 116  0027 89            	pushw	x
+ 117  0028 ae5210        	ldw	x,#21008
+ 118  002b cd0000        	call	_I2C_Init
+ 120  002e 5b0a          	addw	sp,#10
+ 121                     ; 23   I2C_DMACmd(I2C, ENABLE);
+ 123  0030 4b01          	push	#1
+ 124  0032 ae5210        	ldw	x,#21008
+ 125  0035 cd0000        	call	_I2C_DMACmd
+ 127  0038 84            	pop	a
+ 128                     ; 24 }
+ 131  0039 81            	ret
+ 169                     ; 26 void sw_QuickCmd(uint8_t slave_addr)
+ 169                     ; 27 {
+ 170                     	switch	.text
+ 171  003a               _sw_QuickCmd:
+ 173  003a 88            	push	a
+ 174       00000000      OFST:	set	0
+ 177                     ; 28 	I2C_GenerateSTART(I2C1, ENABLE);
+ 179  003b 4b01          	push	#1
+ 180  003d ae5210        	ldw	x,#21008
+ 181  0040 cd0000        	call	_I2C_GenerateSTART
+ 183  0043 84            	pop	a
+ 185  0044               L15:
+ 186                     ; 31   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+ 188  0044 ae0301        	ldw	x,#769
+ 189  0047 89            	pushw	x
+ 190  0048 ae5210        	ldw	x,#21008
+ 191  004b cd0000        	call	_I2C_CheckEvent
+ 193  004e 85            	popw	x
+ 194  004f 4d            	tnz	a
+ 195  0050 27f2          	jreq	L15
+ 196                     ; 35   I2C_Send7bitAddress(I2C1, slave_addr, I2C_Direction_Transmitter);
+ 199  0052 4b00          	push	#0
+ 200  0054 7b02          	ld	a,(OFST+2,sp)
+ 201  0056 88            	push	a
+ 202  0057 ae5210        	ldw	x,#21008
+ 203  005a cd0000        	call	_I2C_Send7bitAddress
+ 205  005d 85            	popw	x
+ 207  005e               L75:
+ 208                     ; 38   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+ 210  005e ae0782        	ldw	x,#1922
+ 211  0061 89            	pushw	x
+ 212  0062 ae5210        	ldw	x,#21008
+ 213  0065 cd0000        	call	_I2C_CheckEvent
+ 215  0068 85            	popw	x
+ 216  0069 4d            	tnz	a
+ 217  006a 27f2          	jreq	L75
+ 218                     ; 42   I2C_GenerateSTOP(I2C1, ENABLE);
+ 220  006c 4b01          	push	#1
+ 221  006e ae5210        	ldw	x,#21008
+ 222  0071 cd0000        	call	_I2C_GenerateSTOP
+ 224  0074 84            	pop	a
+ 225                     ; 43 }
+ 228  0075 84            	pop	a
+ 229  0076 81            	ret
+ 277                     ; 45 void sw_WriteCmdByte(uint8_t SwAddr, uint8_t Cmd)
+ 277                     ; 46 {
+ 278                     	switch	.text
+ 279  0077               _sw_WriteCmdByte:
+ 281  0077 89            	pushw	x
+ 282       00000000      OFST:	set	0
+ 285                     ; 47 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+ 287  0078 4b01          	push	#1
+ 288  007a ae5210        	ldw	x,#21008
+ 289  007d cd0000        	call	_I2C_GenerateSTART
+ 291  0080 84            	pop	a
+ 293  0081               L701:
+ 294                     ; 51 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+ 296  0081 ae0301        	ldw	x,#769
+ 297  0084 89            	pushw	x
+ 298  0085 ae5210        	ldw	x,#21008
+ 299  0088 cd0000        	call	_I2C_CheckEvent
+ 301  008b 85            	popw	x
+ 302  008c 4d            	tnz	a
+ 303  008d 27f2          	jreq	L701
+ 304                     ; 56 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Transmitter);
+ 306  008f 4b00          	push	#0
+ 307  0091 7b02          	ld	a,(OFST+2,sp)
+ 308  0093 88            	push	a
+ 309  0094 ae5210        	ldw	x,#21008
+ 310  0097 cd0000        	call	_I2C_Send7bitAddress
+ 312  009a 85            	popw	x
+ 314  009b               L511:
+ 315                     ; 60 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+ 317  009b ae0782        	ldw	x,#1922
+ 318  009e 89            	pushw	x
+ 319  009f ae5210        	ldw	x,#21008
+ 320  00a2 cd0000        	call	_I2C_CheckEvent
+ 322  00a5 85            	popw	x
+ 323  00a6 4d            	tnz	a
+ 324  00a7 27f2          	jreq	L511
+ 325                     ; 65 	I2C_SendData(I2C1, Cmd);
+ 327  00a9 7b02          	ld	a,(OFST+2,sp)
+ 328  00ab 88            	push	a
+ 329  00ac ae5210        	ldw	x,#21008
+ 330  00af cd0000        	call	_I2C_SendData
+ 332  00b2 84            	pop	a
+ 334  00b3               L321:
+ 335                     ; 68 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+ 337  00b3 ae0784        	ldw	x,#1924
+ 338  00b6 89            	pushw	x
+ 339  00b7 ae5210        	ldw	x,#21008
+ 340  00ba cd0000        	call	_I2C_CheckEvent
+ 342  00bd 85            	popw	x
+ 343  00be 4d            	tnz	a
+ 344  00bf 27f2          	jreq	L321
+ 345                     ; 73 	I2C_GenerateSTOP(I2C1, ENABLE);
+ 347  00c1 4b01          	push	#1
+ 348  00c3 ae5210        	ldw	x,#21008
+ 349  00c6 cd0000        	call	_I2C_GenerateSTOP
+ 351  00c9 84            	pop	a
+ 352                     ; 74 }
+ 355  00ca 85            	popw	x
+ 356  00cb 81            	ret
+ 413                     ; 76 void sw_WriteExtCmdByte(uint8_t SwAddr, uint8_t RegAddr, uint8_t ExtCmd)
+ 413                     ; 77 {
+ 414                     	switch	.text
+ 415  00cc               _sw_WriteExtCmdByte:
+ 417  00cc 89            	pushw	x
+ 418       00000000      OFST:	set	0
+ 421                     ; 78 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+ 423  00cd 4b01          	push	#1
+ 424  00cf ae5210        	ldw	x,#21008
+ 425  00d2 cd0000        	call	_I2C_GenerateSTART
+ 427  00d5 84            	pop	a
+ 429  00d6               L751:
+ 430                     ; 82 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+ 432  00d6 ae0301        	ldw	x,#769
+ 433  00d9 89            	pushw	x
+ 434  00da ae5210        	ldw	x,#21008
+ 435  00dd cd0000        	call	_I2C_CheckEvent
+ 437  00e0 85            	popw	x
+ 438  00e1 4d            	tnz	a
+ 439  00e2 27f2          	jreq	L751
+ 440                     ; 87 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Transmitter);
+ 442  00e4 4b00          	push	#0
+ 443  00e6 7b02          	ld	a,(OFST+2,sp)
+ 444  00e8 88            	push	a
+ 445  00e9 ae5210        	ldw	x,#21008
+ 446  00ec cd0000        	call	_I2C_Send7bitAddress
+ 448  00ef 85            	popw	x
+ 450  00f0               L561:
+ 451                     ; 91 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+ 453  00f0 ae0782        	ldw	x,#1922
+ 454  00f3 89            	pushw	x
+ 455  00f4 ae5210        	ldw	x,#21008
+ 456  00f7 cd0000        	call	_I2C_CheckEvent
+ 458  00fa 85            	popw	x
+ 459  00fb 4d            	tnz	a
+ 460  00fc 27f2          	jreq	L561
+ 461                     ; 97 	I2C_SendData(I2C1, RegAddr);
+ 463  00fe 7b02          	ld	a,(OFST+2,sp)
+ 464  0100 88            	push	a
+ 465  0101 ae5210        	ldw	x,#21008
+ 466  0104 cd0000        	call	_I2C_SendData
+ 468  0107 84            	pop	a
+ 470  0108               L371:
+ 471                     ; 100 	while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+ 473  0108 ae0784        	ldw	x,#1924
+ 474  010b 89            	pushw	x
+ 475  010c ae5210        	ldw	x,#21008
+ 476  010f cd0000        	call	_I2C_CheckEvent
+ 478  0112 85            	popw	x
+ 479  0113 4d            	tnz	a
+ 480  0114 27f2          	jreq	L371
+ 481                     ; 105 	I2C_SendData(I2C1, ExtCmd);
+ 483  0116 7b05          	ld	a,(OFST+5,sp)
+ 484  0118 88            	push	a
+ 485  0119 ae5210        	ldw	x,#21008
+ 486  011c cd0000        	call	_I2C_SendData
+ 488  011f 84            	pop	a
+ 490  0120               L102:
+ 491                     ; 109 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+ 493  0120 ae0784        	ldw	x,#1924
+ 494  0123 89            	pushw	x
+ 495  0124 ae5210        	ldw	x,#21008
+ 496  0127 cd0000        	call	_I2C_CheckEvent
+ 498  012a 85            	popw	x
+ 499  012b 4d            	tnz	a
+ 500  012c 27f2          	jreq	L102
+ 501                     ; 114 	I2C_GenerateSTOP(I2C1, ENABLE);
+ 503  012e 4b01          	push	#1
+ 504  0130 ae5210        	ldw	x,#21008
+ 505  0133 cd0000        	call	_I2C_GenerateSTOP
+ 507  0136 84            	pop	a
+ 508                     ; 115 }
+ 511  0137 85            	popw	x
+ 512  0138 81            	ret
+ 603                     ; 117 void sw_ReadVoltCurr(uint8_t SwAddr, sw_t* Switch)
+ 603                     ; 118 {
+ 604                     	switch	.text
+ 605  0139               _sw_ReadVoltCurr:
+ 607  0139 88            	push	a
+ 608  013a 5205          	subw	sp,#5
+ 609       00000005      OFST:	set	5
+ 612  013c               L152:
+ 613                     ; 121   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
+ 615  013c ae0302        	ldw	x,#770
+ 616  013f 89            	pushw	x
+ 617  0140 ae5210        	ldw	x,#21008
+ 618  0143 cd0000        	call	_I2C_GetFlagStatus
+ 620  0146 85            	popw	x
+ 621  0147 4d            	tnz	a
+ 622  0148 26f2          	jrne	L152
+ 623                     ; 124 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+ 625  014a 4b01          	push	#1
+ 626  014c ae5210        	ldw	x,#21008
+ 627  014f cd0000        	call	_I2C_GenerateSTART
+ 629  0152 84            	pop	a
+ 631  0153               L752:
+ 632                     ; 128 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+ 634  0153 ae0301        	ldw	x,#769
+ 635  0156 89            	pushw	x
+ 636  0157 ae5210        	ldw	x,#21008
+ 637  015a cd0000        	call	_I2C_CheckEvent
+ 639  015d 85            	popw	x
+ 640  015e 4d            	tnz	a
+ 641  015f 27f2          	jreq	L752
+ 642                     ; 133 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
+ 644  0161 4b01          	push	#1
+ 645  0163 7b07          	ld	a,(OFST+2,sp)
+ 646  0165 88            	push	a
+ 647  0166 ae5210        	ldw	x,#21008
+ 648  0169 cd0000        	call	_I2C_Send7bitAddress
+ 650  016c 85            	popw	x
+ 652  016d               L562:
+ 653                     ; 136   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+ 655  016d ae0302        	ldw	x,#770
+ 656  0170 89            	pushw	x
+ 657  0171 ae5210        	ldw	x,#21008
+ 658  0174 cd0000        	call	_I2C_CheckEvent
+ 660  0177 85            	popw	x
+ 661  0178 4d            	tnz	a
+ 662  0179 27f2          	jreq	L562
+ 664  017b               L372:
+ 665                     ; 143   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
+ 667  017b ae0340        	ldw	x,#832
+ 668  017e 89            	pushw	x
+ 669  017f ae5210        	ldw	x,#21008
+ 670  0182 cd0000        	call	_I2C_CheckEvent
+ 672  0185 85            	popw	x
+ 673  0186 4d            	tnz	a
+ 674  0187 27f2          	jreq	L372
+ 675                     ; 146 	buffer[0] = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
+ 677  0189 ae5210        	ldw	x,#21008
+ 678  018c cd0000        	call	_I2C_ReceiveData
+ 680  018f 6b03          	ld	(OFST-2,sp),a
+ 682  0191               L303:
+ 683                     ; 150   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
+ 685  0191 ae0340        	ldw	x,#832
+ 686  0194 89            	pushw	x
+ 687  0195 ae5210        	ldw	x,#21008
+ 688  0198 cd0000        	call	_I2C_CheckEvent
+ 690  019b 85            	popw	x
+ 691  019c 4d            	tnz	a
+ 692  019d 27f2          	jreq	L303
+ 693                     ; 153 	buffer[1] = I2C_ReceiveData(I2C1); //meanwhile the slave send the third byte
+ 695  019f ae5210        	ldw	x,#21008
+ 696  01a2 cd0000        	call	_I2C_ReceiveData
+ 698  01a5 6b04          	ld	(OFST-1,sp),a
+ 699                     ; 156   I2C_AcknowledgeConfig(I2C1, DISABLE);
+ 701  01a7 4b00          	push	#0
+ 702  01a9 ae5210        	ldw	x,#21008
+ 703  01ac cd0000        	call	_I2C_AcknowledgeConfig
+ 705  01af 84            	pop	a
+ 706                     ; 159   I2C_GenerateSTOP(I2C1, ENABLE);
+ 708  01b0 4b01          	push	#1
+ 709  01b2 ae5210        	ldw	x,#21008
+ 710  01b5 cd0000        	call	_I2C_GenerateSTOP
+ 712  01b8 84            	pop	a
+ 714  01b9               L113:
+ 715                     ; 163   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_RXNE) == RESET)
+ 717  01b9 ae0140        	ldw	x,#320
+ 718  01bc 89            	pushw	x
+ 719  01bd ae5210        	ldw	x,#21008
+ 720  01c0 cd0000        	call	_I2C_GetFlagStatus
+ 722  01c3 85            	popw	x
+ 723  01c4 4d            	tnz	a
+ 724  01c5 27f2          	jreq	L113
+ 725                     ; 166 	buffer[2] = I2C_ReceiveData(I2C1);// receieve the third bit
+ 727  01c7 ae5210        	ldw	x,#21008
+ 728  01ca cd0000        	call	_I2C_ReceiveData
+ 730  01cd 6b05          	ld	(OFST+0,sp),a
+ 731                     ; 168 	Switch->voltage = (6.65/4096)*(buffer[0]<<4|buffer[2]>>4);//in unit V
+ 733  01cf 1e09          	ldw	x,(OFST+4,sp)
+ 734  01d1 89            	pushw	x
+ 735  01d2 7b07          	ld	a,(OFST+2,sp)
+ 736  01d4 4e            	swap	a
+ 737  01d5 a40f          	and	a,#15
+ 738  01d7 5f            	clrw	x
+ 739  01d8 97            	ld	xl,a
+ 740  01d9 1f03          	ldw	(OFST-2,sp),x
+ 741  01db 7b05          	ld	a,(OFST+0,sp)
+ 742  01dd 97            	ld	xl,a
+ 743  01de a610          	ld	a,#16
+ 744  01e0 42            	mul	x,a
+ 745  01e1 01            	rrwa	x,a
+ 746  01e2 1a04          	or	a,(OFST-1,sp)
+ 747  01e4 41            	exg	a,xl
+ 748  01e5 1a03          	or	a,(OFST-2,sp)
+ 749  01e7 41            	exg	a,xl
+ 750  01e8 02            	rlwa	x,a
+ 751  01e9 cd0000        	call	c_itof
+ 753  01ec ae0004        	ldw	x,#L123
+ 754  01ef cd0000        	call	c_fmul
+ 756  01f2 cd0000        	call	c_ftoi
+ 758  01f5 9085          	popw	y
+ 759  01f7 90ff          	ldw	(y),x
+ 760                     ; 169 	Switch->current = (105.84/4096)*(buffer[1]<<4|buffer[2]&0b1111);// in unit mA
+ 762  01f9 1e09          	ldw	x,(OFST+4,sp)
+ 763  01fb 89            	pushw	x
+ 764  01fc 7b07          	ld	a,(OFST+2,sp)
+ 765  01fe a40f          	and	a,#15
+ 766  0200 6b04          	ld	(OFST-1,sp),a
+ 767  0202 7b06          	ld	a,(OFST+1,sp)
+ 768  0204 97            	ld	xl,a
+ 769  0205 a610          	ld	a,#16
+ 770  0207 42            	mul	x,a
+ 771  0208 01            	rrwa	x,a
+ 772  0209 1a04          	or	a,(OFST-1,sp)
+ 773  020b 02            	rlwa	x,a
+ 774  020c cd0000        	call	c_itof
+ 776  020f ae0000        	ldw	x,#L133
+ 777  0212 cd0000        	call	c_fmul
+ 779  0215 cd0000        	call	c_ftoi
+ 781  0218 9085          	popw	y
+ 782  021a 90ef02        	ldw	(2,y),x
+ 783                     ; 170 }
+ 786  021d 5b06          	addw	sp,#6
+ 787  021f 81            	ret
+ 850                     ; 172 void sw_ReadCurrent(uint8_t SwAddr, sw_t* Switch)
+ 850                     ; 173 {
+ 851                     	switch	.text
+ 852  0220               _sw_ReadCurrent:
+ 854  0220 88            	push	a
+ 855  0221 5204          	subw	sp,#4
+ 856       00000004      OFST:	set	4
+ 859  0223               L763:
+ 860                     ; 176   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
+ 862  0223 ae0302        	ldw	x,#770
+ 863  0226 89            	pushw	x
+ 864  0227 ae5210        	ldw	x,#21008
+ 865  022a cd0000        	call	_I2C_GetFlagStatus
+ 867  022d 85            	popw	x
+ 868  022e 4d            	tnz	a
+ 869  022f 26f2          	jrne	L763
+ 870                     ; 179 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+ 872  0231 4b01          	push	#1
+ 873  0233 ae5210        	ldw	x,#21008
+ 874  0236 cd0000        	call	_I2C_GenerateSTART
+ 876  0239 84            	pop	a
+ 878  023a               L573:
+ 879                     ; 183 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+ 881  023a ae0301        	ldw	x,#769
+ 882  023d 89            	pushw	x
+ 883  023e ae5210        	ldw	x,#21008
+ 884  0241 cd0000        	call	_I2C_CheckEvent
+ 886  0244 85            	popw	x
+ 887  0245 4d            	tnz	a
+ 888  0246 27f2          	jreq	L573
+ 889                     ; 188 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
+ 891  0248 4b01          	push	#1
+ 892  024a 7b06          	ld	a,(OFST+2,sp)
+ 893  024c 88            	push	a
+ 894  024d ae5210        	ldw	x,#21008
+ 895  0250 cd0000        	call	_I2C_Send7bitAddress
+ 897  0253 85            	popw	x
+ 899  0254               L304:
+ 900                     ; 191   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+ 902  0254 ae0302        	ldw	x,#770
+ 903  0257 89            	pushw	x
+ 904  0258 ae5210        	ldw	x,#21008
+ 905  025b cd0000        	call	_I2C_CheckEvent
+ 907  025e 85            	popw	x
+ 908  025f 4d            	tnz	a
+ 909  0260 27f2          	jreq	L304
+ 911  0262               L114:
+ 912                     ; 198   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
+ 914  0262 ae0340        	ldw	x,#832
+ 915  0265 89            	pushw	x
+ 916  0266 ae5210        	ldw	x,#21008
+ 917  0269 cd0000        	call	_I2C_CheckEvent
+ 919  026c 85            	popw	x
+ 920  026d 4d            	tnz	a
+ 921  026e 27f2          	jreq	L114
+ 922                     ; 201 	buffer[0] = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
+ 924  0270 ae5210        	ldw	x,#21008
+ 925  0273 cd0000        	call	_I2C_ReceiveData
+ 927  0276 6b03          	ld	(OFST-1,sp),a
+ 928                     ; 204   I2C_AcknowledgeConfig(I2C1, DISABLE);
+ 930  0278 4b00          	push	#0
+ 931  027a ae5210        	ldw	x,#21008
+ 932  027d cd0000        	call	_I2C_AcknowledgeConfig
+ 934  0280 84            	pop	a
+ 935                     ; 207   I2C_GenerateSTOP(I2C1, ENABLE);
+ 937  0281 4b01          	push	#1
+ 938  0283 ae5210        	ldw	x,#21008
+ 939  0286 cd0000        	call	_I2C_GenerateSTOP
+ 941  0289 84            	pop	a
+ 943  028a               L714:
+ 944                     ; 211   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_RXNE) == RESET)
+ 946  028a ae0140        	ldw	x,#320
+ 947  028d 89            	pushw	x
+ 948  028e ae5210        	ldw	x,#21008
+ 949  0291 cd0000        	call	_I2C_GetFlagStatus
+ 951  0294 85            	popw	x
+ 952  0295 4d            	tnz	a
+ 953  0296 27f2          	jreq	L714
+ 954                     ; 214 	buffer[2] = I2C_ReceiveData(I2C1);
+ 956  0298 ae5210        	ldw	x,#21008
+ 957  029b cd0000        	call	_I2C_ReceiveData
+ 959  029e 6b05          	ld	(OFST+1,sp),a
+ 960                     ; 216 	Switch->current = (105.84/4096)*(buffer[0]<<4|buffer[1]>>4);// in unit mA
+ 962  02a0 1e08          	ldw	x,(OFST+4,sp)
+ 963  02a2 89            	pushw	x
+ 964  02a3 7b06          	ld	a,(OFST+2,sp)
+ 965  02a5 4e            	swap	a
+ 966  02a6 a40f          	and	a,#15
+ 967  02a8 5f            	clrw	x
+ 968  02a9 97            	ld	xl,a
+ 969  02aa 1f03          	ldw	(OFST-1,sp),x
+ 970  02ac 7b05          	ld	a,(OFST+1,sp)
+ 971  02ae 97            	ld	xl,a
+ 972  02af a610          	ld	a,#16
+ 973  02b1 42            	mul	x,a
+ 974  02b2 01            	rrwa	x,a
+ 975  02b3 1a04          	or	a,(OFST+0,sp)
+ 976  02b5 41            	exg	a,xl
+ 977  02b6 1a03          	or	a,(OFST-1,sp)
+ 978  02b8 41            	exg	a,xl
+ 979  02b9 02            	rlwa	x,a
+ 980  02ba cd0000        	call	c_itof
+ 982  02bd ae0000        	ldw	x,#L133
+ 983  02c0 cd0000        	call	c_fmul
+ 985  02c3 cd0000        	call	c_ftoi
+ 987  02c6 9085          	popw	y
+ 988  02c8 90ef02        	ldw	(2,y),x
+ 989                     ; 217 }
+ 992  02cb 5b05          	addw	sp,#5
+ 993  02cd 81            	ret
+1056                     ; 219 void sw_ReadVoltage(uint8_t SwAddr, sw_t* Switch)
+1056                     ; 220 {
+1057                     	switch	.text
+1058  02ce               _sw_ReadVoltage:
+1060  02ce 88            	push	a
+1061  02cf 5204          	subw	sp,#4
+1062       00000004      OFST:	set	4
+1065  02d1               L554:
+1066                     ; 223   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
+1068  02d1 ae0302        	ldw	x,#770
+1069  02d4 89            	pushw	x
+1070  02d5 ae5210        	ldw	x,#21008
+1071  02d8 cd0000        	call	_I2C_GetFlagStatus
+1073  02db 85            	popw	x
+1074  02dc 4d            	tnz	a
+1075  02dd 26f2          	jrne	L554
+1076                     ; 226 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+1078  02df 4b01          	push	#1
+1079  02e1 ae5210        	ldw	x,#21008
+1080  02e4 cd0000        	call	_I2C_GenerateSTART
+1082  02e7 84            	pop	a
+1084  02e8               L364:
+1085                     ; 230 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+1087  02e8 ae0301        	ldw	x,#769
+1088  02eb 89            	pushw	x
+1089  02ec ae5210        	ldw	x,#21008
+1090  02ef cd0000        	call	_I2C_CheckEvent
+1092  02f2 85            	popw	x
+1093  02f3 4d            	tnz	a
+1094  02f4 27f2          	jreq	L364
+1095                     ; 235 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
+1097  02f6 4b01          	push	#1
+1098  02f8 7b06          	ld	a,(OFST+2,sp)
+1099  02fa 88            	push	a
+1100  02fb ae5210        	ldw	x,#21008
+1101  02fe cd0000        	call	_I2C_Send7bitAddress
+1103  0301 85            	popw	x
+1105  0302               L174:
+1106                     ; 238   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+1108  0302 ae0302        	ldw	x,#770
+1109  0305 89            	pushw	x
+1110  0306 ae5210        	ldw	x,#21008
+1111  0309 cd0000        	call	_I2C_CheckEvent
+1113  030c 85            	popw	x
+1114  030d 4d            	tnz	a
+1115  030e 27f2          	jreq	L174
+1117  0310               L774:
+1118                     ; 245   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
+1120  0310 ae0340        	ldw	x,#832
+1121  0313 89            	pushw	x
+1122  0314 ae5210        	ldw	x,#21008
+1123  0317 cd0000        	call	_I2C_CheckEvent
+1125  031a 85            	popw	x
+1126  031b 4d            	tnz	a
+1127  031c 27f2          	jreq	L774
+1128                     ; 248 	buffer[0] = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
+1130  031e ae5210        	ldw	x,#21008
+1131  0321 cd0000        	call	_I2C_ReceiveData
+1133  0324 6b03          	ld	(OFST-1,sp),a
+1134                     ; 251   I2C_AcknowledgeConfig(I2C1, DISABLE);
+1136  0326 4b00          	push	#0
+1137  0328 ae5210        	ldw	x,#21008
+1138  032b cd0000        	call	_I2C_AcknowledgeConfig
+1140  032e 84            	pop	a
+1141                     ; 254   I2C_GenerateSTOP(I2C1, ENABLE);
+1143  032f 4b01          	push	#1
+1144  0331 ae5210        	ldw	x,#21008
+1145  0334 cd0000        	call	_I2C_GenerateSTOP
+1147  0337 84            	pop	a
+1149  0338               L505:
+1150                     ; 258   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_RXNE) == RESET)
+1152  0338 ae0140        	ldw	x,#320
+1153  033b 89            	pushw	x
+1154  033c ae5210        	ldw	x,#21008
+1155  033f cd0000        	call	_I2C_GetFlagStatus
+1157  0342 85            	popw	x
+1158  0343 4d            	tnz	a
+1159  0344 27f2          	jreq	L505
+1160                     ; 261 	buffer[2] = I2C_ReceiveData(I2C1);
+1162  0346 ae5210        	ldw	x,#21008
+1163  0349 cd0000        	call	_I2C_ReceiveData
+1165  034c 6b05          	ld	(OFST+1,sp),a
+1166                     ; 263 	Switch->voltage = (6.65/4096)*(buffer[0]<<4|buffer[1]>>4);// in unit mA
+1168  034e 1e08          	ldw	x,(OFST+4,sp)
+1169  0350 89            	pushw	x
+1170  0351 7b06          	ld	a,(OFST+2,sp)
+1171  0353 4e            	swap	a
+1172  0354 a40f          	and	a,#15
+1173  0356 5f            	clrw	x
+1174  0357 97            	ld	xl,a
+1175  0358 1f03          	ldw	(OFST-1,sp),x
+1176  035a 7b05          	ld	a,(OFST+1,sp)
+1177  035c 97            	ld	xl,a
+1178  035d a610          	ld	a,#16
+1179  035f 42            	mul	x,a
+1180  0360 01            	rrwa	x,a
+1181  0361 1a04          	or	a,(OFST+0,sp)
+1182  0363 41            	exg	a,xl
+1183  0364 1a03          	or	a,(OFST-1,sp)
+1184  0366 41            	exg	a,xl
+1185  0367 02            	rlwa	x,a
+1186  0368 cd0000        	call	c_itof
+1188  036b ae0004        	ldw	x,#L123
+1189  036e cd0000        	call	c_fmul
+1191  0371 cd0000        	call	c_ftoi
+1193  0374 9085          	popw	y
+1194  0376 90ff          	ldw	(y),x
+1195                     ; 264 }
+1198  0378 5b05          	addw	sp,#5
+1199  037a 81            	ret
+1250                     ; 266 void sw_ReadStatus(uint8_t SwAddr, sw_t* Switch)
+1250                     ; 267 {
+1251                     	switch	.text
+1252  037b               _sw_ReadStatus:
+1254  037b 88            	push	a
+1255       00000000      OFST:	set	0
+1258  037c               L735:
+1259                     ; 269   while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY))
+1261  037c ae0302        	ldw	x,#770
+1262  037f 89            	pushw	x
+1263  0380 ae5210        	ldw	x,#21008
+1264  0383 cd0000        	call	_I2C_GetFlagStatus
+1266  0386 85            	popw	x
+1267  0387 4d            	tnz	a
+1268  0388 26f2          	jrne	L735
+1269                     ; 272 	I2C_GenerateSTART(I2C1, ENABLE); //sending start condition
+1271  038a 4b01          	push	#1
+1272  038c ae5210        	ldw	x,#21008
+1273  038f cd0000        	call	_I2C_GenerateSTART
+1275  0392 84            	pop	a
+1277  0393               L545:
+1278                     ; 276 	while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+1280  0393 ae0301        	ldw	x,#769
+1281  0396 89            	pushw	x
+1282  0397 ae5210        	ldw	x,#21008
+1283  039a cd0000        	call	_I2C_CheckEvent
+1285  039d 85            	popw	x
+1286  039e 4d            	tnz	a
+1287  039f 27f2          	jreq	L545
+1288                     ; 281 	I2C_Send7bitAddress(I2C1, SwAddr, I2C_Direction_Receiver);
+1290  03a1 4b01          	push	#1
+1291  03a3 7b02          	ld	a,(OFST+2,sp)
+1292  03a5 88            	push	a
+1293  03a6 ae5210        	ldw	x,#21008
+1294  03a9 cd0000        	call	_I2C_Send7bitAddress
+1296  03ac 85            	popw	x
+1298  03ad               L355:
+1299                     ; 284   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+1301  03ad ae0302        	ldw	x,#770
+1302  03b0 89            	pushw	x
+1303  03b1 ae5210        	ldw	x,#21008
+1304  03b4 cd0000        	call	_I2C_CheckEvent
+1306  03b7 85            	popw	x
+1307  03b8 4d            	tnz	a
+1308  03b9 27f2          	jreq	L355
+1310  03bb               L165:
+1311                     ; 291   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED)) 
+1313  03bb ae0340        	ldw	x,#832
+1314  03be 89            	pushw	x
+1315  03bf ae5210        	ldw	x,#21008
+1316  03c2 cd0000        	call	_I2C_CheckEvent
+1318  03c5 85            	popw	x
+1319  03c6 4d            	tnz	a
+1320  03c7 27f2          	jreq	L165
+1321                     ; 294 	Switch-> status = I2C_ReceiveData(I2C1); //meanwhile the slave send the second byte
+1323  03c9 ae5210        	ldw	x,#21008
+1324  03cc cd0000        	call	_I2C_ReceiveData
+1326  03cf 1e04          	ldw	x,(OFST+4,sp)
+1327  03d1 e704          	ld	(4,x),a
+1328                     ; 296 }
+1331  03d3 84            	pop	a
+1332  03d4 81            	ret
+1366                     ; 298 void sw_on(uint8_t SwAddr)
+1366                     ; 299 {
+1367                     	switch	.text
+1368  03d5               _sw_on:
+1372                     ; 300 	switch(SwAddr)
+1375                     ; 307 			break;
+1376  03d5 a080          	sub	a,#128
+1377  03d7 2706          	jreq	L565
+1378  03d9 a002          	sub	a,#2
+1379  03db 2708          	jreq	L765
+1380  03dd 200a          	jra	L116
+1381  03df               L565:
+1382                     ; 302 		case SW1_ADDRESS:
+1382                     ; 303 			setBit(GPIOB->ODR, 1);
+1384  03df 72125005      	bset	20485,#1
+1385                     ; 304 			break;
+1387  03e3 2004          	jra	L116
+1388  03e5               L765:
+1389                     ; 305 		case SW2_ADDRESS:
+1389                     ; 306 			setBit(GPIOB->ODR, 1);
+1391  03e5 72125005      	bset	20485,#1
+1392                     ; 307 			break;
+1394  03e9               L116:
+1395                     ; 309 }
+1398  03e9 81            	ret
+1432                     ; 310 void sw_off(uint8_t SwAddr)
+1432                     ; 311 {
+1433                     	switch	.text
+1434  03ea               _sw_off:
+1438                     ; 312 	switch(SwAddr)
+1441                     ; 319 			break;
+1442  03ea a080          	sub	a,#128
+1443  03ec 2706          	jreq	L316
+1444  03ee a002          	sub	a,#2
+1445  03f0 2708          	jreq	L516
+1446  03f2 200a          	jra	L736
+1447  03f4               L316:
+1448                     ; 314 		case SW1_ADDRESS:
+1448                     ; 315 			clearBit(GPIOB->ODR, 0);
+1450  03f4 72115005      	bres	20485,#0
+1451                     ; 316 			break;
+1453  03f8 2004          	jra	L736
+1454  03fa               L516:
+1455                     ; 317 		case SW2_ADDRESS:
+1455                     ; 318 			clearBit(GPIOB->ODR, 0);
+1457  03fa 72115005      	bres	20485,#0
+1458                     ; 319 			break;
+1460  03fe               L736:
+1461                     ; 321 }
+1464  03fe 81            	ret
+1477                     	xdef	_sw_off
+1478                     	xdef	_sw_on
+1479                     	xdef	_sw_ReadStatus
+1480                     	xdef	_sw_ReadVoltage
+1481                     	xdef	_sw_ReadCurrent
+1482                     	xdef	_sw_ReadVoltCurr
+1483                     	xdef	_sw_WriteExtCmdByte
+1484                     	xdef	_sw_WriteCmdByte
+1485                     	xdef	_sw_QuickCmd
+1486                     	xdef	_sw_Init
+1487                     	xdef	_sw_DeInit
+1488                     	xref	_I2C_LowLevel_Init
+1489                     	xref	_I2C_LowLevel_DeInit
+1490                     	xref	_I2C_GetFlagStatus
+1491                     	xref	_I2C_CheckEvent
+1492                     	xref	_I2C_DMACmd
+1493                     	xref	_I2C_ReceiveData
+1494                     	xref	_I2C_SendData
+1495                     	xref	_I2C_Send7bitAddress
+1496                     	xref	_I2C_AcknowledgeConfig
+1497                     	xref	_I2C_GenerateSTOP
+1498                     	xref	_I2C_GenerateSTART
+1499                     	xref	_I2C_Cmd
+1500                     	xref	_I2C_Init
+1501                     .const:	section	.text
+1502  0000               L133:
+1503  0000 3cd3ae14      	dc.w	15571,-20972
+1504  0004               L123:
+1505  0004 3ad4cccc      	dc.w	15060,-13108
+1506                     	xref.b	c_x
+1526                     	xref	c_ftoi
+1527                     	xref	c_fmul
+1528                     	xref	c_itof
+1529                     	end

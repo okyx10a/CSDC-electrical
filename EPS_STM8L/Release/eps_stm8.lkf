@@ -52,6 +52,7 @@ crtsi0.sm8
 #<BEGIN OBJECT_FILES>
 Release\sw.o
 Release\i2c.o
+Release\timing_delay.o
 Release\stm8l15x_wwdg.o
 Release\stm8l15x_wfe.o
 Release\stm8l15x_usart.o

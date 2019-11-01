@@ -1,5 +1,6 @@
 sw.c
 i2c.c
+stm8l_stdperiph_lib\utilities\misc\timing_delay.c
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wwdg.c
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_wfe.c
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\src\stm8l15x_usart.c
@@ -32,6 +33,7 @@ main.c
 stm8_interrupt_vector.c
 sw.h
 i2c.h
+stm8l_stdperiph_lib\utilities\misc\timing_delay.h
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wwdg.h
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_wfe.h
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_usart.h
@@ -62,4 +64,4 @@ stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_beep.h
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_aes.h
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x_adc.h
 stm8l_stdperiph_lib\libraries\stm8l15x_stdperiph_driver\inc\stm8l15x.h
-..\..\..\..\..\..\program files (x86)\cosmic\cxstm8_eval\hstm8\mods0.h
+..\..\..\..\program files (x86)\cosmic\cxstm8_eval\hstm8\mods0.h
