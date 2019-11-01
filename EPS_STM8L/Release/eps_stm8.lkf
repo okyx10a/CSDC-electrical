@@ -50,6 +50,9 @@ crtsi0.sm8
 
 # Object files list - section reserved for STVD
 #<BEGIN OBJECT_FILES>
+Release\spi.o
+Release\obc.o
+Release\mppt.o
 Release\sw.o
 Release\i2c.o
 Release\timing_delay.o

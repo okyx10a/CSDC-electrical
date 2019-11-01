@@ -1,5 +1,5 @@
 
-Map of Debug\eps_stm8.sm8 from link file Debug\eps_stm8.lkf - Thu Oct 31 13:54:54 2019
+Map of Debug\eps_stm8.sm8 from link file Debug\eps_stm8.lkf - Thu Oct 31 23:01:36 2019
 
 
                                --------
@@ -15,8 +15,8 @@ start 0000000a end 0000000a length     0 segment .bit
 start 0000000a end 0000000a length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 00000100 length     0 segment .bss
-start 00000000 end 0000141d length  5149 segment .info.
-start 00000000 end 00026b9f length 158623 segment .debug
+start 00000000 end 00001562 length  5474 segment .info.
+start 00000000 end 00026c6b length 158827 segment .debug
 start 00008000 end 00008080 length   128 segment .const
 start 00008099 end 0000809c length     3 segment .init
 
@@ -25,282 +25,294 @@ start 00008099 end 0000809c length     3 segment .init
                                Modules
                                -------
 
-e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8:
+d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8:
 start 0000809c end 000080e7 length    75 section .text
 start 00000100 end 00000100 length     0 section .bss
 start 00000000 end 00000000 length     0 section .ubsct
 start 00000000 end 00000030 length    48 section .info.
 
+Debug\spi.o:
+start 00000000 end 00000044 length    68 section .debug
+start 00000030 end 0000009c length   108 section .info.
+
+Debug\obc.o:
+start 00000044 end 00000088 length    68 section .debug
+start 0000009c end 00000108 length   108 section .info.
+
+Debug\mppt.o:
+start 00000088 end 000000cc length    68 section .debug
+start 00000108 end 00000175 length   109 section .info.
+
 Debug\sw.o:
 start 000080e7 end 000084e6 length  1023 section .text
-start 00000000 end 000005db length  1499 section .debug
-start 00000030 end 0000009b length   107 section .info.
+start 000000cc end 000006a7 length  1499 section .debug
+start 00000175 end 000001e0 length   107 section .info.
 start 00008080 end 00008088 length     8 section .const
 
 Debug\i2c.o:
 start 000084e6 end 000085f2 length   268 section .text
-start 000005db end 00000810 length   565 section .debug
-start 0000009b end 00000107 length   108 section .info.
+start 000006a7 end 000008dc length   565 section .debug
+start 000001e0 end 0000024c length   108 section .info.
 
 Debug\timing_delay.o:
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .ubsct *** removed ***
-start 00000810 end 00000994 length   388 section .debug
-start 00000107 end 0000017c length   117 section .info.
+start 000008dc end 00000a60 length   388 section .debug
+start 0000024c end 000002c1 length   117 section .info.
 
 Debug\stm8l15x_wwdg.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000994 end 00000c57 length   707 section .debug
-start 0000017c end 000001f2 length   118 section .info.
+start 00000a60 end 00000d23 length   707 section .debug
+start 000002c1 end 00000337 length   118 section .info.
 
 Debug\stm8l15x_wfe.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000c57 end 00001336 length  1759 section .debug
-start 000001f2 end 00000267 length   117 section .info.
+start 00000d23 end 00001402 length  1759 section .debug
+start 00000337 end 000003ac length   117 section .info.
 
 Debug\stm8l15x_usart.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00001336 end 00002b13 length  6109 section .debug
-start 00000267 end 000002de length   119 section .info.
+start 00001402 end 00002bdf length  6109 section .debug
+start 000003ac end 00000423 length   119 section .info.
 
 Debug\stm8l15x_tim5.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00002b13 end 00005eb6 length 13219 section .debug
-start 000002de end 00000354 length   118 section .info.
+start 00002bdf end 00005f82 length 13219 section .debug
+start 00000423 end 00000499 length   118 section .info.
 
 Debug\stm8l15x_tim4.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00005eb6 end 00007157 length  4769 section .debug
-start 00000354 end 000003ca length   118 section .info.
+start 00005f82 end 00007223 length  4769 section .debug
+start 00000499 end 0000050f length   118 section .info.
 
 Debug\stm8l15x_tim3.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00007157 end 0000a4fa length 13219 section .debug
-start 000003ca end 00000440 length   118 section .info.
+start 00007223 end 0000a5c6 length 13219 section .debug
+start 0000050f end 00000585 length   118 section .info.
 
 Debug\stm8l15x_tim2.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0000a4fa end 0000d89d length 13219 section .debug
-start 00000440 end 000004b6 length   118 section .info.
+start 0000a5c6 end 0000d969 length 13219 section .debug
+start 00000585 end 000005fb length   118 section .info.
 
 Debug\stm8l15x_tim1.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0000d89d end 000125b3 length 19734 section .debug
-start 000004b6 end 0000052c length   118 section .info.
+start 0000d969 end 0001267f length 19734 section .debug
+start 000005fb end 00000671 length   118 section .info.
 
 Debug\stm8l15x_syscfg.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000125b3 end 000139fa length  5191 section .debug
-start 0000052c end 000005a4 length   120 section .info.
+start 0001267f end 00013ac6 length  5191 section .debug
+start 00000671 end 000006e9 length   120 section .info.
 
 Debug\stm8l15x_spi.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000139fa end 00014d44 length  4938 section .debug
-start 000005a4 end 00000619 length   117 section .info.
+start 00013ac6 end 00014e10 length  4938 section .debug
+start 000006e9 end 0000075e length   117 section .info.
 
 Debug\stm8l15x_rtc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00014d44 end 00017be7 length 11939 section .debug
-start 00000619 end 0000068e length   117 section .info.
+start 00014e10 end 00017cb3 length 11939 section .debug
+start 0000075e end 000007d3 length   117 section .info.
 
 Debug\stm8l15x_rst.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00017be7 end 00017e7c length   661 section .debug
-start 0000068e end 00000703 length   117 section .info.
+start 00017cb3 end 00017f48 length   661 section .debug
+start 000007d3 end 00000848 length   117 section .info.
 
 Debug\stm8l15x_pwr.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00017e7c end 00018514 length  1688 section .debug
-start 00000703 end 00000778 length   117 section .info.
+start 00017f48 end 000185e0 length  1688 section .debug
+start 00000848 end 000008bd length   117 section .info.
 
 Debug\stm8l15x_lcd.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00018514 end 00019d3b length  6183 section .debug
-start 00000778 end 000007ed length   117 section .info.
+start 000185e0 end 00019e07 length  6183 section .debug
+start 000008bd end 00000932 length   117 section .info.
 
 Debug\stm8l15x_iwdg.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00019d3b end 0001a0e0 length   933 section .debug
-start 000007ed end 00000863 length   118 section .info.
+start 00019e07 end 0001a1ac length   933 section .debug
+start 00000932 end 000009a8 length   118 section .info.
 
 Debug\stm8l15x_itc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001a0e0 end 0001a7d2 length  1778 section .debug
-start 00000863 end 000008d8 length   117 section .info.
+start 0001a1ac end 0001a89e length  1778 section .debug
+start 000009a8 end 00000a1d length   117 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 
 Debug\stm8l15x_irtim.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001a7d2 end 0001aa2d length   603 section .debug
-start 000008d8 end 0000094f length   119 section .info.
+start 0001a89e end 0001aaf9 length   603 section .debug
+start 00000a1d end 00000a94 length   119 section .info.
 
 Debug\stm8l15x_i2c.o:
 start 000085f2 end 00008abe length  1228 section .text
-start 0001aa2d end 0001ce7b length  9294 section .debug
-start 0000094f end 000009c4 length   117 section .info.
+start 0001aaf9 end 0001cf47 length  9294 section .debug
+start 00000a94 end 00000b09 length   117 section .info.
 start 00008088 end 00008094 length    12 section .const
 
 Debug\stm8l15x_gpio.o:
 start 00008abe end 00008b8a length   204 section .text
-start 0001ce7b end 0001d9bc length  2881 section .debug
-start 000009c4 end 00000a3a length   118 section .info.
+start 0001cf47 end 0001da88 length  2881 section .debug
+start 00000b09 end 00000b7f length   118 section .info.
 
 Debug\stm8l15x_flash.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001d9bc end 0001e8a7 length  3819 section .debug
-start 00000a3a end 00000ab1 length   119 section .info.
+start 0001da88 end 0001e973 length  3819 section .debug
+start 00000b7f end 00000bf6 length   119 section .info.
 
 Debug\stm8l15x_exti.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0001e8a7 end 0001f405 length  2910 section .debug
-start 00000ab1 end 00000b27 length   118 section .info.
+start 0001e973 end 0001f4d1 length  2910 section .debug
+start 00000bf6 end 00000c6c length   118 section .info.
 
 Debug\stm8l15x_dma.o:
 start 00008b8a end 00008d7f length   501 section .text
-start 0001f405 end 0002045d length  4184 section .debug
-start 00000b27 end 00000b9c length   117 section .info.
+start 0001f4d1 end 00020529 length  4184 section .debug
+start 00000c6c end 00000ce1 length   117 section .info.
 
 Debug\stm8l15x_dac.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 0002045d end 00021805 length  5032 section .debug
-start 00000b9c end 00000c11 length   117 section .info.
+start 00020529 end 000218d1 length  5032 section .debug
+start 00000ce1 end 00000d56 length   117 section .info.
 
 Debug\stm8l15x_comp.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00021805 end 00022509 length  3332 section .debug
-start 00000c11 end 00000c87 length   118 section .info.
+start 000218d1 end 000225d5 length  3332 section .debug
+start 00000d56 end 00000dcc length   118 section .info.
 
 Debug\stm8l15x_clk.o:
 start 00008d7f end 000090dc length   861 section .text
-start 00022509 end 00023ee8 length  6623 section .debug
-start 00000c87 end 00000cfc length   117 section .info.
+start 000225d5 end 00023fb4 length  6623 section .debug
+start 00000dcc end 00000e41 length   117 section .info.
 start 00008094 end 00008099 length     5 section .const
 
 Debug\stm8l15x_beep.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00023ee8 end 00024239 length   849 section .debug
-start 00000cfc end 00000d72 length   118 section .info.
+start 00023fb4 end 00024305 length   849 section .debug
+start 00000e41 end 00000eb7 length   118 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 
 Debug\stm8l15x_aes.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00024239 end 00024a4c length  2067 section .debug
-start 00000d72 end 00000de7 length   117 section .info.
+start 00024305 end 00024b18 length  2067 section .debug
+start 00000eb7 end 00000f2c length   117 section .info.
 
 Debug\stm8l15x_adc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00024a4c end 00026986 length  7994 section .debug
-start 00000de7 end 00000e5c length   117 section .info.
+start 00024b18 end 00026a52 length  7994 section .debug
+start 00000f2c end 00000fa1 length   117 section .info.
 
 Debug\main.o:
 start 000090dc end 000090e8 length    12 section .text
-start 00026986 end 00026a34 length   174 section .debug
-start 00000e5c end 00000ec9 length   109 section .info.
+start 00026a52 end 00026b00 length   174 section .debug
+start 00000fa1 end 0000100e length   109 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000ec9 end 00000ef9 length    48 section .info.
+start 0000100e end 0000103e length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o:
 start 000090e8 end 000091bd length   213 section .text
-start 00000ef9 end 00000f28 length    47 section .info.
+start 0000103e end 0000106d length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o:
 start 000091bd end 0000921f length    98 section .text
-start 00000f28 end 00000f57 length    47 section .info.
+start 0000106d end 0000109c length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)imul.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)imul.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000f57 end 00000f86 length    47 section .info.
+start 0000109c end 000010cb length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)itof.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)itof.o:
 start 0000921f end 0000924d length    46 section .text
-start 00000f86 end 00000fb5 length    47 section .info.
+start 000010cb end 000010fa length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ladd.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ladd.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000fb5 end 00000fe4 length    47 section .info.
+start 000010fa end 00001129 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lcmp.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lcmp.o:
 start 0000924d end 0000926d length    32 section .text
-start 00000fe4 end 00001013 length    47 section .info.
+start 00001129 end 00001158 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgadd.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgadd.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00001013 end 00001043 length    48 section .info.
+start 00001158 end 00001188 length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgsbc.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgsbc.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00001043 end 00001073 length    48 section .info.
+start 00001188 end 000011b8 length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o:
 start 0000926d end 000092f8 length   139 section .text
-start 00001073 end 000010a2 length    47 section .info.
+start 000011b8 end 000011e7 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lreg.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lreg.o:
 start 00000000 end 00000004 length     4 section .ubsct
-start 000010a2 end 000010d1 length    47 section .info.
+start 000011e7 end 00001216 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ltor.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ltor.o:
 start 000092f8 end 0000930a length    18 section .text
-start 000010d1 end 00001100 length    47 section .info.
+start 00001216 end 00001245 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ludiv.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ludiv.o:
 start 0000930a end 0000931e length    20 section .text
-start 00001100 end 00001130 length    48 section .info.
+start 00001245 end 00001275 length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o:
 start 0000931e end 00009409 length   235 section .text
-start 00001130 end 0000115f length    47 section .info.
+start 00001275 end 000012a4 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgneg.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgneg.o:
 start 00009409 end 0000941c length    19 section .text
-start 0000115f end 0000118f length    48 section .info.
+start 000012a4 end 000012d4 length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lneg.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lneg.o:
 start 0000941c end 00009431 length    21 section .text
-start 0000118f end 000011be length    47 section .info.
+start 000012d4 end 00001303 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lursh.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lursh.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 000011be end 000011ee length    48 section .info.
+start 00001303 end 00001333 length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lzmp.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lzmp.o:
 start 00009431 end 00009444 length    19 section .text
-start 000011ee end 0000121d length    47 section .info.
+start 00001333 end 00001362 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)rtol.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)rtol.o:
 start 00009444 end 00009456 length    18 section .text
-start 0000121d end 0000124c length    47 section .info.
+start 00001362 end 00001391 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o:
 start 00009456 end 00009481 length    43 section .text
-start 0000124c end 0000127c length    48 section .info.
+start 00001391 end 000013c1 length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)smul.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)smul.o:
 start 00009481 end 000094c0 length    63 section .text
-start 0000127c end 000012ab length    47 section .info.
+start 000013c1 end 000013f0 length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utol.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utol.o:
 start 000094c0 end 000094cb length    11 section .text
-start 000012ab end 000012da length    47 section .info.
+start 000013f0 end 0000141f length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utolx.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utolx.o:
 start 000094cb end 000094d2 length     7 section .text
-start 000012da end 0000130a length    48 section .info.
+start 0000141f end 0000144f length    48 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)xreg.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)xreg.o:
 start 00000004 end 00000007 length     3 section .ubsct
-start 0000130a end 00001339 length    47 section .info.
+start 0000144f end 0000147e length    47 section .info.
 
-(e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)yreg.o:
+(d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)yreg.o:
 start 00000007 end 0000000a length     3 section .ubsct
-start 00001339 end 00001368 length    47 section .info.
+start 0000147e end 000014ad length    47 section .info.
 
 Debug\stm8_interrupt_vector.o:
 start 000094d2 end 000094d3 length     1 section .text
-start 00026a34 end 00026b9f length   363 section .debug
-start 00001368 end 000013e6 length   126 section .info.
+start 00026b00 end 00026c6b length   363 section .debug
+start 000014ad end 0000152b length   126 section .info.
 start 00008000 end 00008080 length   128 section .const
 
 
@@ -1334,21 +1346,21 @@ _WWDG_SetWindowValue                  ********   *** removed from Debug\stm8l15x
 __endmem                              000005fe   defined in command file
                                                  *** not used ***
 __endzp                               0000000a   defined in command file section .ubsct
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
 __idesc__                             00008099   defined in linker section .init
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
 __memory                              00000100   defined in command file section .bss
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
 __stack                               000007ff   defined in command file
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
 __startmem                            00000100   defined in command file section .bss
                                                  *** not used ***
-__stext                               0000809c   defined in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8 section .text
+__stext                               0000809c   defined in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8 section .text
                                                  used in Debug\stm8_interrupt_vector.o
 __vectab                              00008000   defined in Debug\stm8_interrupt_vector.o section .const
-_exit                                 000080e5   defined in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8 section .text
+_exit                                 000080e5   defined in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8 section .text
 _main                                 000090dc   defined in Debug\main.o section .text
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
 _sw_DeInit                            000080e7   defined in Debug\sw.o section .text
 _sw_Init                              000080eb   defined in Debug\sw.o section .text
 _sw_QuickCmd                          00008121   defined in Debug\sw.o section .text
@@ -1361,93 +1373,93 @@ _sw_WriteCmdByte                      0000815e   defined in Debug\sw.o section .
 _sw_WriteExtCmdByte                   000081b3   defined in Debug\sw.o section .text
 _sw_off                               000084d1   defined in Debug\sw.o section .text
 _sw_on                                000084bc   defined in Debug\sw.o section .text
-c_cmulx                               ********   *** removed from (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o ***
-c_divsl                               0000931e   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o section .text
+c_cmulx                               ********   *** removed from (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o ***
+c_divsl                               0000931e   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o section .text
                                                  *** not used ***
-c_divul                               00009335   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o section .text
-                                                 used in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ludiv.o
-c_fmul                                000090e8   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o section .text
+c_divul                               00009335   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o section .text
+                                                 used in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ludiv.o
+c_fmul                                000090e8   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o section .text
                                                  used in Debug\sw.o
-c_ftoi                                000091bd   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o section .text
+c_ftoi                                000091bd   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o section .text
                                                  used in Debug\sw.o
-c_ftol                                000091c3   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o section .text
-c_imul                                ********   *** removed from (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)imul.o ***
-c_itof                                0000921f   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)itof.o section .text
+c_ftol                                000091c3   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o section .text
+c_imul                                ********   *** removed from (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)imul.o ***
+c_itof                                0000921f   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)itof.o section .text
                                                  used in Debug\sw.o
-c_ladd                                ********   *** removed from (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ladd.o ***
-c_lcmp                                0000924d   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lcmp.o section .text
+c_ladd                                ********   *** removed from (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ladd.o ***
+c_lcmp                                0000924d   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lcmp.o section .text
                                                  used in Debug\stm8l15x_i2c.o
-c_lgadd                               ********   *** removed from (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgadd.o ***
-c_lgneg                               00009409   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgneg.o section .text
-                                                 used in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
-c_lgsbc                               ********   *** removed from (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgsbc.o ***
-c_lmul                                0000926d   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o section .text
+c_lgadd                               ********   *** removed from (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgadd.o ***
+c_lgneg                               00009409   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgneg.o section .text
+                                                 used in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
+c_lgsbc                               ********   *** removed from (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgsbc.o ***
+c_lmul                                0000926d   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o section .text
                                                  used in Debug\stm8l15x_i2c.o
-c_lmulc                               00009275   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o section .text
+c_lmulc                               00009275   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o section .text
                                                  *** not used ***
-c_lneg                                0000941c   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lneg.o section .text
-                                                 used in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
-c_lreg                                00000000   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lreg.o section .ubsct
+c_lneg                                0000941c   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lneg.o section .text
+                                                 used in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
+c_lreg                                00000000   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lreg.o section .ubsct
                                                  used in Debug\i2c.o
                                                          Debug\stm8l15x_usart.o
                                                          Debug\stm8l15x_i2c.o
                                                          Debug\stm8l15x_flash.o
                                                          Debug\stm8l15x_clk.o
                                                          Debug\stm8l15x_beep.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)itof.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ladd.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lcmp.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgadd.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ltor.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lneg.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lursh.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)rtol.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)smul.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utol.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utolx.o
-c_ltor                                000092f8   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ltor.o section .text
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)cmulx.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ftol.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)itof.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ladd.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lcmp.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lgadd.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ltor.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lneg.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lursh.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)rtol.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)smul.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utol.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utolx.o
+c_ltor                                000092f8   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ltor.o section .text
                                                  used in Debug\stm8l15x_usart.o
                                                          Debug\stm8l15x_i2c.o
                                                          Debug\stm8l15x_clk.o
                                                          Debug\stm8l15x_beep.o
-c_ludv                                0000930a   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ludiv.o section .text
+c_ludv                                0000930a   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ludiv.o section .text
                                                  used in Debug\stm8l15x_usart.o
                                                          Debug\stm8l15x_i2c.o
                                                          Debug\stm8l15x_clk.o
                                                          Debug\stm8l15x_beep.o
-c_lursh                               ********   *** removed from (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lursh.o ***
-c_lzmp                                00009431   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lzmp.o section .text
+c_lursh                               ********   *** removed from (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lursh.o ***
+c_lzmp                                00009431   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lzmp.o section .text
                                                  used in Debug\timing_delay.o
                                                          Debug\stm8l15x_i2c.o
-c_okmul                               000090f6   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o section .text
+c_okmul                               000090f6   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o section .text
                                                  *** not used ***
-c_rtol                                00009444   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)rtol.o section .text
+c_rtol                                00009444   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)rtol.o section .text
                                                  used in Debug\stm8l15x_usart.o
                                                          Debug\stm8l15x_i2c.o
                                                          Debug\stm8l15x_clk.o
-c_sdivx                               0000945c   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o section .text
+c_sdivx                               0000945c   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o section .text
                                                  used in Debug\stm8l15x_i2c.o
-c_smodx                               00009456   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o section .text
+c_smodx                               00009456   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o section .text
                                                  *** not used ***
-c_smul                                00009481   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)smul.o section .text
+c_smul                                00009481   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)smul.o section .text
                                                  used in Debug\stm8l15x_i2c.o
-c_uitol                               000094c0   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utol.o section .text
+c_uitol                               000094c0   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utol.o section .text
                                                  used in Debug\stm8l15x_i2c.o
-c_uitolx                              000094cb   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utolx.o section .text
+c_uitolx                              000094cb   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)utolx.o section .text
                                                  used in Debug\i2c.o
-c_x                                   00000004   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)xreg.o section .ubsct
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+c_x                                   00000004   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)xreg.o section .ubsct
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
                                                          Debug\stm8l15x_beep.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)imul.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
-                                                         (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o
-c_y                                   00000007   defined in (e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)yreg.o section .ubsct
-                                                 used in e:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)fmul.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)imul.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)lmul.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)ldiv.o
+                                                         (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)sdivx.o
+c_y                                   00000007   defined in (d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\libm0.sm8)yreg.o section .ubsct
+                                                 used in d:\Program Files (x86)\COSMIC\CXSTM8_EVAL\lib\crtsi0.sm8
 f_NonHandledInterrupt                 000094d2   defined in Debug\stm8_interrupt_vector.o section .text
