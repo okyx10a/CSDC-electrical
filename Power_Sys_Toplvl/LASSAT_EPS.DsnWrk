@@ -1,0 +1,18 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=..\batterybd\BatteryBd.PrjPCB
+[Project2]
+ProjectPath=..\Imported power_board.PrjPcb\power_board.PrjPcb
+[Project3]
+ProjectPath=..\SolarArray\SolarArray1\SolarArray1.PrjPCB
+[Project4]
+ProjectPath=..\SolarArray\SolarArray2\SolarArray2.PrjPCB
+[Project5]
+ProjectPath=..\SolarArray\SolarArray3\SolarArray3.PrjPCB
+[Project6]
+ProjectPath=..\SolarArray\SolarArray4\SolarArray4.PrjPCB
+[Project7]
+ProjectPath=..\SolarArray\SolarArrayTop\SoalrArrayTop.PrjPCB
+[Project8]
+ProjectPath=Power_Sys_Toplvl.PrjPCB
